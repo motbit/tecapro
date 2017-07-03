@@ -164,68 +164,7 @@
                                                         </span>
                                                     </div>
                                                 </li>
-                                                <li class="category "><a href="Home.html">Trang chủ</a></li>
-                                                <li class="category">
-                                                    <a href="tong_quan.html" class="parent">Giới thiệu</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="tong_quan.html">Tổng quan</a></li>
-                                                        <li><a href="so_do_to_chuc.html">Sơ đồ tổ chức</a></li>
-                                                        <li><a href="truyen_thong_tecapro.html">Truyền thống Tecapro</a></li>
-                                                        <li><a href="#">Profile</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="category ">
-                                                    <a href="#" class="parent">Đơn vị thành viên</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="don_vi_Tecapro_Telecom.html">Công ty CP Tecapro - Telecom</a></li>
-                                                        <li><a href="don_vi_CB_DV_MT_ECO.html">Công ty CP CN-DV Môi trường ECO</a></li>
-                                                        <li><a href="don_vi_xi_nghiep_vat_lieu_TB_CN.html">XN Vật liệu và Thiết bị công nghiệp</a></li>
-                                                        <li><a href="don_vi_cp_CNTT.html">Công ty CP CNTT &amp; Truyền thông</a></li>
-                                                        <li><a href="don_vi_xi_nghiep_dich_vu_thuong_mai.html">XN Dịch vụ Kỹ thuật &amp; Thương mại</a></li>
-                                                        <li><a href="don_vi_xi_nghiep_CT.html">XN Xây dựng công trình</a></li>
-                                                        <li><a href="don_vi_chi_nhanh_HN.html">Chi nhánh Hà Nội</a></li>
-                                                        <li><a href="don_vi_chi_nhanh_Da_Nang.html">Chi nhánh Đà Nẵng</a></li>
-                                                        <li><a href="don_vi_chi_nhanh_Vung_Tau.html">Chi nhánh Vũng Tàu </a></li>
-                                                        <li><a href="don_vi_CH_LB_Nga.html">VPĐD tại CH Liên Bang Nga</a></li>
-                                                        <li><a href="don_vi_MTV_TecaWord.html">Công ty TNHH MTV TECAWORLD</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="category ">
-                                                    <a href="#" class="parent">Tin tức & Sự kiện</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="tin_tuc_su_kien.html">Tin Tecapro</a></li>
-                                                        <li><a href="#">Tin các đơn vị thành viên</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="category ">
-                                                    <a href="#home1" class="parent">Lĩnh vực hoạt động</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="linh_vuc_hoat_dong.html">Công nghệ thông tin</a></li>
-                                                        <li><a href="linh_vuc_hoat_dong_dien_tu_vien_thong.html">Điện tử viễn thông</a></li>
-                                                        <li><a href="linh_vuc_hoat_dong_cong_nghe_MT.html">Công nghệ môi trường</a></li>
-                                                        <li><a href="linh_vuc_hoat_dong_xay_dung_CT.html">Xây dựng công trình</a></li>
-                                                        <li><a href="linh_vuc_hoat_dong_dich_vu.html">Dịch vụ</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="category ">
-                                                    <a href="#" class="parent">Thư viện</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="thu_vien_video.html">Thư viện video</a></li>
-                                                        <li><a href="thu_vien_hinh_anh.html">Thư viện hình ảnh</a></li>
-                                                        <li><a href="thu_vien_tai_lieu.html">Thư viện download</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="category ">
-                                                    <a href="#" class="parent">Liên kết</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="chung_khoan.html">Ngoại tệ & Chứng khoán</a></li>
-                                                        <li><a href="thoi_tiet.html">Thời tiết</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="category"><a href="tuyen_dung.html">Tuyển dụng</a>
-                                                </li>
-                                                <li class="category "><a href="lien_he.html">Liên hệ</a>
-                                                </li>
+                                                <?php tecapro_active_menu(); ?>
                                             </ul>
                                         </nav>
                                         <div class="container-fuild bar">
