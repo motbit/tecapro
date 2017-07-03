@@ -2164,6 +2164,8 @@ ul.ul-max li {
  }
 p.tieude-sp {
     font-size: 20pt;}
+	ul.sub-menu {
+    width: 100%;}
 /* pushmenu-push   */
 .pushmenu { /*this is the nav*/
   background: #fff;
@@ -2488,7 +2490,8 @@ z-index:3
 
 .gw-nav-list>li .sub-menu>li {
   margin-left: 0;
-  position: relative
+  position: relative;
+      width: 100%!important;
 }
 
 .gw-nav-list>li .sub-menu>li>a {
@@ -2518,7 +2521,7 @@ z-index:3
   top: -1px;
   bottom: 0;
   z-index: 1;
-  border: 2px solid #dd4814;
+  border: 0px solid #dd4814;
 }
 
 .gw-nav-list>li .sub-menu>li.active>a { color: #dd4814 }
@@ -2824,7 +2827,7 @@ ul.ul-tin li.li-tin img{
 }
 ul.ul-tin li.li-tin .list-new{
 	    padding: 10px;
-		    margin-top: 0px;
+		margin-top: 0px;
 }
 ul.ul-tin li.li-tin .list-new div:nth-child(2){
 	padding-left:10px;
@@ -2905,7 +2908,10 @@ span.icon{
 	 display:none;
  }
 
-.truso-a,#cnt-center,.padding-lienhe,.truso,.padding-sanpham,.content-gioithieu,.padding-mobile{
+.truso-a,#cnt-center,.padding-lienhe,.truso,.padding-sanpham,.content-gioithieu{
+	padding:0px!important;
+}
+.padding-mobile{
 	padding:0px 10px!important;
 }
 .truso-small{
@@ -2953,7 +2959,7 @@ ul.hoatdong li:before {
     padding-right: 6px;
 }
 ul.hoatdong{
-	padding:0px 10px;
+	/* padding:0px 10px; */
 	list-style-type:none;
 }
 
@@ -3124,6 +3130,7 @@ ul.ul-gt.ul-thuvien-tailieu li {
     background: #f7931e;
     margin-bottom: 15px;
     float: left;
+	    margin-left: 0px;
 }
 .tailieu {
     width: 100%;
@@ -3732,6 +3739,15 @@ div.tv-top {
   ul.sub-menu{
 	  width:100%;
   }
+  ul.ul-lienhe li {
+    width: 100%;
+}
+ul.ul-lienhe li input, ul.ul-lienhe li textarea {
+    width: 100%;
+}
+.content-tintuc .ds-tintuc{
+	margin-bottom:10px;
+}
 }
 @media screen and (max-width: 480px){
 .content {
