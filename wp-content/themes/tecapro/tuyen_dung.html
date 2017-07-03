@@ -1,423 +1,821 @@
 <html lang="vi">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	   <link rel="shortcut icon" href="images/logo.png">
-      <script src="bootstrap/js/bootstrap.min.js"></script>
-      <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-      <script src="bootstrap/owl.carousel.2.0.0-beta.2.4/owl.carousel.js"></script>
-      <script src="bootstrap/owl.carousel.2.0.0-beta.2.4/owl.carousel.min.js"></script>
-      <link href="css/style_Home.css" rel="stylesheet" />
-      <link href="css/style.css" rel="stylesheet" />
-      <script src="js/jssor.slider-21.1.6.mini.js" type="text/javascript"></script>
-      <link rel="stylesheet" type="text/css" href="css/component.css" />
-      <script src="js/modernizr.custom.js"></script>
-      <script src="js/menu.js"></script>
-      <!-- <script src="js/init.js"></script> -->
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <title>Tuyển dụng</title>
-      <script>
-         (function($){
-         $(function(){
-          
-             (function( $ ){
-                 $.fn.slideToPos = function() {
-         		  
-                   var left = $(this).position().left + ($(this).width() / 2) - ($(".menu1 a.knob").width() / 2) - 2;
-                   $(".menu1 a.knob").css("left", left);
-                  
-         	  $(".before").css("width", left+10);
-                   return this;
-                 }; 
-              })( jQuery );
-          	   var url = window.location;  
-               $('ul li.category a[href="' + url + '"]').parent().addClass('active');
-               $('ul li.category a').filter(function () {
-                  return this.href == url;		
-             }).parent().addClass('active').slideToPos(); 	    
-              e.preventDefault();
-              $(this).slideToPos();
-         
-         }); // end of document ready
-         })(jQuery); // end of jQuery name space
-      </script>
-   </head>
-   <body>
-      <div class="container-fuild none-padding contaier-head">
-         <div class=" container header">
-            <div class=" col-sm-12 col-xs-12 none-padding">
-               <div class=" col-sm-8 col-xs-8 none-padding">
-                  <p class="addFont">CÔNG TY TNHH MỘT THÀNH VIÊN ỨNG DỤNG KỸ THUẬT VÀ SẢN XUẤT</p>
-               </div>
-               <div class="col-sm-1 col-xs-1 none-padding">
-                  <!-- <img src="images/search.png" class="img-search"> -->
-                  <div class="dropdown">
-                     <button class="dropbtn"><img src="images/search.png" class="img-search flag-show"><img src="images/en.svg" class="img-search flag-hidden"></button>
-                     <div class="dropdown-content">
-                        <a href="#">Tiếng Việt</a>
-                        <a href="#">English</a>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-3 col-xs-3 none-padding">
-                  <div class="input-group">			
-                     <input type="text" class="form-control">
-                     <span class="input-group-btn">
-                     <button class="btn btn-default" type="button">Tìm kiếm</button>
-                     </span>
-                  </div>
-                  <!-- /input-group -->
-               </div>
-            </div>
-         </div>
-         <!--end header-->
-      </div>
-      <!--=======================-->
-      <div class="container-fuild none-padding">
-         <div class=" container menu">
-            <div class="col-sm-2 col-xs-2 none-padding">
-               <img src="images/logo.png" class="img-logo">
-            </div>
-            <div class="col-sm-10 col-xs-10 none-padding ">
-               <div class="menu1">
-                  <div class="slider">
-                     <nav>
-                        <ul>
-                           <li class="category "><a href="Home.html">Trang chủ</a></li>
-                           <li class="category">
-                              <a href="tong_quan.html">Giới thiệu</a>
-                              <ul class="sub-menu">
-                                 <li><a href="tong_quan.html">Tổng quan</a></li>
-                                 <li><a href="so_do_to_chuc.html">Sơ đồ tổ chức</a></li>
-                                 <li><a href="truyen_thong_tecapro.html">Truyền thống Tecapro</a></li>
-                                 <li><a href="#">Profile</a></li>
-                              </ul>
-                           </li>
-                           <li class="category ">
-                              <a href="#">Đơn vị thành viên</a>
-                              <ul class="sub-menu">
-                                 <li><a href="don_vi_Tecapro_Telecom.html">Công ty CP Tecapro - Telecom</a></li>
-                                 <li><a href="don_vi_CB_DV_MT_ECO.html">Công ty CP CN-DV Môi trường ECO</a></li>
-                                 <li><a href="don_vi_xi_nghiep_vat_lieu_TB_CN.html">XN Vật liệu và Thiết bị công nghiệp</a></li>
-                                 <li><a href="don_vi_cp_CNTT.html">Công ty CP CNTT &amp; Truyền thông</a></li>
-                                 <li><a href="don_vi_xi_nghiep_dich_vu_thuong_mai.html">XN Dịch vụ Kỹ thuật &amp; Thương mại</a></li>
-                                 <li><a href="don_vi_xi_nghiep_CT.html">XN Xây dựng công trình</a></li>
-                                 <li><a href="don_vi_chi_nhanh_HN.html">Chi nhánh Hà Nội</a></li>
-                                 <li><a href="don_vi_chi_nhanh_Da_Nang.html">Chi nhánh Đà Nẵng</a></li>
-                                 <li><a href="don_vi_chi_nhanh_Vung_Tau.html">Chi nhánh Vũng Tàu </a></li>
-                                 <li><a href="don_vi_CH_LB_Nga.html">VPĐD tại CH Liên Bang Nga</a></li>
-                                 <li><a href="don_vi_MTV_TecaWord.html">Công ty TNHH MTV TECAWORLD</a></li>
-                              </ul>
-                           </li>
-                           <li class="category ">
-                              <a href="#">Tin tức & Sự kiện</a>
-                              <ul class="sub-menu">
-                                 <li><a href="tin_tuc_su_kien.html">Tin Tecapro</a></li>
-                                 <li><a href="#">Tin các đơn vị thành viên</a></li>
-                              </ul>
-                           </li>
-                           <li class="category ">
-                              <a href="#home1">Lĩnh vực hoạt động</a>
-                              <ul class="sub-menu">
-                                 <li><a href="linh_vuc_hoat_dong.html">Công nghệ thông tin</a></li>
-                                 <li><a href="linh_vuc_hoat_dong_dien_tu_vien_thong.html">Điện tử viễn thông</a></li>
-                                 <li><a href="linh_vuc_hoat_dong_cong_nghe_MT.html">Công nghệ môi trường</a></li>
-                                 <li><a href="linh_vuc_hoat_dong_xay_dung_CT.html">Xây dựng công trình</a></li>
-                                 <li><a href="linh_vuc_hoat_dong_dich_vu.html">Dịch vụ</a></li>
-                              </ul>
-                           </li>
-                           <li class="category ">
-                              <a href="#">Thư viện</a>
-                              <ul class="sub-menu">
-                                 <li><a href="thu_vien_video.html">Thư viện video</a></li>
-                                 <li><a href="thu_vien_hinh_anh.html">Thư viện hình ảnh</a></li>
-                                 <li><a href="thu_vien_tai_lieu.html">Thư viện download</a></li>
-                              </ul>
-                           </li>
-                           <li class="category ">
-                              <a href="#">Liên kết</a>
-                              <ul class="sub-menu">
-                                 <li><a href="chung_khoan.html">Ngoại tệ & Chứng khoán</a></li>
-                                 <li><a href="thoi_tiet.html">Thời tiết</a></li>
-                              </ul>
-                           </li>
-                           <li class="category">  <a href="tuyen_dung.html">Tuyển dụng</a>	
-                           </li>
-                        
-                           <li class="category "><a href="lien_he.html">Liên hệ</a>
-                           </li>
-                        </ul>
-                     </nav>
-                     <div class="container-fuild bar">
-                        <div class="before"></div>
-                        <a class="knob"></a>
-                        <div class="after"></div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="col-sm-12 col-xs-12 none-padding">
-            <div class="col-sm-6 col-xs-6 none-padding">
-               <div class="before2"></div>
-            </div>
-            <div class="col-sm-6 col-xs-6 none-padding">
-               <div class="before1"></div>
-            </div>
-         </div>
-      </div>
-      </div>
-      <!--===========-->
-      <!--============================-->
-      <!--============================-->
-      </div>
-      <!--end banner-->
-      <!--=============================-->
-      <div class="container none-padding">
-         <p class="tintuc p-add add2">TUYỂN DỤNG</p>
-         <div class="col-sm-12 col-xs-12 none-padding">
-            <table class="tuyendung">
-               <thead>
-                  <tr>
-                     <th>Vị trí</th>
-                     <th>Địa điểm</th>
-                     <th>Số lượng</th>
-                     <th>Hạn hồ sơ</th>
-                     <th>Mức lương</th>
-                  </tr>
-                  <tr class="line-th">
-                     <th>
-                        <p class="circle-green">
-                        </p>
-                     </th>
-                     <th>
-                        <p class="circle-blue">
-                        </p>
-                     </th>
-                     <th>
-                        <p class="circle-aqua">
-                        </p>
-                     </th>
-                     <th>
-                        <p class="circle-red">
-                        </p>
-                     </th>
-                     <th>
-                        <p class="circle-orange">
-                        </p>
-                     </th>
-                  </tr>
-               </thead>
-               <tfoot>
-                  <tr class="click">
-                     <td class="col-sm-4 col-xs-4 none-padding green">
-                        <a href="#" class="link-a">Kỹ sư phần mềm(SoftWare Engineer)</a>
-                     </td>
-                     <td class="col-sm-2 col-xs-2 none-padding blue">
-                        Hà nội
-                     </td>
-                     <td class="col-sm-2 col-xs-2 none-padding aqua">
-                        100
-                     </td>
-                     <td class="col-sm-2 col-xs-2 none-padding red">
-                        22/12/2016
-                     </td>
-                     <td class="col-sm-2 col-xs-2 none-padding orange">
-                        8.000.000-12.000.000
-                     </td>
-                  </tr>
-                  <!---->
-                  <tr >
-                     <td colspan="5" class="td-show">
-                        <p class="p-left" >
-                           <b>Trung tâm Teca Soft&Tech cần tuyển 100 Chuyên viên, Cộng tác viên phát triển phần mềm, kiểm khử Java, C#, C/C++, vhdl, Sharepoint
-                           Lập trình trên Windows application, Web application.</b>.</br>
-                           – Sử dụng ngôn ngữ C#, Java, JavaScript, C/C++, VHDL, Android, IOS.</br>
-                           – Lập trình điều khiển tự động hóa, điện tử nhúng.</br>
-                           – Lập trình các ứng dụng di động.</br>
-                           – Lập trình UX/UI sử dụng -HTML5/CSS3.</br>
-                           – Lập trình UX/UI sử dụng Jquery.</br>
-                           <b><i>Yêu cầu chung</i></b></br>
-                           – Có kiến thức về cơ sở dữ liệu: Oracle, SQL Server, MSQL.</br>
-                           – Có tư duy logic tốt và tinh thần trách nhiệm với công việc cao.</br>
-                           – Có khả năng làm việc nhóm tốt cũng như độc lập giải quyết vấn đề.</br>
-                           <b><i>Yêu cầu lập trình Java</i></b></br>
-                           – Có kiến thức về lập trình JAVA: Hibernate, Spring, Struts, ZK, Vaadin, …</br>
-                           – Có kiến thức về HTML, CSS, Javascript, jQuery.</br>
-                           <b><i>Yêu cầu lập trình .NET</i></b></br>
-                           – Có kỹ năng tham gia phát triển các dự án .NET trên nền C#.</br>
-                           – Có kiến thức về Sharepoint</br>
-                           – Lập trình UX/UI sử dụng -HTML5/CSS3.</br>
-                           – Lập trình UX/UI sử dụng Jquery.</br>
-                           <b><i>Yêu cầu an toàn thông tin</i></b></br>
-                           – Kỹ năng phát triển phần mềm trên Linux</br>
-                           – Kiến thức cơ bản về bảo mật, an toàn thông tin.</br>
-                           – Có khả năng sử dụng ngôn ngữ: Java, C/C++, Javascript, Android, IOS</br>
-                           <b><i>Kiểm thử</i></b></br>
-                           – Có kỹ năng viết Testcase, kiểm thử.</br>
-                           <b><i>Quyền lợi</i></b></br>
-                           – Được tham gia BHXH theo quy định.</br>
-                           – Đầy đủ cơ chế chính sách theo quy định của nhà nước.</br>
-                           – Nhiều cơ hội thăng tiến và phát triển sự nghiệp, nhiều cơ hội hợp tác và làm việc với các công ty công nghệ cao hàng đầu thế giới.</br>
-                           – Được tạo điều kiện để đầu tư nghiên cứu phát triển sản phẩm thực tiễn ứng dụng công nghệ cao trong quốc phòng và phục kinh tế quốc dân.</br>
-                           – Có cơ hội được đi học tập đào tạo trong và ngoài nước.</br>
-                           – Môi trường làm việc thân thiện, thách thức, thú vị.
-                           </br>
-                           – Có cơ hội phát triển bản thân.</br>
-                           – Năm có 15 tháng lương.</br>
-                           – Được hưởng đầy đủ các chế độ phúc lợi xã hội, thưởng các ngày lễ, tết, nghỉ mát.</br>
-                        </p>
-                        <div class="col-sm-12 col-xs-12 none-padding scroll-bottom">
-                           <h3>Liên hệ</h3>
-                           <div class="col-sm-3 col-xs-3 none-padding">
-                              <ul>
-                                 <li>
-                                    <img src="images/user.png">
-                                    Nguyen Thu Thao
-                                 </li>
-                                 <li>
-                                    <img src="images/phone.png">
-                                    0982 909090
-                                 </li>
-                              </ul>
-                           </div>
-                           <div class="col-sm-8 col-xs-8 none-padding">
-                              <ul>
-                                 <li>
-                                    <img src="images/email.png">
-                                    thaont@tecapro.com.vn
-                                 </li>
-                                 <li>
-                                    <img src="images/address.png">
-                                    <a href="lien_he.html">
-                                    Tòa nhà CIT Số 15 Đường Duy Tân, Dịch Vọng Hậu, Cầu Giấy, Hà Nội.
-                                    </a>
-                                 </li>
-                              </ul>
-                           </div>
-                           <div class="col-sm-1 col-xs-1 none-padding">
-                              <button>
-                                 <img src="images/thugon.png">
-                                 <p>Thu gọn</p>
-                              </button>
-                           </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <link rel="shortcut icon" href="images/logo.png">
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="bootstrap/owl.carousel.2.0.0-beta.2.4/owl.carousel.js"></script>
+        <script src="bootstrap/owl.carousel.2.0.0-beta.2.4/owl.carousel.min.js"></script>
+        <link href="css/style_Home.css" rel="stylesheet" />
+        <script src="js/jssor.slider-21.1.6.mini.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="css/component.css" />
+        <script src="js/modernizr.custom.js"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/menu_left.js"></script>
+        <!-- <script src="js/init.js"></script> -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <title>Tuyển dụng</title>
+        <script>
+            function Clicktr(a)
+            {
+            	var chitiet =$(a).find(".chitiet-tuyendung");
+            	var display = chitiet.css("display");
+            	$(".chitiet-tuyendung").hide();
+            	chitiet.css("display",display);
+            	$(a).find(".chitiet-tuyendung").slideToggle();
+            }
+            $(document).ready(function(){
+               $(".tbl-tuyendung tr:even").css("background-color", "#f0f0f0");
+            
+            });
+        </script>
+        <script>
+            (function($){
+            $(function(){
+             
+                (function( $ ){
+                    $.fn.slideToPos = function() {
+            		  
+                      var left = $(this).position().left + ($(this).width() / 2) - ($(".menu1 a.knob").width() / 2) - 2;
+                      $(".menu1 a.knob").css("left", left);
+                     
+            	  $(".before").css("width", left+10);
+                      return this;
+                    }; 
+                 })( jQuery );
+             	   var url = window.location;  
+                  $('ul li.category a[href="' + url + '"]').parent().addClass('active');
+                  $('ul li.category a').filter(function () {
+                     return this.href == url;		
+                }).parent().addClass('active').slideToPos(); 	    
+                 e.preventDefault();
+                 $(this).slideToPos();
+            
+            }); // end of document ready
+            })(jQuery); // end of jQuery name space
+        </script>
+    </head>
+    <body class="pushmenu-push">
+        <!-- head -->
+        <div class="container-fuild none-padding">
+            <div class="container-fuild none-padding contaier-head none-mobile">
+                <div class=" container header">
+                    <div class=" col-sm-12 col-xs-12 none-padding">
+                        <div class=" col-sm-8 col-xs-8 none-padding">
+                            <p class="addFont">CÔNG TY TNHH MỘT THÀNH VIÊN - ỨNG DỤNG KỸ THUẬT VÀ SẢN XUẤT</p>
                         </div>
-         </div>
-         </td>
-         </tr>
-         <!---->
-         <tr>
-         <tr>
-         <td class="col-sm-4 col-xs-4 none-padding green">
-         <a href="#">Chuyên viên thiết kế đồ họa(Designer)</a>
-         </td>
-         <td class=" col-sm-2 col-xs-2 none-padding blue">
-         Tp.HCM
-         </td>
-         <td class="col-sm-2 col-xs-2 none-padding aqua">
-         100
-         </td>
-         <td class="col-sm-2 col-xs-2 none-padding red">
-         22/12/2016
-         </td>
-         <td class="col-sm-2 col-xs-2 none-padding orange">
-         Thỏa thuận
-         </td>
-         </tr>
-         <!---->
-         <tr>
-         <td class="col-sm-4 col-xs-4 none-padding green">
-         <a href="#">Cộng tác viên Tester</a>
-         </td>
-         <td class="col-sm-2 col-xs-2 none-padding blue">
-         Hà nội
-         </td>
-         <td class="col-sm-2 col-xs-2 none-padding aqua">
-         100
-         </td>
-         <td class="col-sm-2 col-xs-2 none-padding red">
-         22/12/2016
-         </td>
-         <td class="col-sm-2 col-xs-2 none-padding orange">
-         5.000.000
-         </td>
-         </tr>
-         <!---->
-         <tr>
-         <td class="col-sm-4 col-xs-4 none-padding green">
-         <a href="#">Nhân viên hành chính</a>
-         </td>
-         <td class="col-sm-2 col-xs-2 none-padding blue">
-         Hà nội
-         </td>
-         <td class="col-sm-2 col-xs-2 none-padding aqua">
-         1
-         </td>
-         <td class="col-sm-2 col-xs-2 none-padding red">
-         22/12/2016
-         </td>
-         <td class="col-sm-2 col-xs-2 none-padding orange">
-         thỏa thuận
-         </td>
-         </tr>
-         </tfoot>
-         </table>
-      </div>
-      <!--=======đối tács============-->
-      </div><!--end container-->
-      <!--===========menu-bottom=================-->
-      <div class="col-sm-12 col-xs-12 none-padding " >
-         <div class="container-fuild none-padding content-a ">
-            <div class=" container" >
-               <div class="col-sm-12 col-xs-12 none-padding ">
-                  <ul class="ul-home">
-                     <li>
-                        <a href="Home.html">
-                           <p>Trang chủ</p>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="tong_quan.html">
-                           <p>Về chúng tôi</p>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="lien_he.html">
-                           <p>Liên hệ</p>
-                        </a>
-                     </li>
-                  </ul>
-               </div>
+                        <div class="col-sm-1 col-xs-1 none-padding">
+                            <!-- <img src="images/search.png" class="img-search"> -->
+                            <div class="dropdown">
+                                <button class="dropbtn"><img src="images/search.png" class="img-search flag-show"><img src="images/en.svg" class="img-search flag-hidden"></button>
+                                <div class="dropdown-content">
+                                    <a href="#">Tiếng Việt</a>
+                                    <a href="#">English</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-3 none-padding">
+                            <div class="input-group">			
+                                <input type="text" class="form-control">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">Tìm kiếm</button>
+                                </span>
+                            </div>
+                            <!-- /input-group -->
+                        </div>
+                    </div>
+                </div>
+                <!--end header-->
             </div>
-         </div>
-         <!--=============footer===============-->
-         <div class="col-sm-12 col-xs-12 none-padding container-fuild none-padding footer">
-            <div class=" container none-padding " >
-               <div class="col-sm-8 col-xs-8 none-padding">
-                  <p class="tbl-p">
-                     Bản quyền 2016 thuộc về Công ty TNHH MTV  Ứng dụng Kỹ thuật và Sản xuất <br>
-                     Địa chỉ : 18A - Đường Cộng Hoà, Phường 12, Quận Tân Bình, TP.Hồ Chí Minh<br>
-                     Điện thoại : (84-8)-3811.0181,  (84-8)-3811.0718     Fax: (84-8)-3811.0688  <br>
-                     Email : tecapro@tecapro.com.vn   Web :  www.tecapro.com.vn
-                  </p>
-               </div>
-               <div class="col-sm-4 col-xs-4 none-padding">
-                  <ul class="ul-footer">
-                     <li>
-                        Lượt truy cập : 78910
-                     </li>
-                     <li class="li-center">
-                        |
-                     </li>
-                     <li>
-                        Số  người online : 789
-                     </li>
-                  </ul>
-               </div>
+            <div class="col-xs-12 none-padding none-desktop boder-head">
+                <div class="col-xs-12 none-padding none-desktop img-fix">
+                    <div class="col-sm-1 col-xs-2 none-padding  main">
+                        <section class="buttonset">
+                            <div id="nav_list"></div>
+                        </section>
+                        <!-- End Content -->
+                    </div>
+                    <a href="#">
+                    <img src="images/banner_mobile.svg" class="col-sm-11 col-xs-10 none-padding banner-mobile">
+                    <img src="images/banner_ipad.svg" class="col-sm-11 col-xs-10 none-padding banner-ipad">
+                    </a>
+                </div>
             </div>
-         </div>
-      </div>
-      <!--============================-->
-   </body>
+            <!--=======================-->
+            <div class="container-fuild none-padding">
+                <div class=" container menu">
+                    <div class="col-sm-2 col-xs-12 none-padding">
+                        <img src="images/logo.png" class="img-logo"/>
+                    </div>
+                    <div class="col-sm-10 col-xs-12 none-padding ">
+                        <div class="pushmenu-push">
+                            <div class="pushmenu pushmenu-left">
+                                <div class="menu1">
+                                    <div class="slider">
+                                        <nav>
+                                            <ul class="gw-nav gw-nav-list">
+                                                <li class="category">
+                                                    <div class="input-group ">			
+                                                        <input type="text" class="form-control" placeholder="Nhập từ khóa cần tìm kiếm">
+                                                        <span class="input-group-btn">
+                                                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                                <li class="category " ><a href="Home.html">Trang chủ</a></li>
+                                                <li class="category">
+                                                    <a href="tong_quan.html" class="parent">Giới thiệu</a>
+                                                    <ul class="sub-menu">
+                                                        <li><a href="tong_quan.html">Tổng quan</a></li>
+                                                        <li><a href="so_do_to_chuc.html">Sơ đồ tổ chức</a></li>
+                                                        <li><a href="truyen_thong_tecapro.html">Truyền thống Tecapro</a></li>
+                                                        <li><a href="#">Profile</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="category ">
+                                                    <a href="#" class="parent">Đơn vị thành viên</a>
+                                                    <ul class="sub-menu">
+                                                        <li><a href="don_vi_Tecapro_Telecom.html">Công ty CP Tecapro - Telecom</a></li>
+                                                        <li><a href="don_vi_CB_DV_MT_ECO.html">Công ty CP CN-DV Môi trường ECO</a></li>
+                                                        <li><a href="don_vi_xi_nghiep_vat_lieu_TB_CN.html">XN Vật liệu và Thiết bị công nghiệp</a></li>
+                                                        <li><a href="don_vi_cp_CNTT.html">Công ty CP CNTT &amp; Truyền thông</a></li>
+                                                        <li><a href="don_vi_xi_nghiep_dich_vu_thuong_mai.html">XN Dịch vụ Kỹ thuật &amp; Thương mại</a></li>
+                                                        <li><a href="don_vi_xi_nghiep_CT.html">XN Xây dựng công trình</a></li>
+                                                        <li><a href="don_vi_chi_nhanh_HN.html">Chi nhánh Hà Nội</a></li>
+                                                        <li><a href="don_vi_chi_nhanh_Da_Nang.html">Chi nhánh Đà Nẵng</a></li>
+                                                        <li><a href="don_vi_chi_nhanh_Vung_Tau.html">Chi nhánh Vũng Tàu </a></li>
+                                                        <li><a href="don_vi_CH_LB_Nga.html">VPĐD tại CH Liên Bang Nga</a></li>
+                                                        <li><a href="don_vi_MTV_TecaWord.html">Công ty TNHH MTV TECAWORLD</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="category ">
+                                                    <a href="#" class="parent">Tin tức & Sự kiện</a>
+                                                    <ul class="sub-menu">
+                                                        <li><a href="tin_tuc_su_kien.html">Tin Tecapro</a></li>
+                                                        <li><a href="#">Tin các đơn vị thành viên</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="category ">
+                                                    <a href="#home1" class="parent">Lĩnh vực hoạt động</a>
+                                                    <ul class="sub-menu">
+                                                        <li><a href="linh_vuc_hoat_dong.html">Công nghệ thông tin</a></li>
+                                                        <li><a href="linh_vuc_hoat_dong_dien_tu_vien_thong.html">Điện tử viễn thông</a></li>
+                                                        <li><a href="linh_vuc_hoat_dong_cong_nghe_MT.html">Công nghệ môi trường</a></li>
+                                                        <li><a href="linh_vuc_hoat_dong_xay_dung_CT.html">Xây dựng công trình</a></li>
+                                                        <li><a href="linh_vuc_hoat_dong_dich_vu.html">Dịch vụ</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="category ">
+                                                    <a href="#" class="parent">Thư viện</a>
+                                                    <ul class="sub-menu">
+                                                        <li><a href="thu_vien_video.html">Thư viện video</a></li>
+                                                        <li><a href="thu_vien_hinh_anh.html">Thư viện hình ảnh</a></li>
+                                                        <li><a href="thu_vien_tai_lieu.html">Thư viện download</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="category ">
+                                                    <a href="#" class="parent">Liên kết</a>
+                                                    <ul class="sub-menu">
+                                                        <li><a href="chung_khoan.html">Ngoại tệ & Chứng khoán</a></li>
+                                                        <li><a href="thoi_tiet.html">Thời tiết</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="category">  <a href="tuyen_dung.html">Tuyển dụng</a>	
+                                                </li>
+                                                <li class="category "><a href="lien_he.html">Liên hệ</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                        <div class="container-fuild bar">
+                                            <div class="before"></div>
+                                            <a class="knob"></a>
+                                            <div class="after"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-xs-12 none-padding">
+                    <div class="col-sm-6 col-xs-6 none-padding">
+                        <div class="before2"></div>
+                    </div>
+                    <div class="col-sm-6 col-xs-6 none-padding">
+                        <div class="before1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end head===========-->
+        <!--============================-->
+        <!--=============================-->
+        <div class="container none-padding padding-mobile">
+            <p class="tintuc p-add add2">TUYỂN DỤNG</p>
+            <div class="col-sm-12 col-xs-12 none-padding tuyendung-PC">
+                <table class="tuyendung">
+                    <thead>
+                        <tr>
+                            <th>Vị trí</th>
+                            <th>Địa điểm</th>
+                            <th>Số lượng</th>
+                            <th>Hạn hồ sơ</th>
+                            <th>Mức lương</th>
+                        </tr>
+                        <tr class="line-th">
+                            <th>
+                                <p class="circle-green">
+                                </p>
+                            </th>
+                            <th>
+                                <p class="circle-blue">
+                                </p>
+                            </th>
+                            <th>
+                                <p class="circle-aqua">
+                                </p>
+                            </th>
+                            <th>
+                                <p class="circle-red">
+                                </p>
+                            </th>
+                            <th>
+                                <p class="circle-orange">
+                                </p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr class="click">
+                            <td class="col-sm-4 col-xs-4 none-padding green">
+                                <a href="#" class="link-a">Kỹ sư phần mềm(SoftWare Engineer)</a>
+                            </td>
+                            <td class="col-sm-2 col-xs-2 none-padding blue">
+                                Hà nội
+                            </td>
+                            <td class="col-sm-2 col-xs-2 none-padding aqua">
+                                100
+                            </td>
+                            <td class="col-sm-2 col-xs-2 none-padding red">
+                                22/12/2016
+                            </td>
+                            <td class="col-sm-2 col-xs-2 none-padding orange">
+                                8.000.000-12.000.000
+                            </td>
+                        </tr>
+                        <!---->
+                        <tr >
+                            <td colspan="5" class="td-show">
+                                <p class="p-left" >
+                                    <b>Trung tâm Teca Soft&Tech cần tuyển 100 Chuyên viên, Cộng tác viên phát triển phần mềm, kiểm khử Java, C#, C/C++, vhdl, Sharepoint
+                                    Lập trình trên Windows application, Web application.</b>.</br>
+                                    – Sử dụng ngôn ngữ C#, Java, JavaScript, C/C++, VHDL, Android, IOS.</br>
+                                    – Lập trình điều khiển tự động hóa, điện tử nhúng.</br>
+                                    – Lập trình các ứng dụng di động.</br>
+                                    – Lập trình UX/UI sử dụng -HTML5/css3.</br>
+                                    – Lập trình UX/UI sử dụng Jquery.</br>
+                                    <b><i>Yêu cầu chung</i></b></br>
+                                    – Có kiến thức về cơ sở dữ liệu: Oracle, SQL Server, MSQL.</br>
+                                    – Có tư duy logic tốt và tinh thần trách nhiệm với công việc cao.</br>
+                                    – Có khả năng làm việc nhóm tốt cũng như độc lập giải quyết vấn đề.</br>
+                                    <b><i>Yêu cầu lập trình Java</i></b></br>
+                                    – Có kiến thức về lập trình JAVA: Hibernate, Spring, Struts, ZK, Vaadin, …</br>
+                                    – Có kiến thức về HTML, css, Javascript, jQuery.</br>
+                                    <b><i>Yêu cầu lập trình .NET</i></b></br>
+                                    – Có kỹ năng tham gia phát triển các dự án .NET trên nền C#.</br>
+                                    – Có kiến thức về Sharepoint</br>
+                                    – Lập trình UX/UI sử dụng -HTML5/css3.</br>
+                                    – Lập trình UX/UI sử dụng Jquery.</br>
+                                    <b><i>Yêu cầu an toàn thông tin</i></b></br>
+                                    – Kỹ năng phát triển phần mềm trên Linux</br>
+                                    – Kiến thức cơ bản về bảo mật, an toàn thông tin.</br>
+                                    – Có khả năng sử dụng ngôn ngữ: Java, C/C++, Javascript, Android, IOS</br>
+                                    <b><i>Kiểm thử</i></b></br>
+                                    – Có kỹ năng viết Testcase, kiểm thử.</br>
+                                    <b><i>Quyền lợi</i></b></br>
+                                    – Được tham gia BHXH theo quy định.</br>
+                                    – Đầy đủ cơ chế chính sách theo quy định của nhà nước.</br>
+                                    – Nhiều cơ hội thăng tiến và phát triển sự nghiệp, nhiều cơ hội hợp tác và làm việc với các công ty công nghệ cao hàng đầu thế giới.</br>
+                                    – Được tạo điều kiện để đầu tư nghiên cứu phát triển sản phẩm thực tiễn ứng dụng công nghệ cao trong quốc phòng và phục kinh tế quốc dân.</br>
+                                    – Có cơ hội được đi học tập đào tạo trong và ngoài nước.</br>
+                                    – Môi trường làm việc thân thiện, thách thức, thú vị.
+                                    </br>
+                                    – Có cơ hội phát triển bản thân.</br>
+                                    – Năm có 15 tháng lương.</br>
+                                    – Được hưởng đầy đủ các chế độ phúc lợi xã hội, thưởng các ngày lễ, tết, nghỉ mát.</br>
+                                </p>
+                                <div class="col-sm-12 col-xs-12 none-padding scroll-bottom">
+                                    <h3>Liên hệ</h3>
+                                    <div class="col-sm-3 col-xs-3 none-padding">
+                                        <ul>
+                                            <li>
+                                                <img src="images/user.png">
+                                                Nguyen Thu Thao
+                                            </li>
+                                            <li>
+                                                <img src="images/phone.png">
+                                                0982 909090
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-8 col-xs-8 none-padding">
+                                        <ul>
+                                            <li>
+                                                <img src="images/email.png">
+                                                thaont@tecapro.com.vn
+                                            </li>
+                                            <li>
+                                                <img src="images/address.png">
+                                                <a href="lien_he.html">
+                                                Tòa nhà CIT Số 15 Đường Duy Tân, Dịch Vọng Hậu, Cầu Giấy, Hà Nội.
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-1 col-xs-1 none-padding">
+                                        <button>
+                                            <img src="images/thugon.png">
+                                            <p>Thu gọn</p>
+                                        </button>
+                                    </div>
+                                </div>
+            </div>
+            </td>
+            </tr>
+            <!---->
+            <tr>
+            <tr>
+            <td class="col-sm-4 col-xs-4 none-padding green">
+            <a href="#">Chuyên viên thiết kế đồ họa(Designer)</a>
+            </td>
+            <td class=" col-sm-2 col-xs-2 none-padding blue">
+            Tp.HCM
+            </td>
+            <td class="col-sm-2 col-xs-2 none-padding aqua">
+            100
+            </td>
+            <td class="col-sm-2 col-xs-2 none-padding red">
+            22/12/2016
+            </td>
+            <td class="col-sm-2 col-xs-2 none-padding orange">
+            Thỏa thuận
+            </td>
+            </tr>
+            <!---->
+            <tr>
+            <td class="col-sm-4 col-xs-4 none-padding green">
+            <a href="#">Cộng tác viên Tester</a>
+            </td>
+            <td class="col-sm-2 col-xs-2 none-padding blue">
+            Hà nội
+            </td>
+            <td class="col-sm-2 col-xs-2 none-padding aqua">
+            100
+            </td>
+            <td class="col-sm-2 col-xs-2 none-padding red">
+            22/12/2016
+            </td>
+            <td class="col-sm-2 col-xs-2 none-padding orange">
+            5.000.000
+            </td>
+            </tr>
+            <!---->
+            <tr>
+            <td class="col-sm-4 col-xs-4 none-padding green">
+            <a href="#">Nhân viên hành chính</a>
+            </td>
+            <td class="col-sm-2 col-xs-2 none-padding blue">
+            Hà nội
+            </td>
+            <td class="col-sm-2 col-xs-2 none-padding aqua">
+            1
+            </td>
+            <td class="col-sm-2 col-xs-2 none-padding red">
+            22/12/2016
+            </td>
+            <td class="col-sm-2 col-xs-2 none-padding orange">
+            thỏa thuận
+            </td>
+            </tr>
+            </tfoot>
+            </table>
+        </div>
+        <!-- tuyen dung mobile -->
+        <div class="col-xs-12 none-padding tuyendung-mobile">
+            <table class="tbl-tuyendung">
+                <tr onclick="Clicktr(this);">
+                    <td>
+                        <div class="col-xs-12 none-padding tieude-tuyendung">Cộng tác viên tester</div>
+                        <div class="col-xs-6 none-padding">
+                            <div class="col-xs-6 none-padding">
+                                Địa điểm:
+                            </div>
+                            <div class="col-xs-6 none-padding ">
+                                Hà Nội
+                            </div>
+                            <div class="col-xs-6 none-padding">
+                                Mức Lương:
+                            </div>
+                            <div class="col-xs-6 none-padding orange">
+                                8-12 triệu
+                            </div>
+                        </div>
+                        <div class="col-xs-6 none-padding">
+                            <div class="col-xs-6 none-padding">
+                                Số lượng:
+                            </div>
+                            <div class="col-xs-6 none-padding ">
+                                100
+                            </div>
+                            <div class="col-xs-6 none-padding">
+                                Hạn nộp HS:
+                            </div>
+                            <div class="col-xs-6 none-padding red">
+                                21/12/2016
+                            </div>
+                        </div>
+                        <div class="col-xs-12 none-padding chitiet-tuyendung">
+                            <b>Trung tâm Teca Soft&Tech cần tuyển 100 Chuyên viên, Cộng tác viên phát triển phần mềm, kiểm khử Java, C#, C/C++, vhdl, Sharepoint
+                            Lập trình trên Windows application, Web application.</b>.</br>
+                            – Sử dụng ngôn ngữ C#, Java, JavaScript, C/C++, VHDL, Android, IOS.</br>
+                            – Lập trình điều khiển tự động hóa, điện tử nhúng.</br>
+                            – Lập trình các ứng dụng di động.</br>
+                            – Lập trình UX/UI sử dụng -HTML5/css3.</br>
+                            – Lập trình UX/UI sử dụng Jquery.</br>
+                            <b><i>Yêu cầu chung</i></b></br>
+                            – Có kiến thức về cơ sở dữ liệu: Oracle, SQL Server, MSQL.</br>
+                            – Có tư duy logic tốt và tinh thần trách nhiệm với công việc cao.</br>
+                            – Có khả năng làm việc nhóm tốt cũng như độc lập giải quyết vấn đề.</br>
+                            <b><i>Yêu cầu lập trình Java</i></b></br>
+                            – Có kiến thức về lập trình JAVA: Hibernate, Spring, Struts, ZK, Vaadin, …</br>
+                            – Có kiến thức về HTML, css, Javascript, jQuery.</br>
+                            <b><i>Yêu cầu lập trình .NET</i></b></br>
+                            – Có kỹ năng tham gia phát triển các dự án .NET trên nền C#.</br>
+                            – Có kiến thức về Sharepoint</br>
+                            – Lập trình UX/UI sử dụng -HTML5/css3.</br>
+                            – Lập trình UX/UI sử dụng Jquery.</br>
+                            <b><i>Yêu cầu an toàn thông tin</i></b></br>
+                            – Kỹ năng phát triển phần mềm trên Linux</br>
+                            – Kiến thức cơ bản về bảo mật, an toàn thông tin.</br>
+                            – Có khả năng sử dụng ngôn ngữ: Java, C/C++, Javascript, Android, IOS</br>
+                            <b><i>Kiểm thử</i></b></br>
+                            – Có kỹ năng viết Testcase, kiểm thử.</br>
+                            <b><i>Quyền lợi</i></b></br>
+                            – Được tham gia BHXH theo quy định.</br>
+                            – Đầy đủ cơ chế chính sách theo quy định của nhà nước.</br>
+                            – Nhiều cơ hội thăng tiến và phát triển sự nghiệp, nhiều cơ hội hợp tác và làm việc với các công ty công nghệ cao hàng đầu thế giới.</br>
+                            – Được tạo điều kiện để đầu tư nghiên cứu phát triển sản phẩm thực tiễn ứng dụng công nghệ cao trong quốc phòng và phục kinh tế quốc dân.</br>
+                            – Có cơ hội được đi học tập đào tạo trong và ngoài nước.</br>
+                            – Môi trường làm việc thân thiện, thách thức, thú vị.
+                            </br>
+                            – Có cơ hội phát triển bản thân.</br>
+                            – Năm có 15 tháng lương.</br>
+                            – Được hưởng đầy đủ các chế độ phúc lợi xã hội, thưởng các ngày lễ, tết, nghỉ mát.</br>
+                        </div>
+                    </td>
+                </tr>
+                <tr onclick="Clicktr(this);">
+                    <td>
+                        <div class="col-xs-12 none-padding tieude-tuyendung">Cộng tác viên tester</div>
+                        <div class="col-xs-6 none-padding">
+                            <div class="col-xs-6 none-padding">
+                                Địa điểm:
+                            </div>
+                            <div class="col-xs-6 none-padding ">
+                                Hà Nội
+                            </div>
+                            <div class="col-xs-6 none-padding">
+                                Mức Lương:
+                            </div>
+                            <div class="col-xs-6 none-padding orange">
+                                8-12 triệu
+                            </div>
+                        </div>
+                        <div class="col-xs-6 none-padding">
+                            <div class="col-xs-6 none-padding">
+                                Số lượng:
+                            </div>
+                            <div class="col-xs-6 none-padding ">
+                                100
+                            </div>
+                            <div class="col-xs-6 none-padding">
+                                Hạn nộp HS:
+                            </div>
+                            <div class="col-xs-6 none-padding red">
+                                21/12/2016
+                            </div>
+                        </div>
+                        <div class="col-xs-12 none-padding chitiet-tuyendung">
+                            <b>Trung tâm Teca Soft&Tech cần tuyển 100 Chuyên viên, Cộng tác viên phát triển phần mềm, kiểm khử Java, C#, C/C++, vhdl, Sharepoint
+                            Lập trình trên Windows application, Web application.</b>.</br>
+                            – Sử dụng ngôn ngữ C#, Java, JavaScript, C/C++, VHDL, Android, IOS.</br>
+                            – Lập trình điều khiển tự động hóa, điện tử nhúng.</br>
+                            – Lập trình các ứng dụng di động.</br>
+                            – Lập trình UX/UI sử dụng -HTML5/css3.</br>
+                            – Lập trình UX/UI sử dụng Jquery.</br>
+                            <b><i>Yêu cầu chung</i></b></br>
+                            – Có kiến thức về cơ sở dữ liệu: Oracle, SQL Server, MSQL.</br>
+                            – Có tư duy logic tốt và tinh thần trách nhiệm với công việc cao.</br>
+                            – Có khả năng làm việc nhóm tốt cũng như độc lập giải quyết vấn đề.</br>
+                            <b><i>Yêu cầu lập trình Java</i></b></br>
+                            – Có kiến thức về lập trình JAVA: Hibernate, Spring, Struts, ZK, Vaadin, …</br>
+                            – Có kiến thức về HTML, css, Javascript, jQuery.</br>
+                            <b><i>Yêu cầu lập trình .NET</i></b></br>
+                            – Có kỹ năng tham gia phát triển các dự án .NET trên nền C#.</br>
+                            – Có kiến thức về Sharepoint</br>
+                            – Lập trình UX/UI sử dụng -HTML5/css3.</br>
+                            – Lập trình UX/UI sử dụng Jquery.</br>
+                            <b><i>Yêu cầu an toàn thông tin</i></b></br>
+                            – Kỹ năng phát triển phần mềm trên Linux</br>
+                            – Kiến thức cơ bản về bảo mật, an toàn thông tin.</br>
+                            – Có khả năng sử dụng ngôn ngữ: Java, C/C++, Javascript, Android, IOS</br>
+                            <b><i>Kiểm thử</i></b></br>
+                            – Có kỹ năng viết Testcase, kiểm thử.</br>
+                            <b><i>Quyền lợi</i></b></br>
+                            – Được tham gia BHXH theo quy định.</br>
+                            – Đầy đủ cơ chế chính sách theo quy định của nhà nước.</br>
+                            – Nhiều cơ hội thăng tiến và phát triển sự nghiệp, nhiều cơ hội hợp tác và làm việc với các công ty công nghệ cao hàng đầu thế giới.</br>
+                            – Được tạo điều kiện để đầu tư nghiên cứu phát triển sản phẩm thực tiễn ứng dụng công nghệ cao trong quốc phòng và phục kinh tế quốc dân.</br>
+                            – Có cơ hội được đi học tập đào tạo trong và ngoài nước.</br>
+                            – Môi trường làm việc thân thiện, thách thức, thú vị.
+                            </br>
+                            – Có cơ hội phát triển bản thân.</br>
+                            – Năm có 15 tháng lương.</br>
+                            – Được hưởng đầy đủ các chế độ phúc lợi xã hội, thưởng các ngày lễ, tết, nghỉ mát.</br>
+                        </div>
+                    </td>
+                </tr>
+                <tr onclick="Clicktr(this);">
+                    <td>
+                        <div class="col-xs-12 none-padding tieude-tuyendung">Cộng tác viên tester</div>
+                        <div class="col-xs-6 none-padding">
+                            <div class="col-xs-6 none-padding">
+                                Địa điểm:
+                            </div>
+                            <div class="col-xs-6 none-padding ">
+                                Hà Nội
+                            </div>
+                            <div class="col-xs-6 none-padding">
+                                Mức Lương:
+                            </div>
+                            <div class="col-xs-6 none-padding orange">
+                                8-12 triệu
+                            </div>
+                        </div>
+                        <div class="col-xs-6 none-padding">
+                            <div class="col-xs-6 none-padding">
+                                Số lượng:
+                            </div>
+                            <div class="col-xs-6 none-padding ">
+                                100
+                            </div>
+                            <div class="col-xs-6 none-padding">
+                                Hạn nộp HS:
+                            </div>
+                            <div class="col-xs-6 none-padding red">
+                                21/12/2016
+                            </div>
+                        </div>
+                        <div class="col-xs-12 none-padding chitiet-tuyendung">
+                            <b>Trung tâm Teca Soft&Tech cần tuyển 100 Chuyên viên, Cộng tác viên phát triển phần mềm, kiểm khử Java, C#, C/C++, vhdl, Sharepoint
+                            Lập trình trên Windows application, Web application.</b>.</br>
+                            – Sử dụng ngôn ngữ C#, Java, JavaScript, C/C++, VHDL, Android, IOS.</br>
+                            – Lập trình điều khiển tự động hóa, điện tử nhúng.</br>
+                            – Lập trình các ứng dụng di động.</br>
+                            – Lập trình UX/UI sử dụng -HTML5/css3.</br>
+                            – Lập trình UX/UI sử dụng Jquery.</br>
+                            <b><i>Yêu cầu chung</i></b></br>
+                            – Có kiến thức về cơ sở dữ liệu: Oracle, SQL Server, MSQL.</br>
+                            – Có tư duy logic tốt và tinh thần trách nhiệm với công việc cao.</br>
+                            – Có khả năng làm việc nhóm tốt cũng như độc lập giải quyết vấn đề.</br>
+                            <b><i>Yêu cầu lập trình Java</i></b></br>
+                            – Có kiến thức về lập trình JAVA: Hibernate, Spring, Struts, ZK, Vaadin, …</br>
+                            – Có kiến thức về HTML, css, Javascript, jQuery.</br>
+                            <b><i>Yêu cầu lập trình .NET</i></b></br>
+                            – Có kỹ năng tham gia phát triển các dự án .NET trên nền C#.</br>
+                            – Có kiến thức về Sharepoint</br>
+                            – Lập trình UX/UI sử dụng -HTML5/css3.</br>
+                            – Lập trình UX/UI sử dụng Jquery.</br>
+                            <b><i>Yêu cầu an toàn thông tin</i></b></br>
+                            – Kỹ năng phát triển phần mềm trên Linux</br>
+                            – Kiến thức cơ bản về bảo mật, an toàn thông tin.</br>
+                            – Có khả năng sử dụng ngôn ngữ: Java, C/C++, Javascript, Android, IOS</br>
+                            <b><i>Kiểm thử</i></b></br>
+                            – Có kỹ năng viết Testcase, kiểm thử.</br>
+                            <b><i>Quyền lợi</i></b></br>
+                            – Được tham gia BHXH theo quy định.</br>
+                            – Đầy đủ cơ chế chính sách theo quy định của nhà nước.</br>
+                            – Nhiều cơ hội thăng tiến và phát triển sự nghiệp, nhiều cơ hội hợp tác và làm việc với các công ty công nghệ cao hàng đầu thế giới.</br>
+                            – Được tạo điều kiện để đầu tư nghiên cứu phát triển sản phẩm thực tiễn ứng dụng công nghệ cao trong quốc phòng và phục kinh tế quốc dân.</br>
+                            – Có cơ hội được đi học tập đào tạo trong và ngoài nước.</br>
+                            – Môi trường làm việc thân thiện, thách thức, thú vị.
+                            </br>
+                            – Có cơ hội phát triển bản thân.</br>
+                            – Năm có 15 tháng lương.</br>
+                            – Được hưởng đầy đủ các chế độ phúc lợi xã hội, thưởng các ngày lễ, tết, nghỉ mát.</br>
+                        </div>
+                    </td>
+                </tr>
+                <tr onclick="Clicktr(this);">
+                    <td>
+                        <div class="col-xs-12 none-padding tieude-tuyendung">Cộng tác viên tester</div>
+                        <div class="col-xs-6 none-padding">
+                            <div class="col-xs-6 none-padding">
+                                Địa điểm:
+                            </div>
+                            <div class="col-xs-6 none-padding ">
+                                Hà Nội
+                            </div>
+                            <div class="col-xs-6 none-padding">
+                                Mức Lương:
+                            </div>
+                            <div class="col-xs-6 none-padding orange">
+                                8-12 triệu
+                            </div>
+                        </div>
+                        <div class="col-xs-6 none-padding">
+                            <div class="col-xs-6 none-padding">
+                                Số lượng:
+                            </div>
+                            <div class="col-xs-6 none-padding ">
+                                100
+                            </div>
+                            <div class="col-xs-6 none-padding">
+                                Hạn nộp HS:
+                            </div>
+                            <div class="col-xs-6 none-padding red">
+                                21/12/2016
+                            </div>
+                        </div>
+                        <div class="col-xs-12 none-padding chitiet-tuyendung">
+                            <b>Trung tâm Teca Soft&Tech cần tuyển 100 Chuyên viên, Cộng tác viên phát triển phần mềm, kiểm khử Java, C#, C/C++, vhdl, Sharepoint
+                            Lập trình trên Windows application, Web application.</b>.</br>
+                            – Sử dụng ngôn ngữ C#, Java, JavaScript, C/C++, VHDL, Android, IOS.</br>
+                            – Lập trình điều khiển tự động hóa, điện tử nhúng.</br>
+                            – Lập trình các ứng dụng di động.</br>
+                            – Lập trình UX/UI sử dụng -HTML5/css3.</br>
+                            – Lập trình UX/UI sử dụng Jquery.</br>
+                            <b><i>Yêu cầu chung</i></b></br>
+                            – Có kiến thức về cơ sở dữ liệu: Oracle, SQL Server, MSQL.</br>
+                            – Có tư duy logic tốt và tinh thần trách nhiệm với công việc cao.</br>
+                            – Có khả năng làm việc nhóm tốt cũng như độc lập giải quyết vấn đề.</br>
+                            <b><i>Yêu cầu lập trình Java</i></b></br>
+                            – Có kiến thức về lập trình JAVA: Hibernate, Spring, Struts, ZK, Vaadin, …</br>
+                            – Có kiến thức về HTML, css, Javascript, jQuery.</br>
+                            <b><i>Yêu cầu lập trình .NET</i></b></br>
+                            – Có kỹ năng tham gia phát triển các dự án .NET trên nền C#.</br>
+                            – Có kiến thức về Sharepoint</br>
+                            – Lập trình UX/UI sử dụng -HTML5/css3.</br>
+                            – Lập trình UX/UI sử dụng Jquery.</br>
+                            <b><i>Yêu cầu an toàn thông tin</i></b></br>
+                            – Kỹ năng phát triển phần mềm trên Linux</br>
+                            – Kiến thức cơ bản về bảo mật, an toàn thông tin.</br>
+                            – Có khả năng sử dụng ngôn ngữ: Java, C/C++, Javascript, Android, IOS</br>
+                            <b><i>Kiểm thử</i></b></br>
+                            – Có kỹ năng viết Testcase, kiểm thử.</br>
+                            <b><i>Quyền lợi</i></b></br>
+                            – Được tham gia BHXH theo quy định.</br>
+                            – Đầy đủ cơ chế chính sách theo quy định của nhà nước.</br>
+                            – Nhiều cơ hội thăng tiến và phát triển sự nghiệp, nhiều cơ hội hợp tác và làm việc với các công ty công nghệ cao hàng đầu thế giới.</br>
+                            – Được tạo điều kiện để đầu tư nghiên cứu phát triển sản phẩm thực tiễn ứng dụng công nghệ cao trong quốc phòng và phục kinh tế quốc dân.</br>
+                            – Có cơ hội được đi học tập đào tạo trong và ngoài nước.</br>
+                            – Môi trường làm việc thân thiện, thách thức, thú vị.
+                            </br>
+                            – Có cơ hội phát triển bản thân.</br>
+                            – Năm có 15 tháng lương.</br>
+                            – Được hưởng đầy đủ các chế độ phúc lợi xã hội, thưởng các ngày lễ, tết, nghỉ mát.</br>
+                        </div>
+                    </td>
+                </tr>
+                <tr onclick="Clicktr(this);">
+                    <td>
+                        <div class="col-xs-12 none-padding tieude-tuyendung">Cộng tác viên tester</div>
+                        <div class="col-xs-6 none-padding">
+                            <div class="col-xs-6 none-padding">
+                                Địa điểm:
+                            </div>
+                            <div class="col-xs-6 none-padding ">
+                                Hà Nội
+                            </div>
+                            <div class="col-xs-6 none-padding">
+                                Mức Lương:
+                            </div>
+                            <div class="col-xs-6 none-padding orange">
+                                8-12 triệu
+                            </div>
+                        </div>
+                        <div class="col-xs-6 none-padding">
+                            <div class="col-xs-6 none-padding">
+                                Số lượng:
+                            </div>
+                            <div class="col-xs-6 none-padding ">
+                                100
+                            </div>
+                            <div class="col-xs-6 none-padding">
+                                Hạn nộp HS:
+                            </div>
+                            <div class="col-xs-6 none-padding red">
+                                21/12/2016
+                            </div>
+                        </div>
+                        <div class="col-xs-12 none-padding chitiet-tuyendung">
+                            <b>Trung tâm Teca Soft&Tech cần tuyển 100 Chuyên viên, Cộng tác viên phát triển phần mềm, kiểm khử Java, C#, C/C++, vhdl, Sharepoint
+                            Lập trình trên Windows application, Web application.</b>.</br>
+                            – Sử dụng ngôn ngữ C#, Java, JavaScript, C/C++, VHDL, Android, IOS.</br>
+                            – Lập trình điều khiển tự động hóa, điện tử nhúng.</br>
+                            – Lập trình các ứng dụng di động.</br>
+                            – Lập trình UX/UI sử dụng -HTML5/css3.</br>
+                            – Lập trình UX/UI sử dụng Jquery.</br>
+                            <b><i>Yêu cầu chung</i></b></br>
+                            – Có kiến thức về cơ sở dữ liệu: Oracle, SQL Server, MSQL.</br>
+                            – Có tư duy logic tốt và tinh thần trách nhiệm với công việc cao.</br>
+                            – Có khả năng làm việc nhóm tốt cũng như độc lập giải quyết vấn đề.</br>
+                            <b><i>Yêu cầu lập trình Java</i></b></br>
+                            – Có kiến thức về lập trình JAVA: Hibernate, Spring, Struts, ZK, Vaadin, …</br>
+                            – Có kiến thức về HTML, css, Javascript, jQuery.</br>
+                            <b><i>Yêu cầu lập trình .NET</i></b></br>
+                            – Có kỹ năng tham gia phát triển các dự án .NET trên nền C#.</br>
+                            – Có kiến thức về Sharepoint</br>
+                            – Lập trình UX/UI sử dụng -HTML5/css3.</br>
+                            – Lập trình UX/UI sử dụng Jquery.</br>
+                            <b><i>Yêu cầu an toàn thông tin</i></b></br>
+                            – Kỹ năng phát triển phần mềm trên Linux</br>
+                            – Kiến thức cơ bản về bảo mật, an toàn thông tin.</br>
+                            – Có khả năng sử dụng ngôn ngữ: Java, C/C++, Javascript, Android, IOS</br>
+                            <b><i>Kiểm thử</i></b></br>
+                            – Có kỹ năng viết Testcase, kiểm thử.</br>
+                            <b><i>Quyền lợi</i></b></br>
+                            – Được tham gia BHXH theo quy định.</br>
+                            – Đầy đủ cơ chế chính sách theo quy định của nhà nước.</br>
+                            – Nhiều cơ hội thăng tiến và phát triển sự nghiệp, nhiều cơ hội hợp tác và làm việc với các công ty công nghệ cao hàng đầu thế giới.</br>
+                            – Được tạo điều kiện để đầu tư nghiên cứu phát triển sản phẩm thực tiễn ứng dụng công nghệ cao trong quốc phòng và phục kinh tế quốc dân.</br>
+                            – Có cơ hội được đi học tập đào tạo trong và ngoài nước.</br>
+                            – Môi trường làm việc thân thiện, thách thức, thú vị.
+                            </br>
+                            – Có cơ hội phát triển bản thân.</br>
+                            – Năm có 15 tháng lương.</br>
+                            – Được hưởng đầy đủ các chế độ phúc lợi xã hội, thưởng các ngày lễ, tết, nghỉ mát.</br>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!--=======đối tács============-->
+        </div><!--end container-->
+        <!--===========footer=================-->
+        <div class="col-sm-12 col-xs-12 none-padding menu-footer ">
+            <div class="container-fuild none-padding content-a ">
+                <div class=" container" >
+                    <div class="col-sm-12 col-xs-12 none-padding ">
+                        <ul class="ul-home">
+                            <li>
+                                <a href="Home.html">
+                                    <p>Trang chủ</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tong_quan.html">
+                                    <p>Về chúng tôi</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="lien_he.html">
+                                    <p>Liên hệ</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--=============footer===============-->
+            <div class="col-sm-12 col-xs-12 none-padding container-fuild none-padding footer">
+                <div class=" container none-padding " >
+                    <div class="col-sm-8 col-xs-12 none-padding">
+                        <p class="tbl-p">
+                            Bản quyền 2016 thuộc về Công ty TNHH MTV  Ứng dụng Kỹ thuật và Sản xuất <br>
+                            Địa chỉ : 18A - Đường Cộng Hoà, Phường 12, Quận Tân Bình, TP.Hồ Chí Minh<br>
+                            Điện thoại : (84-8)-3811.0181,  (84-8)-3811.0718     Fax: (84-8)-3811.0688  <br>
+                            Email : tecapro@tecapro.com.vn   Web :  www.tecapro.com.vn
+                        </p>
+                    </div>
+                    <div class="col-sm-4 col-xs-12 none-padding">
+                        <ul class="ul-footer">
+                            <li>
+                                Lượt truy cập : 78910
+                            </li>
+                            <li class="li-center">
+                                |
+                            </li>
+                            <li>
+                                Số  người online : 789
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--============================-->
+    </body>
 </html>
