@@ -1,6 +1,7 @@
 (function($){
 	$(function(){
-	 
+	  var widthWinfirst = window.innerWidth;
+     if (widthWinfirst > 1060){
 	    (function( $ ){
          $.fn.slideToPos = function() {
 			  
@@ -19,7 +20,9 @@
       e.preventDefault();
       $(this).slideToPos();
  
-	 
-	}); // end of document ready
+	 }
+	});
+	// end of document ready
+	
 })(jQuery); // end of jQuery name space
 

@@ -6,7 +6,7 @@
 	   <link rel="shortcut icon" href="images/logo.png">
       <!-- bxSlider Javascript file -->
       <script src="js/jquery.bxslider.min.js"></script>
-      <!-- bxSlider CSS file -->
+      <!-- bxSlider css file -->
       <link href="css/jquery.bxslider.css" rel="stylesheet" />
       <!--  -->
       <script src="js/vetical_slider.js"></script>
@@ -15,56 +15,87 @@
       <script src="bootstrap/owl.carousel.2.0.0-beta.2.4/owl.carousel.js"></script>
       <script src="bootstrap/owl.carousel.2.0.0-beta.2.4/owl.carousel.min.js"></script>
       <link href="css/style_Home.css" rel="stylesheet" />
-      <link href="css/style.css" rel="stylesheet" />
       <script src="js/jssor.slider-21.1.6.mini.js" type="text/javascript"></script>
       <link rel="stylesheet" type="text/css" href="css/component.css" />
       <script src="js/modernizr.custom.js"></script>
       <script src="js/menu.js"></script>
+	  <script src="js/menu_left.js"></script>
       <script src="js/init.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <title>Thiết bị y tế</title>
    </head>
-   <body>
-      <div class="container-fuild none-padding contaier-head">
+   <body class="pushmenu-push">
+   <!-- head -->
+   <div class="container-fuild none-padding">
+      <div class="container-fuild none-padding contaier-head none-mobile">
          <div class=" container header">
-            <div class=" col-sm-8 col-xs-8 none-padding">
-               <p class="addFont">CÔNG TY TNHH MỘT THÀNH VIÊN ỨNG DỤNG KỸ THUẬT VÀ SẢN XUẤT</p>
-            </div>
-            <div class="col-sm-1 col-xs-1 none-padding">
-               <div class="dropdown">
-                  <button class="dropbtn"><img src="images/search.png" class="img-search flag-show"><img src="images/en.svg" class="img-search flag-hidden"></button>
-                  <div class="dropdown-content">
-                     <a href="#">Tiếng Việt</a>
-                     <a href="#">English</a>
+            <div class=" col-sm-12 col-xs-12 none-padding">
+               <div class=" col-sm-8 col-xs-8 none-padding">
+                  <p class="addFont">CÔNG TY TNHH MỘT THÀNH VIÊN - ỨNG DỤNG KỸ THUẬT VÀ SẢN XUẤT</p>
+               </div>
+               <div class="col-sm-1 col-xs-1 none-padding">
+                  <!-- <img src="images/search.png" class="img-search"> -->
+                  <div class="dropdown">
+                     <button class="dropbtn"><img src="images/search.png" class="img-search flag-show"><img src="images/en.svg" class="img-search flag-hidden"></button>
+                     <div class="dropdown-content">
+                        <a href="#">Tiếng Việt</a>
+                        <a href="#">English</a>
+                     </div>
                   </div>
                </div>
-            </div>
-            <div class="col-sm-3 col-xs-3 none-padding">
-               <div class="input-group">
-                  <input type="text" class="form-control">
-                  <span class="input-group-btn">
-                  <button class="btn btn-default" type="button">Tìm kiếm</button>
-                  </span>
+               <div class="col-sm-3 col-xs-3 none-padding">
+                  <div class="input-group">			
+                     <input type="text" class="form-control">
+                     <span class="input-group-btn">
+                     <button class="btn btn-default" type="button">Tìm kiếm</button>
+                     </span>
+                  </div>
+                  <!-- /input-group -->
                </div>
-               <!-- /input-group -->
             </div>
          </div>
          <!--end header-->
       </div>
-      <!--=======================-->
+   <div class="col-xs-12 none-padding none-desktop boder-head">
+                <div class="col-xs-12 none-padding none-desktop img-fix">
+				<div class="col-sm-1 col-xs-2 none-padding  main">
+                                   <section class="buttonset">
+										<div id="nav_list"></div>
+									</section>
+                                    <!-- End Content -->
+                                </div>
+                    <a href="#">
+                    <img src="images/banner_mobile.svg" class="col-sm-11 col-xs-10 none-padding banner-mobile">
+                    <img src="images/banner_ipad.svg" class="col-sm-11 col-xs-10 none-padding banner-ipad">
+                    </a>
+					
+                </div>
+                
+                </div>
+	 <!--=======================-->
       <div class="container-fuild none-padding">
          <div class=" container menu">
-            <div class="col-sm-2 col-xs-2 none-padding">
-               <img src="images/logo.png" class="img-logo">
+            <div class="col-sm-2 col-xs-12 none-padding">
+               <img src="images/logo.png" class="img-logo"/>
             </div>
-            <div class="col-sm-10 col-xs-10 none-padding ">
+            <div class="col-sm-10 col-xs-12 none-padding ">
+			<div class="pushmenu-push">
+              <div class="pushmenu pushmenu-left">
                <div class="menu1">
                   <div class="slider">
                      <nav>
-                        <ul>
-                           <li class="category "><a href="Home.html">Trang chủ</a></li>
+                        <ul class="gw-nav gw-nav-list">
+							<li class="category">
+								<div class="input-group ">			
+									<input type="text" class="form-control" placeholder="Nhập từ khóa cần tìm kiếm">
+									<span class="input-group-btn">
+									<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+									</span>
+								</div>
+								</li>
+                           <li class="category " ><a href="Home.html">Trang chủ</a></li>
                            <li class="category">
-                              <a href="tong_quan.html">Giới thiệu</a>
+                              <a href="tong_quan.html" class="parent">Giới thiệu</a>
                               <ul class="sub-menu">
                                  <li><a href="tong_quan.html">Tổng quan</a></li>
                                  <li><a href="so_do_to_chuc.html">Sơ đồ tổ chức</a></li>
@@ -73,7 +104,7 @@
                               </ul>
                            </li>
                            <li class="category ">
-                              <a href="#">Đơn vị thành viên</a>
+                              <a href="#" class="parent">Đơn vị thành viên</a>
                               <ul class="sub-menu">
                                  <li><a href="don_vi_Tecapro_Telecom.html">Công ty CP Tecapro - Telecom</a></li>
                                  <li><a href="don_vi_CB_DV_MT_ECO.html">Công ty CP CN-DV Môi trường ECO</a></li>
@@ -89,14 +120,14 @@
                               </ul>
                            </li>
                            <li class="category ">
-                              <a href="#">Tin tức & Sự kiện</a>
+                              <a href="#" class="parent">Tin tức & Sự kiện</a>
                               <ul class="sub-menu">
                                  <li><a href="tin_tuc_su_kien.html">Tin Tecapro</a></li>
                                  <li><a href="#">Tin các đơn vị thành viên</a></li>
                               </ul>
                            </li>
                            <li class="category ">
-                              <a href="#home1">Lĩnh vực hoạt động</a>
+                              <a href="#home1" class="parent">Lĩnh vực hoạt động</a>
                               <ul class="sub-menu">
                                  <li><a href="linh_vuc_hoat_dong.html">Công nghệ thông tin</a></li>
                                  <li><a href="linh_vuc_hoat_dong_dien_tu_vien_thong.html">Điện tử viễn thông</a></li>
@@ -106,7 +137,7 @@
                               </ul>
                            </li>
                            <li class="category ">
-                              <a href="#">Thư viện</a>
+                              <a href="#" class="parent">Thư viện</a>
                               <ul class="sub-menu">
                                  <li><a href="thu_vien_video.html">Thư viện video</a></li>
                                  <li><a href="thu_vien_hinh_anh.html">Thư viện hình ảnh</a></li>
@@ -114,7 +145,7 @@
                               </ul>
                            </li>
                            <li class="category ">
-                              <a href="#">Liên kết</a>
+                              <a href="#" class="parent">Liên kết</a>
                               <ul class="sub-menu">
                                  <li><a href="chung_khoan.html">Ngoại tệ & Chứng khoán</a></li>
                                  <li><a href="thoi_tiet.html">Thời tiết</a></li>
@@ -122,7 +153,7 @@
                            </li>
                            <li class="category">  <a href="tuyen_dung.html">Tuyển dụng</a>	
                            </li>
-                          
+                           
                            <li class="category "><a href="lien_he.html">Liên hệ</a>
                            </li>
                         </ul>
@@ -135,6 +166,8 @@
                   </div>
                </div>
             </div>
+            </div>
+            </div>
          </div>
          <div class="col-sm-12 col-xs-12 none-padding">
             <div class="col-sm-6 col-xs-6 none-padding">
@@ -146,23 +179,24 @@
          </div>
       </div>
       </div>
-      <!--===========-->
+      <!--end head===========-->
       <!--============================-->
-      <div class="col-sm-12 col-xs-12 none-padding banner">
-        <img src="images/bg05.png" class="banner-sp">
+      <div class="col-sm-12 col-xs-12 none-padding banner banner-img">
+        <img src="images/bg05.png">
+        <img src="images/Tecapro_banner-06.png">
       </div>
       <!--end banner-->
       <!--========================-->
       <div class="container none-padding">
          <div class="col-sm-12 col-xs-12 none-padding"  id="cnt-center">
-            <div class="col-sm-3 col-xs-3 none-padding">
+            <div class="col-md-3 col-sm-12 col-xs-12 none-padding  detail-left">
                <p class="tieude-sp">
                   Thiết Bị Y Tế  
                </p>
                <p class="nd-sp">Thiết bị y tế là sản phẩm tích hợp đo được huyết áp, nhịp tim, nồng độ oxy trong máu, thân nhiệt của người bệnh sử dụng công nghệ đo không xâm thực mới nhất cho kết quả chính xác cao. Các thông số đo sẽ được gửi tự động lên cơ sở dữ liệu của Bệnh án Điện tử hoặc Hệ thống Bác sĩ Gia đình thông qua mạng lưới không dây. Bệnh nhân, người thân và bác sĩ có thể theo dõi qua Website hoặc Smartphone để đưa ra những giải pháp điều trị. Ngoài ra, thiết bị y tế tích hợp cảnh báo thông minh khi các thông số ở ngưỡng bất thường đảm bảo có sự can thiệp kịp thời cho người bệnh.
                </p>
             </div>
-            <div class="col-sm-6 col-xs-6 none-padding" id="center">
+            <div class="col-md-6 col-sm-6 col-xs-12 none-padding" id="center">
                <ul class="sp">
                   <li>
                      <p class="li-tieude">Tính năng nổi bật</p>
@@ -226,7 +260,7 @@
                </div>
             </div>
             <!---->
-            <div class="col-sm-3 col-xs-3 none-padding center">
+            <div class="col-md-3 col-sm-6 col-xs-12 none-padding center">
                <p class="li-tieude">Các sản phẩm khác
                <p>
                <ul class="bxslider ul-sp2">
@@ -266,7 +300,7 @@
          </div>
       </div>
       <!--=============================-->
-      <div class="container none-padding">
+      <div class="container none-padding none-mobile">
          <div class="main clearfix col-sm-12 col-xs-12 none-padding">
             <nav id="menu" class="nav">
                <ul class="ul-bottom">
@@ -333,6 +367,15 @@
                         <div class="div-add">Dịch vụ</div>
                      </a>
                   </li>
+				  <li>
+                            <a href="linh_vuc_hoat_dong_dich_vu.html">
+                                <span class="icon">
+                                <img src="images/icon_video.svg" class="img-show">
+                                <img src="images/video_mobile.svg" class="img-hidden">
+                                </span>
+                                <div class="div-add">Video</div>
+                            </a>
+                        </li>
                </ul>
             </nav>
          </div>
@@ -368,56 +411,58 @@
          </div>
       </div>
       <!--end container-->
-      <!--===========menu-bottom=================-->
-      <div class="container-fuild none-padding content-a ">
-         <div class=" container" >
-            <div class="col-sm-12 col-xs-12 none-padding ">
-               <ul class="ul-home">
-                  <li>
-                     <a href="Home.html">
-                        <p>Trang chủ</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="tong_quan.html">
-                        <p>Về chúng tôi</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="lien_he.html">
-                        <p>Liên hệ</p>
-                     </a>
-                  </li>
-               </ul>
+      <!--===========footer=================-->
+        <div class="col-sm-12 col-xs-12 none-padding menu-footer ">
+            <div class="container-fuild none-padding content-a ">
+                <div class=" container" >
+                    <div class="col-sm-12 col-xs-12 none-padding ">
+                        <ul class="ul-home">
+                            <li>
+                                <a href="Home.html">
+                                    <p>Trang chủ</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tong_quan.html">
+                                    <p>Về chúng tôi</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="lien_he.html">
+                                    <p>Liên hệ</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-      <!--=============footer===============-->
-      <div class="container-fuild none-padding footer">
-         <div class=" container none-padding" >
-            <div class="col-sm-8 col-xs-8 none-padding">
-               <p class="tbl-p">
-                  Bản quyền 2016 thuộc về Công ty TNHH MTV  Ứng dụng Kỹ thuật và Sản xuất <br>
-                  Địa chỉ : 18A - Đường Cộng Hoà, Phường 12, Quận Tân Bình, TP.Hồ Chí Minh<br>
-                  Điện thoại : (84-8)-3811.0181,  (84-8)-3811.0718     Fax: (84-8)-3811.0688  <br>
-                  Email : tecapro@tecapro.com.vn   Web :  www.tecapro.com.vn
-               </p>
+            <!--=============footer===============-->
+            <div class="col-sm-12 col-xs-12 none-padding container-fuild none-padding footer">
+                <div class=" container none-padding " >
+                    <div class="col-sm-8 col-xs-12 none-padding">
+                        <p class="tbl-p">
+                            Bản quyền 2016 thuộc về Công ty TNHH MTV  Ứng dụng Kỹ thuật và Sản xuất <br>
+                            Địa chỉ : 18A - Đường Cộng Hoà, Phường 12, Quận Tân Bình, TP.Hồ Chí Minh<br>
+                            Điện thoại : (84-8)-3811.0181,  (84-8)-3811.0718     Fax: (84-8)-3811.0688  <br>
+                            Email : tecapro@tecapro.com.vn   Web :  www.tecapro.com.vn
+                        </p>
+                    </div>
+                    <div class="col-sm-4 col-xs-12 none-padding">
+                        <ul class="ul-footer">
+                            <li>
+                                Lượt truy cập : 78910
+                            </li>
+                            <li class="li-center">
+                                |
+                            </li>
+                            <li>
+                                Số  người online : 789
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-4 col-xs-4 none-padding">
-               <ul class="ul-footer">
-                  <li>
-                     Lượt truy cập : 78910
-                  </li>
-                  <li class="li-center">
-                     |
-                  </li>
-                  <li>
-                     Số  người online : 789
-                  </li>
-               </ul>
-            </div>
-         </div>
-      </div>
-      <!--============================-->
+        </div>
+        <!--============================-->
    </body>
 </html>

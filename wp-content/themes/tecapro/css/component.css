@@ -375,7 +375,8 @@ a, button {
 	}
 
 	.nav li span.icon {
-		width: 50%;
+		/* width: 50%; */
+		    width: 35%;
 	}
 
 	.nav li .icon + span {
@@ -415,7 +416,7 @@ a, button {
 @media (min-width: 32.5em) and (max-width: 38.688em) {
 	
 	.nav li span.icon {
-		width: 50%;
+		width: 35%;
 	}
 
 	.nav li .icon + span {
@@ -468,8 +469,8 @@ a, button {
 	
 	/* When JavaScript is enabled, we hide the menu */
 	.js .nav ul {
-		max-height: 0em;
-		overflow: hidden;
+		/* max-height: 0em; */
+		/* overflow: hidden; */
 	}
 	
 	/* Displaying the menu when the user has clicked on the button*/

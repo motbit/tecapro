@@ -1,4 +1,5 @@
  $(document).ready(function () {
+	   $('body').toggleClass('TouchMobile');
      var url = window.location;  
       $('ul.sub-menu a[href="' + url + '"]').parent().addClass('active');
        $('ul.sub-menu a').filter(function () {
@@ -42,6 +43,7 @@
     });
      
 	}); // end of document ready
+   
    $('ul.ul-max li a[href="' + url + '"]').parent().addClass('active');
        $('ul.ul-max li a').filter(function () {
           return this.href == url;		
@@ -140,4 +142,82 @@ $("ul.sub-menu li").hover(function () {
 );
    
 });
-(jQuery); // end of jQuery name space
+(function($){
+	$(function(){
+
+	  // Slider functionality
+	  
+	    // slide knob to position function
+		 var widthWinfirst = window.innerWidth;
+     if (widthWinfirst > 1060){
+	    (function( $ ){
+         $.fn.slideToPos = function() {
+           var left = $(this).position().left + ($(this).width() / 2) - ($(".menu1 a.knob").width() / 2) - 2;
+           $(".menu1 a.knob").css("left", left);
+           // var before = $(this).parent().parent().parent().children(".bar").first().children(".before").first();
+           // before.css("width", left + 20).css("backgroundColor", $($(this).attr("href")).css("backgroundColor","#68301A"));
+		  $(".before").css("width", left+10);
+           return this;
+         }; 
+      })( jQuery );
+	 	  
+	 	$("li.category.active a").slideToPos();     
+    $(".li.category a").click(function(e) {
+      e.preventDefault();
+      $(this).slideToPos();
+      // $('html, body').animate({ scrollTop: $(this.hash).offset().top }, 400);
+    });
+    
+    
+    }
+	}); // end of document ready
+	
+})(jQuery); // end of jQuery name space
+
+ 
+	// ipad menu
+$(document).ready(function () {
+     var widthWinfirst = window.innerWidth;
+	 var url = window.location;  
+     if (widthWinfirst < 1060){
+		 $("nav ul li.category a.parent").click(function(){
+		 $(this).attr('href','javascript:void(0)');
+		  });
+		  $("ul li.init-arrow-down a.parent").click(function(){
+     $(this).attr('href','javascript:void(0)');
+     
+    });
+    }	
+  });
+  
+  // menu mobile 
+$(document).ready(function() {
+		$menuLeft = $('.pushmenu-left');
+		$nav_list = $('#nav_list');
+		
+		$nav_list.click(function() {	
+			var classActive=$menuLeft.attr('class');
+			var classact='active';
+			if(classActive.indexOf('pushmenu-open')>0)
+			{
+				$('body').addClass('TouchMobile');
+			}
+			else
+			{
+				$('body').removeClass('TouchMobile');	
+			}
+			$(this).toggleClass(classact);
+			$('.pushmenu-push').toggleClass('pushmenu-push-toright');
+			$menuLeft.toggleClass('pushmenu-open');
+		});
+	});
+	// end mobile
+	// trang thai mobile
+	$(document).ready(function () {
+     var url = window.location;  
+      $('.pushmenu ul li a[href="' + url + '"]').parent().addClass('active');
+       $('.pushmenu ul li a').filter(function () {
+          return this.href == url;		
+     }).addClass('active').parent().addClass('active').parent().css('display','block').parent().addClass('active');
+  });
+  // end trang thai mobile
