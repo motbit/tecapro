@@ -1,0 +1,91 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+
+
+/* Menu Styles */
+.before1,.before2{
+	height:4px;
+	background:#40A840;
+	margin-top: -4px;
+}
+.before2{
+	 background:#68301A;
+}
+.menu1 {
+  width: 100%;
+ /*  position: fixed; */
+  
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+  .menu1 .slider {
+    position: relative;
+  /*   left: 10%;
+    width: 80%; */
+    text-align: center;
+  }
+  
+    .menu1 .slider .bar, .menu1 .slider .bar .before {
+      height: 4px;
+      transition: .5s;
+      -webkit-transition: .5s;
+      /* border-radius: 20px; */
+      -moz-border-radius: 20px;
+      /* -webkit-border-radius: 20px; */
+    }
+    
+    .menu1 .slider .bar {
+      position: relative;
+      left: 3px;
+      width: 100%;
+      background-color: #40A840;
+	      z-index: 3;
+    }
+      .menu1 .slider .bar .before {
+        width: 100px;
+        float: left;
+        position: relative;
+        left: -3px;
+      }
+      .menu1 .slider .bar a.knob { 
+        position: absolute;
+        top: -5px;
+        left: 0;
+        margin: 0;
+        display: block;
+       
+
+        border-radius: 15px;
+        -moz-border-radius: 15px;
+        -webkit-border-radius: 15px;
+        
+        transition: .5s; 
+        -webkit-transition: .5s; 
+      }
+	    .menu1 ul {
+     margin: 9px 0 30px 0;
+     padding: 0 0 0 0;
+    }
+	
+   /*  .menu1 ul { 
+      height: 100%; 
+      display: inline-block;
+      margin: 20px 0 15px 0;
+    }
+    .menu1 ul li {
+      margin: 0 10px;
+      font-size: 12px;
+      font-weight: bold; 
+      float: left;
+    } */
+   /*  .menu1 ul li a { color: #444; margin: 0; } */
+    
+
+/* menu1 */
+

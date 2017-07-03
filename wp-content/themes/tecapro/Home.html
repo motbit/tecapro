@@ -1,0 +1,540 @@
+<html lang="vi">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	   <link rel="shortcut icon" href="images/logo.png">
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+      <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+      <script src="bootstrap/owl.carousel.2.0.0-beta.2.4/owl.carousel.js"></script>
+      <script src="bootstrap/owl.carousel.2.0.0-beta.2.4/owl.carousel.min.js"></script>
+      <link href="css/style_Home.css" rel="stylesheet" />
+      <link href="css/style.css" rel="stylesheet" />
+      <script src="js/jssor.slider-21.1.6.mini.js" type="text/javascript"></script>
+      <link rel="stylesheet" type="text/css" href="css/component.css" />
+      <script src="js/modernizr.custom.js"></script>
+      <script src="js/menu.js"></script>
+      <!-- 	<script src="js/init.js"></script> -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <title>home</title>
+      <script type="text/javascript">
+         jQuery(document).ready(function ($) {
+         
+             var jssor_1_options = {
+               $AutoPlay: true,
+               $AutoPlaySteps: 6,
+               $SlideDuration: 120,
+               $SlideWidth: 195,
+               $SlideSpacing: 3,
+               $Cols: 6,
+               $ArrowNavigatorOptions: {
+                 $Class: $JssorArrowNavigator$,
+                 $Steps: 6
+               },
+               $BulletNavigatorOptions: {
+                 $Class: $JssorBulletNavigator$,
+                 $SpacingX: 1,
+                 $SpacingY: 1
+               }
+             };
+         
+             var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+         
+             /*responsive code begin*/
+             /*you can remove responsive code if you don't want the slider scales while window resizing*/
+             function ScaleSlider() {
+                 var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                 if (refSize) {
+                     refSize = Math.min(refSize, 1170);
+                     jssor_1_slider.$ScaleWidth(refSize);
+                 }
+                 else {
+                     window.setTimeout(ScaleSlider, 30);
+                 }
+             }
+             ScaleSlider();
+             $(window).bind("load", ScaleSlider);
+             $(window).bind("resize", ScaleSlider);
+             $(window).bind("orientationchange", ScaleSlider);
+             /*responsive code end*/
+         });
+      </script>
+      <script>
+         (function($){
+         $(function(){
+          
+             (function( $ ){
+                 $.fn.slideToPos = function() {
+         		  
+                   var left = $(this).position().left + ($(this).width() / 2) - ($(".menu1 a.knob").width() / 2) - 2;
+                   $(".menu1 a.knob").css("left", left);
+                  
+         	  $(".before").css("width", left+10);
+                   return this;
+                 }; 
+              })( jQuery );
+          	   var url = window.location;  
+               $('ul li.category a[href="' + url + '"]').parent().addClass('active');
+               $('ul li.category a').filter(function () {
+                  return this.href == url;		
+             }).parent().addClass('active').slideToPos(); 	    
+              e.preventDefault();
+              $(this).slideToPos();
+         
+         }); 
+         })(jQuery); 
+      </script>
+
+   </head>
+   <body>
+      <div class="container-fuild none-padding contaier-head">
+         <div class=" container header">
+            <div class=" col-sm-12 col-xs-12 none-padding">
+               <div class=" col-sm-8 col-xs-8 none-padding">
+                  <p class="addFont">CÔNG TY TNHH MỘT THÀNH VIÊN ỨNG DỤNG KỸ THUẬT VÀ SẢN XUẤT</p>
+               </div>
+               <div class="col-sm-1 col-xs-1 none-padding">
+                  <!-- <img src="images/search.png" class="img-search"> -->
+                  <div class="dropdown">
+                     <button class="dropbtn"><img src="images/search.png" class="img-search flag-show"><img src="images/en.svg" class="img-search flag-hidden"></button>
+                     <div class="dropdown-content">
+                        <a href="#">Tiếng Việt</a>
+                        <a href="#">English</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-3 col-xs-3 none-padding">
+                  <div class="input-group">			
+                     <input type="text" class="form-control">
+                     <span class="input-group-btn">
+                     <button class="btn btn-default" type="button">Tìm kiếm</button>
+                     </span>
+                  </div>
+                  <!-- /input-group -->
+               </div>
+            </div>
+         </div>
+         <!--end header-->
+      </div>
+      <!--=======================-->
+      <div class="container-fuild none-padding">
+         <div class=" container menu">
+            <div class="col-sm-2 col-xs-2 none-padding">
+               <img src="images/logo.png" class="img-logo">
+            </div>
+            <div class="col-sm-10 col-xs-10 none-padding ">
+               <div class="menu1">
+                  <div class="slider">
+                     <nav>
+                        <ul>
+                           <li class="category "><a href="Home.html">Trang chủ</a></li>
+                           <li class="category">
+                              <a href="tong_quan.html">Giới thiệu</a>
+                              <ul class="sub-menu">
+                                 <li><a href="tong_quan.html">Tổng quan</a></li>
+                                 <li><a href="so_do_to_chuc.html">Sơ đồ tổ chức</a></li>
+                                 <li><a href="truyen_thong_tecapro.html">Truyền thống Tecapro</a></li>
+                                 <li><a href="#">Profile</a></li>
+                              </ul>
+                           </li>
+                           <li class="category ">
+                              <a href="#">Đơn vị thành viên</a>
+                              <ul class="sub-menu">
+                                 <li><a href="don_vi_Tecapro_Telecom.html">Công ty CP Tecapro - Telecom</a></li>
+                                 <li><a href="don_vi_CB_DV_MT_ECO.html">Công ty CP CN-DV Môi trường ECO</a></li>
+                                 <li><a href="don_vi_xi_nghiep_vat_lieu_TB_CN.html">XN Vật liệu và Thiết bị công nghiệp</a></li>
+                                 <li><a href="don_vi_cp_CNTT.html">Công ty CP CNTT &amp; Truyền thông</a></li>
+                                 <li><a href="don_vi_xi_nghiep_dich_vu_thuong_mai.html">XN Dịch vụ Kỹ thuật &amp; Thương mại</a></li>
+                                 <li><a href="don_vi_xi_nghiep_CT.html">XN Xây dựng công trình</a></li>
+                                 <li><a href="don_vi_chi_nhanh_HN.html">Chi nhánh Hà Nội</a></li>
+                                 <li><a href="don_vi_chi_nhanh_Da_Nang.html">Chi nhánh Đà Nẵng</a></li>
+                                 <li><a href="don_vi_chi_nhanh_Vung_Tau.html">Chi nhánh Vũng Tàu </a></li>
+                                 <li><a href="don_vi_CH_LB_Nga.html">VPĐD tại CH Liên Bang Nga</a></li>
+                                 <li><a href="don_vi_MTV_TecaWord.html">Công ty TNHH MTV TECAWORLD</a></li>
+                              </ul>
+                           </li>
+                           <li class="category ">
+                              <a href="#">Tin tức & Sự kiện</a>
+                              <ul class="sub-menu">
+                                 <li><a href="tin_tuc_su_kien.html">Tin Tecapro</a></li>
+                                 <li><a href="#">Tin các đơn vị thành viên</a></li>
+                              </ul>
+                           </li>
+                           <li class="category ">
+                              <a href="#home1">Lĩnh vực hoạt động</a>
+                              <ul class="sub-menu">
+                                 <li><a href="linh_vuc_hoat_dong.html">Công nghệ thông tin</a></li>
+                                 <li><a href="linh_vuc_hoat_dong_dien_tu_vien_thong.html">Điện tử viễn thông</a></li>
+                                 <li><a href="linh_vuc_hoat_dong_cong_nghe_MT.html">Công nghệ môi trường</a></li>
+                                 <li><a href="linh_vuc_hoat_dong_xay_dung_CT.html">Xây dựng công trình</a></li>
+                                 <li><a href="linh_vuc_hoat_dong_dich_vu.html">Dịch vụ</a></li>
+                              </ul>
+                           </li>
+                           <li class="category ">
+                              <a href="#">Thư viện</a>
+                              <ul class="sub-menu">
+                                 <li><a href="thu_vien_video.html">Thư viện video</a></li>
+                                 <li><a href="thu_vien_hinh_anh.html">Thư viện hình ảnh</a></li>
+                                 <li><a href="thu_vien_tai_lieu.html">Thư viện download</a></li>
+                              </ul>
+                           </li>
+                           <li class="category ">
+                              <a href="#">Liên kết</a>
+                              <ul class="sub-menu">
+                                 <li><a href="chung_khoan.html">Ngoại tệ & Chứng khoán</a></li>
+                                 <li><a href="thoi_tiet.html">Thời tiết</a></li>
+                              </ul>
+                           </li>
+                           <li class="category">  <a href="tuyen_dung.html">Tuyển dụng</a>	
+                           </li>
+                           
+                           <li class="category "><a href="lien_he.html">Liên hệ</a>
+                           </li>
+                        </ul>
+                     </nav>
+                     <div class="container-fuild bar">
+                        <div class="before"></div>
+                        <a class="knob"></a>
+                        <div class="after"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-sm-12 col-xs-12 none-padding">
+            <div class="col-sm-6 col-xs-6 none-padding">
+               <div class="before2"></div>
+            </div>
+            <div class="col-sm-6 col-xs-6 none-padding">
+               <div class="before1"></div>
+            </div>
+         </div>
+      </div>
+      </div>
+      <!--===========-->
+      <!--============================-->
+      <!--============================-->
+      <div class="container-fuild none-padding banner">
+         <div id="myCarousel1" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+               <div class="item active">
+                  <img src="images/BG.png">
+                  <div class="btn-a"> 
+                     <a href="san_pham.html">
+                     <button>Xem chi tiết</button>
+                     </a>
+                  </div>
+               </div>
+               <div class="item">
+                  <img src="images/bg03.png">
+                  <div class="btn-a"> 
+                     <a href="He_thong_cong_thong_tin.html">
+                     <button>Xem chi tiết</button>
+                     </a>
+                  </div>
+               </div>
+               <div class="item">
+                  <img src="images/bg02.png">
+                  <div class="btn-a"> 
+                    <a href="T-Mail.html">
+                     <button>Xem chi tiết</button>
+                     </a>
+                  </div>
+               </div>
+             
+               <div class="item">
+                  <img src="images/bg04.png">
+                  <div class="btn-a"> 
+                     <a href="giap_phap_QL_benh_vien_dien_tu.html">
+                     <button>Xem chi tiết</button>
+                     </a>
+                  </div>
+               </div>
+               <div class="item">
+                  <img src="images/bg05.png">
+                  <div class="btn-a"> 
+                     <a href="thiet_bi_y_te.html">
+                     <button>Xem chi tiết</button>
+                     </a>
+                  </div>
+               </div>
+               <div class="item">
+                  <img src="images/bg06.png">
+                  <div class="btn-a"> 
+                     <a href="Tecopter.html">
+                     <button>Xem chi tiết</button>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <!-- Left and right controls -->
+         </div>
+      </div>
+      </div>
+      <!--end banner-->
+      <div class="container-fuild none-padding">
+         <div class=" container">
+            <div  class="col-sm-6 col-xs-6 none-padding">
+               <a class="left carousel-control" href="#myCarousel1" role="button" data-slide="prev">
+               <span aria-hidden="true"> <img src="images/truoc.png"></span>
+               <span class="sr-only">Previous</span>
+               </a>
+            </div>
+            <div  class="col-sm-6 col-xs-6 none-padding">
+               <a class="right carousel-control" href="#myCarousel1" role="button" data-slide="next">
+               <span aria-hidden="true"> <img src="images/next.png"></span>
+               <span class="sr-only">Next</span>
+               </a> 
+            </div>
+         </div>
+      </div>
+      <!--=============================-->
+      <div class="container none-padding">
+         <div class="main clearfix col-sm-12 col-xs-12 none-padding">
+            <nav id="menu" class="nav">
+               <ul class="ul-bottom">
+                  <li>
+                     <a href="tin_tuc_su_kien.html">
+                        <span class="icon">
+                        <img src="images/tin_tuc_su_kien.svg" class="img-show tintucsk">
+                        <img src="images/Tin_tuc_su_kien1.svg" class="img-hidden tintucsk">
+                        </span>
+                        <div class="div-add">Tin tức & sự kiện</div>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="san_pham_chung.html">
+                        <span class="icon">
+                        <img src="images/san_pham.svg" class="img-show">
+                        <img src="images/san_pham1.svg" class="img-hidden">
+                        </span>
+                        <div class="div-add">Sản phẩm</div>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="linh_vuc_hoat_dong_dien_tu_vien_thong.html">
+                        <span class="icon"> 
+                        <img src="images/dien_tu.svg" class="img-show">
+                        <img src="images/dien_tu1.svg" class="img-hidden">
+                        </span>
+                        <div class="div-add">Điện tử</div>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="linh_vuc_hoat_dong_cong_nghe_MT.html">
+                        <span class="icon">
+                        <img src="images/cong_nghe_MT.svg" class="img-show">
+                        <img src="images/cong_nghe_MT1.svg" class="img-hidden">
+                        </span>
+                        <div class="div-add">Công nghệ môi trường</div>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="linh_vuc_hoat_dong.html">
+                        <span class="icon">
+                        <img src="images/CNTT.svg" class="img-show">
+                        <img src="images/CNTT1.svg" class="img-hidden">
+                        </span>
+                        <div class="div-add">Công nghệ thông tin</div>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="linh_vuc_hoat_dong_xay_dung_CT.html">
+                        <span class="icon">
+                        <img src="images/xay_dung_cong_trinh.svg" class="img-show">
+                        <img src="images/xay_dung_cong_trinh1.svg" class="img-hidden">
+                        </span>
+                        <div class="div-add">Xây dựng công trình</div>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="linh_vuc_hoat_dong_dich_vu.html">
+                        <span class="icon">
+                        <img src="images/dich_vu.svg" class="img-show">
+                        <img src="images/dich_vu1.svg" class="img-hidden">
+                        </span>
+                        <div class="div-add">Dịch vụ</div>
+                     </a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+         <!--===========content=================-->
+         <div class="col-sm-12 col-xs-12 none-padding content">
+            <div class="col-sm-5 col-xs-5 none-padding">
+               <ul class="ul-tin">
+                  <li>
+                     <p class="name">Tin Teca</p>
+                     <img src="images/next.png" class="img-tieude">
+                  </li>
+                  <li  class="li-tin">
+                     <a href="tin_chi_tiet.html">
+                        <p>Công ty TECAPRO tặng máy in chuyên dụng cho bệnh viện Quân y 175</p>
+                        <p class="mui-ten"></p>
+                     </a>
+                  </li>
+                  <li class="li-tin" >
+                     <a href="tin_chi_tiet.html">
+                        <p>Công ty TECAPRO tặng máy in chuyên dụng cho bệnh viện Quân y 175</p>
+                        <p class="mui-ten"></p>
+                     </a>
+                  </li>
+				   <li class="li-tin" >
+                     <a href="tin_chi_tiet.html">
+                        <p>Công ty TECAPRO tặng máy in chuyên dụng cho bệnh viện Quân y 175</p>
+                        <p class="mui-ten"></p>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+            <div class="col-sm-1 col-xs-1 none-padding"></div>
+            <div class="col-sm-6 col-xs-6 none-padding">
+               <ul class="ul-tin">
+                  <li>
+                     <p class="name video">Video</p>
+                     <img src="images/next.png" class="img-tieude">
+                  </li>
+                  <!-- <li class="li-img" id="ul">
+                     <img src="images/Asset 2.png">
+                  </li> -->
+                  <li class="li-img" id="ul1">
+                     <img src="images/Asset 1.png">
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <!--=====================-->
+         <!--==================-->
+         <div class=" col-sm-12 col-xs-12 content-video none-padding content-show" id="slider">
+            <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1170px; height: 195px; overflow: hidden; visibility: hidden;">
+               <!-- Loading Screen -->
+               <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+                  <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                  <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+               </div>
+               <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1170px; height: 195px; overflow: hidden;">
+                  <div>
+                     <img data-u="image" src="images/ax.png" class="img-data" />
+                  </div>
+                  <div style="display: none;">
+                     <img data-u="image" src="images/ax1.png" class="img-data"/>
+                  </div>
+                  <div style="display: none;">
+                     <img data-u="image" src="images/ax2.png" class="img-data" />
+                  </div>
+                  <div style="display: none;">
+                     <img data-u="image" src="images/ax3.png" class="img-data" />
+                  </div>
+                  <div style="display: none;">
+                     <img data-u="image" src="images/ax4.png"class="img-data" />
+                  </div>
+                  <div style="display: none;">
+                     <img data-u="image" src="images/ax5.png" class="img-data"/>
+                  </div>
+                  <div style="display: none;">
+                     <img data-u="image" src="images/ax6.png" class="img-data"/>
+                  </div>
+                  <div style="display: none;">
+                     <img data-u="image" src="images/ax7.png" class="img-data" />
+                  </div>
+                  <div style="display: none;">
+                     <img data-u="image" src="images/ax8.png" class="img-data"/>
+                  </div>
+               </div>
+               <!-- Bullet Navigator -->
+               <div data-u="navigator" class="jssorb03" style="bottom:10px;right:10px;">
+                  <!-- bullet navigator item prototype -->
+                  <div data-u="prototype" style="width:21px;height:21px;">
+                     <div data-u="numbertemplate"></div>
+                  </div>
+               </div>
+               <!-- Arrow Navigator -->
+               <span data-u="arrowleft" class="jssora03l" style="top:0px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
+               <span data-u="arrowright" class="jssora03r" style="top:0px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
+            </div>
+         </div>
+         <!--=======đối tács============-->
+         <div class="col-sm-12 col-xs-12 none-padding run">
+            <script language="JavaScript1.2">
+               var leftrightslide	=	new Array()
+               var finalslide		=	''
+               var slidesspace		=	parseInt ('5')
+               var sliderwidth		=	"1170px"
+               var sliderheight	=	"70px"
+               var slidebgcolor	=	""
+               var stopslide		=	"1"
+               var imagegap		=	"&nbsp;"
+               var slidespeed		=	1
+                  leftrightslide[0]='<a href="dell.com"><img src="images/emerson.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
+               ;
+               leftrightslide[1]='<a href="http://www.microsoft.com/"><img src="images/microsoft.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
+               ;
+               leftrightslide[2]='<a href="#"><img src="images/ibm.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
+               ;
+               leftrightslide[3]='<a href="#"><img src="images/cisco.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
+               ;
+               leftrightslide[4]='<a href="#"><img src="images/nec.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
+               ;
+               leftrightslide[5]='<a href="#"><img src="images/nokia.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
+               ;
+               leftrightslide[6]='<a href="http://www.emerson.com/en-us"><img src="images/dell.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
+               
+               
+            </script>
+            <script src="js/slider_footer.js"></script>
+         </div>
+      </div>
+      <!--end container-->
+      <!--===========menu-bottom=================-->
+      <div class="container-fuild none-padding content-a ">
+         <div class=" container" >
+            <div class="col-sm-12 col-xs-12 none-padding ">
+               <ul class="ul-home">
+                  <li>
+                     <a href="Home.html">
+                        <p>Trang chủ</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="tong_quan.html">
+                        <p>Về chúng tôi</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="lien_he.html">
+                        <p>Liên hệ</p>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <!--=============footer===============-->
+      <div class="container-fuild none-padding footer">
+         <div class=" container none-padding" >
+            <div class="col-sm-8 col-xs-8 none-padding">
+               <p class="tbl-p">
+                  Bản quyền 2016 thuộc về Công ty TNHH MTV  Ứng dụng Kỹ thuật và Sản xuất <br>
+                  Địa chỉ : 18A - Đường Cộng Hoà, Phường 12, Quận Tân Bình, TP.Hồ Chí Minh<br>
+                  Điện thoại : (84-8)-3811.0181,  (84-8)-3811.0718     Fax: (84-8)-3811.0688  <br>
+                  Email : tecapro@tecapro.com.vn   Web :  www.tecapro.com.vn
+               </p>
+            </div>
+            <div class="col-sm-4 col-xs-4 none-padding">
+               <ul class="ul-footer">
+                  <li>
+                     Lượt truy cập : 78910
+                  </li>
+                  <li class="li-center">
+                     |
+                  </li>
+                  <li>
+                     Số  người online : 789
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <!--============================-->
+   </body>
+</html>

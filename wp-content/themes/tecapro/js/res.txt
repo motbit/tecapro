@@ -1,0 +1,40 @@
+$(document).ready(function () {
+    var widthlf = $(".email-left");
+    var widthbody = $("body");
+    var MainContent = $(".email-right");
+  
+    function AddWidthMainContent(a, b, c) {
+      
+        var AB = a - b;
+    
+        if (c >= 980 && c < 1200)
+        {
+            MainContent.css("width", AB - 0);
+     
+        }
+           
+        if (c >= 1200)
+        {
+            MainContent.css("width", AB - 0);
+         
+         
+        }
+           
+    }
+    $(document).ready(function () {
+        var widthWinfirst = window.innerWidth;
+        if (widthWinfirst >= 980 && widthlf.width() < 310) {
+            AddWidthMainContent(widthbody.width(), widthlf.width(), widthWinfirst);
+        }
+        $(window).resize(function () {
+            var widthWin = window.innerWidth;
+            if (widthWin >= 980 && widthlf.width() < 310) {
+                AddWidthMainContent(widthbody.width(), widthlf.width(), widthWin);
+            }
+            else {
+                MainContent.css("width", "100%");
+            }
+        });
+
+    });
+});
