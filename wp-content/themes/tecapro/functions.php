@@ -205,6 +205,7 @@ if (!function_exists('tecapro_head_scripts')) {
         echo '<script src="' . get_template_directory_uri() . '/js/modernizr.custom.js"></script>';
         echo '<script src="' . get_template_directory_uri() . '/js/menu.js"></script>';
         echo '<script src="' . get_template_directory_uri() . '/js/menu_left.js"></script>';
+        echo '<script src="' . get_template_directory_uri() . '/js/init.js"></script>';
         echo '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>';
     }
 }
