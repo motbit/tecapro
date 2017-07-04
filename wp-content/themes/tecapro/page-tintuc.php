@@ -33,6 +33,19 @@ get_header(); ?>
     </style>
 
     <div class="container none-padding padding-mobile">
+        <?php
+        $args = [
+            'numberposts' => 21,
+            'category_name' => 'tin-tecapro'
+        ];
+
+        $posts = get_posts($args);
+        $i = 1;
+
+        foreach ($posts as $post):
+            setup_postdata($post);
+        if ($i == 1):
+        ?>
         <div class="col-sm-12 col-xs-12 none-padding tintuc tintuc-slider">
             <div class="contert-left col-md-8 col-xs-12 none-padding">
                 <!--===============-->
@@ -45,100 +58,69 @@ get_header(); ?>
                         <li data-target="#myCarousel" data-slide-to="3"></li>
                     </ol>
                     <div class="carousel-inner" role="listbox" id="tt">
-                        <div class="item active">
-                            <img src="<?php echo get_template_directory_uri() . '/images/banner.png' ?>">
-                            <div class="carousel-caption cmd">
-                                <p class="add-fnt"><a href="tin_chi_tiet.html">Kỷ niệm 72 năm ngày thành lập Quân Đội Nhân Dân Việt Nam 22/12/1944 - 22/12/2016</a></p>
-                                <h5 class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> Thứ Năm,ngày 24/11/2016</h5>
+                        <?php endif ?>
+                        <?php if ($i >= 1 && $i <= 4) { ?>
+                            <div class="item <?php if ($i==1) echo 'active';?>">
+                                <img src="<?php echo get_thumbnail_url(); ?>">
+                                <div class="carousel-caption cmd">
+                                    <p class="add-fnt"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                                    <h5 class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> <?php echo get_date_publish(get_post_time()); ?></h5>
+                                </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <img src="<?php echo get_template_directory_uri() . '/images/banner.png' ?>">
-                            <div class="carousel-caption cmd">
-                                <p class="add-fnt"><a href="tin_chi_tiet.html">Kỷ niệm 72 năm ngày thành lập Quân Đội Nhân Dân Việt Nam 22/12/1944 - 22/12/2016</a></p>
-                                <h5 class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> Thứ Năm,ngày 24/11/2016</h5>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="<?php echo get_template_directory_uri() . '/images/banner.png' ?>">
-                            <div class="carousel-caption cmd">
-                                <p class="add-fnt"><a href="tin_chi_tiet.html">Kỷ niệm 72 năm ngày thành lập Quân Đội Nhân Dân Việt Nam 22/12/1944 - 22/12/2016</a></p>
-                                <h5 class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Thứ Năm,ngày 24/11/2016</h5>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="<?php echo get_template_directory_uri() . '/images/banner.png' ?>">
-                            <div class="carousel-caption cmd">
-                                <p class="add-fnt"><a href="tin_chi_tiet.html">Kỷ niệm 72 năm ngày thành lập Quân Đội Nhân Dân Việt Nam 22/12/1944 - 22/12/2016</a></p>
-                                <h5 class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Thứ Năm,ngày 24/11/2016</h5>
-                            </div>
-                        </div>
+                        <?php } ?>
+                        <?php if ($i == 4): ?>
                     </div>
                 </div>
             </div>
+            <?php endif; ?>
 
+            <?php if ($i == 5){ ?>
             <div class="contert-right col-md-4 col-xs-12 none-padding  none-mobile">
-                <div class="item item-img">
-                    <img src="<?php echo get_template_directory_uri() . '/images/Asset_11.png' ?>">
-                    <div class="caption-tt">
-                        <p class="add-fnt"><a href="tin_chi_tiet.html">Công ty TECAPRO tặng máy in chuyên dụng cho bệnh viện Quân y 175</a></p>
-                        <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Thứ Năm,ngày 24/11/2016</p>
+                <?php } ?>
+                <?php if ($i >= 5 && $i <= 6): ?>
+                    <div class="item item-img <?php if ($i==6) echo 'item-bottom'; ?>">
+                        <img src="<?php echo get_thumbnail_url('right-column'); ?>">
+                        <div class="caption-tt">
+                            <p class="add-fnt"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                            <h5 class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> <?php echo get_date_publish(get_post_time()); ?></h5>
+                        </div>
                     </div>
-                </div>
-                <div class="item item-bottom item-img">
-                    <img src="<?php echo get_template_directory_uri() . '/images/Asset_10.png' ?>">
-                    <div class="caption-tt">
-                        <p class="add-fnt"><a href="tin_chi_tiet.html">Công ty TECAPRO tặng máy in chuyên dụng cho bệnh viện Quân y 175</a></p>
-                        <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Thứ Năm,ngày 24/11/2016</p>
-                    </div>
-                </div>
+                <?php endif; ?>
+                <?php if ($i == 6){ ?>
             </div>
         </div>
         <!--ènd container-->
+        <?php } ?>
+
+            <?php if ($i==7): ?>
         <!--================-->
         <div class="content-tintuc ul-tintuc col-sm-12 col-xs-12 none-padding">
             <!--=======================-->
+                <?php endif;?>
+            <?php if ($i==7 || $i==10): ?>
             <div class="content-tintuc ct-hidden col-sm-12 col-xs-12 none-padding none-mobile">
+                <?php endif;?>
+                <?php if ($i >=7 && $i<=12): ?>
                 <div class="col-sm-4 col-xs-12 none-padding">
                     <div class=" tintuc thumbnail thumbnail-top">
                         <div class="col-sm-2 col-xs-2 none-padding">
-                            <img src="<?php echo get_template_directory_uri() . '/images/Asset_13.png' ?>">
+                            <img src="<?php echo get_thumbnail_url('six-small'); ?>">
                         </div>
                         <div class="col-sm-10 col-xs-10 tintuc-left">
                             <p>
-                                <a href="tin_chi_tiet.html"> Kỉ niệm 28 năm thành lập công ty Tecapro - Bộ quốc phòng 14/11/1988-14/11/2016</a>
+                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                             </p>
-                            <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Thứ Năm,ngày 24/11/2016</p>
+                            <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span><?php echo get_date_publish(get_post_time()); ?></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4 col-xs-12 none-padding">
-                    <div class=" tintuc thumbnail thumbnail-top">
-                        <div class="col-sm-2 col-xs-2 none-padding">
-                            <img src="<?php echo get_template_directory_uri() . '/images/Asset_13.png' ?>">
-                        </div>
-                        <div class="col-sm-10 col-xs-10 tintuc-left">
-                            <p>
-                                <a href="tin_chi_tiet.html"> Kỉ niệm 28 năm thành lập công ty Tecapro - Bộ quốc phòng 14/11/1988-14/11/2016</a>
-                            </p>
-                            <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Thứ Năm,ngày 24/11/2016</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-xs-12 none-padding">
-                    <div class=" tintuc thumbnail thumbnail-top">
-                        <div class="col-sm-2 col-xs-2 none-padding">
-                            <img src="<?php echo get_template_directory_uri() . '/images/Asset_13.png' ?>">
-                        </div>
-                        <div class="col-sm-10 col-xs-10 none-padding-right tintuc-left">
-                            <p>
-                                <a href="tin_chi_tiet.html"> Kỉ niệm 28 năm thành lập công ty Tecapro - Bộ quốc phòng 14/11/1988-14/11/2016</a>
-                            </p>
-                            <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Thứ Năm,ngày 24/11/2016</p>
-                        </div>
-                    </div>
-                </div>
+                <?php endif; ?>
+
+            <?php if ($i==9 || $i==12): ?>
             </div>
+            <?php endif; ?>
+
+            <?php if ($i==9): ?>
             <!--====================-->
             <div class="content-tintuc ct-hidden col-sm-12 col-xs-12 none-padding none-mobile">
                 <div class="col-sm-4 col-xs-4 none-padding linett">
@@ -152,140 +134,60 @@ get_header(); ?>
                 </div>
             </div>
             <!--================-->
-            <div class="content-tintuc ct-hidden col-sm-12 col-xs-12 none-padding none-mobile">
-                <div class="col-sm-4 col-xs-12 none-padding">
-                    <div class="  thumbnail thumbnail-top">
-                        <div class="col-sm-2 col-xs-2 none-padding">
-                            <img src="<?php echo get_template_directory_uri() . '/images/Asset_13.png' ?>">
-                        </div>
-                        <div class="col-sm-10 col-xs-10 tintuc-left">
-                            <p>
-                                <a href="tin_chi_tiet.html"> Kỉ niệm 28 năm thành lập công ty Tecapro - Bộ quốc phòng 14/11/1988-14/11/2016</a>
-                            </p>
-                            <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Thứ Năm,ngày 24/11/2016</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-xs-12 none-padding">
-                    <div class="  thumbnail thumbnail-top">
-                        <div class="col-sm-2 col-xs-2 none-padding">
-                            <img src="<?php echo get_template_directory_uri() . '/images/Asset_13.png' ?>">
-                        </div>
-                        <div class="col-sm-10 col-xs-10 tintuc-left">
-                            <p>
-                                <a href="tin_chi_tiet.html"> Kỉ niệm 28 năm thành lập công ty Tecapro - Bộ quốc phòng 14/11/1988-14/11/2016</a>
-                            </p>
-                            <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Thứ Năm,ngày 24/11/2016</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-xs-12 none-padding">
-                    <div class="  thumbnail thumbnail-top">
-                        <div class="col-sm-2 col-xs-2 none-padding">
-                            <img src="<?php echo get_template_directory_uri() . '/images/Asset_13.png' ?>">
-                        </div>
-                        <div class="col-sm-10 col-xs-10 none-padding-right tintuc-left">
-                            <p>
-                                <a href="tin_chi_tiet.html"> Kỉ niệm 28 năm thành lập công ty Tecapro - Bộ quốc phòng 14/11/1988-14/11/2016</a>
-                            </p>
-                            <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Thứ Năm,ngày 24/11/2016</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php endif; ?>
+
+            <?php if ($i==13): ?>
             <!--====================-->
             <div class="content-tintuc col-sm-12 col-xs-12 none-padding tintuc linh-vuc-hd">
+                <?php endif; ?>
+                <?php if ($i>=13 && $i<=15): ?>
                 <div class="col-sm-4 col-xs-6 none-padding ds-tintuc">
                     <div class=" tintuc tt-footer thumbnail lvhd">
-                        <img src="<?php echo get_template_directory_uri() . '/images/Asset_10.png' ?>">
+                        <img src="<?php echo get_thumbnail_url('normal'); ?>">
                         <p class="tieude">
-                            <a href="tin_chi_tiet.html">Đoàn sĩ quan trẻ Quân đội Hoàng gia Cam-pu-chia giao lưu tại Công ty TECAPRO</a>
+                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </p>
-                        <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Thứ Năm,ngày 24/11/2016</p>
+                        <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span><?php echo get_date_publish(get_post_time()); ?></p>
                         <p class="p-tomtat">
-                            Ngày 8.11.2016, Công ty TECAPRO đã phối hợp cùng UBND xã An Nhơn Tây tổ chức trao tặng nhà tình nghĩa cho gia đình ...
+                            <?php echo wp_trim_words(substr(get_the_content(), 0, 120)) . '...'; ?>
                         </p>
                     </div>
                 </div>
-                <div class="col-sm-4 col-xs-6 none-padding ds-tintuc">
-                    <div class=" tintuc tt-footer thumbnail lvhd">
-                        <img src="<?php echo get_template_directory_uri() . '/images/Asset_11.png' ?>">
-                        <p class="tieude">
-                            <a href="tin_chi_tiet.html">Thương hiệu của người lính trên mặt trận khoa học và công nghệ</a>
-                        </p>
-                        <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Thứ Năm,ngày 24/11/2016</p>
-                        <p class="p-tomtat">
-                            Ngày 8.11.2016, Công ty TECAPRO đã phối hợp cùng UBND xã An Nhơn Tây tổ chức trao tặng nhà tình nghĩa cho gia đình ...
-                        </p>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-xs-6 none-padding ds-tintuc">
-                    <div class=" tintuc tt-footer thumbnail lvhd">
-                        <img src="<?php echo get_template_directory_uri() . '/images/Asset_10.png' ?>">
-                        <p class="tieude">
-                            <a href="tin_chi_tiet.html"> Kỉ niệm 28 năm thành lập công ty Tecapro - Bộ quốc phòng 14/11/1988-14/11/2016</a>
-                        </p>
-                        <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Thứ Năm,ngày 24/11/2016</p>
-                        <p class="p-tomtat">
-                            Ngày 8.11.2016, Công ty TECAPRO đã phối hợp cùng UBND xã An Nhơn Tây tổ chức trao tặng nhà tình nghĩa cho gia đình ...
-                        </p>
-                    </div>
-                </div>
+                <?php endif; ?>
+            <?php if ($i==15): ?>
             </div>
         </div>
+        <?php endif; ?>
+
+            <?php if ($i==16): ?>
         <!--===================-->
         <div class="col-sm-12 col-xs-12 none-padding">
             <div class="col-sm-9 col-xs-12 none-padding">
                 <div class="col-sm-12 col-xs-12 none-padding content-lvhd content-tintucsukien">
+                    <?php endif; ?>
                     <!--=====================-->
+            <?php if ($i==16 || $i==18 || $i==20): ?>
                     <div class="content-tintuc col-sm-12 col-xs-12 none-padding  linh-vuc-hd">
+                        <?php endif; ?>
+                        <?php if ($i>=16 && $i<=21): ?>
                         <div class="col-sm-6 col-xs-6 none-padding ds-tintuc">
                             <div class=" tintuc tt-footer thumbnail lvhd">
-                                <img src="<?php echo get_template_directory_uri() . '/images/Asset_10.png' ?>">
+                                <img src="<?php echo get_thumbnail_url('normal'); ?>">
                                 <p class="tieude">
-                                    <a href="tin_chi_tiet.html">Đoàn sĩ quan trẻ Quân đội Hoàng gia Cam-pu-chia giao lưu tại Công ty TECAPRO</a>
+                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                 </p>
-                                <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Thứ Năm,ngày 24/11/2016</p>
+                                <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span><?php echo get_date_publish(get_post_time()); ?></p>
                                 <p class="p-tomtat">
-                                    Ngày 8.11.2016, Công ty TECAPRO đã phối hợp cùng UBND xã An Nhơn Tây tổ chức trao tặng nhà tình nghĩa cho gia đình ...
+                                    <?php echo wp_trim_words(substr(get_the_content(), 0, 120)) . '...'; ?>
                                 </p>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-xs-6 none-padding ds-tintuc">
-                            <div class=" tintuc tt-footer thumbnail lvhd">
-                                <img src="<?php echo get_template_directory_uri() . '/images/Asset_11.png' ?>">
-                                <p class="tieude">
-                                    <a href="tin_chi_tiet.html">Thương hiệu của người lính trên mặt trận khoa học và công nghệ</a>
-                                </p>
-                                <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Thứ Năm,ngày 24/11/2016</p>
-                                <p class="p-tomtat">
-                                    Ngày 8.11.2016, Công ty TECAPRO đã phối hợp cùng UBND xã An Nhơn Tây tổ chức trao tặng nhà tình nghĩa cho gia đình ...
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-xs-6 none-padding ds-tintuc">
-                            <div class=" tintuc tt-footer thumbnail lvhd">
-                                <img src="<?php echo get_template_directory_uri() . '/images/Asset_10.png' ?>">
-                                <p class="tieude">
-                                    <a href="tin_chi_tiet.html"> Kỉ niệm 28 năm thành lập công ty Tecapro - Bộ quốc phòng 14/11/1988-14/11/2016</a>
-                                </p>
-                                <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Thứ Năm,ngày 24/11/2016</p>
-                                <p class="p-tomtat">
-                                    Ngày 8.11.2016, Công ty TECAPRO đã phối hợp cùng UBND xã An Nhơn Tây tổ chức trao tặng nhà tình nghĩa cho gia đình ...
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--=====================-->
-                    <div class="content-tintuc col-sm-12 col-xs-12 none-padding  linh-vuc-hd">
-                        <div class="col-sm-6 col-xs-12 none-padding ds-tintuc">
-                            <div class=" tintuc tt-footer thumbnail lvhd">
-                                <div class="col-sm-12 col-xs-3 none-padding">
+                            <?php if ($i==17 || $i==19 || $i==21): ?>
+                            <div class="col-sm-6 col-xs-6 none-padding ds-tintuc">
+                                <div class=" tintuc tt-footer thumbnail lvhd">
                                     <img src="<?php echo get_template_directory_uri() . '/images/Asset_10.png' ?>">
-                                </div>
-                                <div class="col-sm-12 col-xs-9 none-padding">
                                     <p class="tieude">
-                                        <a href="tin_chi_tiet.html"> Kỉ niệm 28 năm thành lập công ty Tecapro - Bộ quốc phòng 14/11/1988-14/11/2016</a>
+                                        <a href="tin_chi_tiet.html">Đoàn sĩ quan trẻ Quân đội Hoàng gia Cam-pu-chia giao lưu tại Công ty TECAPRO</a>
                                     </p>
                                     <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Thứ Năm,ngày 24/11/2016</p>
                                     <p class="p-tomtat">
@@ -293,81 +195,20 @@ get_header(); ?>
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-6 col-xs-12 none-padding ds-tintuc">
-                            <div class=" tintuc tt-footer thumbnail lvhd">
-                                <div class="col-sm-12 col-xs-3 none-padding">
-                                    <img src="<?php echo get_template_directory_uri() . '/images/Asset_11.png' ?>">
-                                </div>
-                                <div class="col-sm-12 col-xs-9 none-padding">
-                                    <p class="tieude">
-                                        <a href="tin_chi_tiet.html">Thương hiệu của người lính trên mặt trận khoa học và công nghệ</a>
-                                    </p>
-                                    <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Thứ Năm,ngày 24/11/2016</p>
-                                    <p class="p-tomtat">
-                                        Ngày 8.11.2016, Công ty TECAPRO đã phối hợp cùng UBND xã An Nhơn Tây tổ chức trao tặng nhà tình nghĩa cho gia đình ...
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-xs-12 none-padding ds-tintuc">
-                            <div class=" tintuc tt-footer thumbnail lvhd">
-                                <div class="col-sm-12 col-xs-3 none-padding">
-                                    <img src="<?php echo get_template_directory_uri() . '/images/Asset_10.png' ?>">
-                                </div>
-                                <div class="col-sm-12 col-xs-9 none-padding">
-                                    <p class="tieude">
-                                        <a href="tin_chi_tiet.html"> Kỉ niệm 28 năm thành lập công ty Tecapro - Bộ quốc phòng 14/11/1988-14/11/2016</a>
-                                    </p>
-                                    <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Thứ Năm,ngày 24/11/2016</p>
-                                    <p class="p-tomtat">
-                                        Ngày 8.11.2016, Công ty TECAPRO đã phối hợp cùng UBND xã An Nhơn Tây tổ chức trao tặng nhà tình nghĩa cho gia đình ...
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                            <?php endif; ?>
+                        <?php endif; ?>
+            <?php if ($i==17 || $i==19 || $i==21): ?>
                     </div>
-                    <!--=====================-->
-                    <div class="content-tintuc col-sm-12 col-xs-12 none-padding  linh-vuc-hd">
-                        <div class="col-sm-6 col-xs-4 none-padding ds-tintuc">
-                            <div class=" tintuc tt-footer thumbnail first-child lvhd">
-                                <img src="<?php echo get_template_directory_uri() . '/images/Asset_10.png' ?>">
-                                <p class="tieude">
-                                    <a href="tin_chi_tiet.html">Đoàn sĩ quan trẻ Quân đội Hoàng gia Cam-pu-chia giao lưu tại Công ty TECAPRO</a>
-                                </p>
-                                <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Thứ Năm,ngày 24/11/2016</p>
-                                <p class="p-tomtat">
-                                    Ngày 8.11.2016, Công ty TECAPRO đã phối hợp cùng UBND xã An Nhơn Tây tổ chức trao tặng nhà tình nghĩa cho gia đình ...
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-xs-4 none-padding ds-tintuc">
-                            <div class=" tintuc tt-footer thumbnail lvhd">
-                                <img src="<?php echo get_template_directory_uri() . '/images/Asset_11.png' ?>">
-                                <p class="tieude">
-                                    <a href="tin_chi_tiet.html">Thương hiệu của người lính trên mặt trận khoa học và công nghệ</a>
-                                </p>
-                                <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Thứ Năm,ngày 24/11/2016</p>
-                                <p class="p-tomtat">
-                                    Ngày 8.11.2016, Công ty TECAPRO đã phối hợp cùng UBND xã An Nhơn Tây tổ chức trao tặng nhà tình nghĩa cho gia đình ...
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-xs-4 none-padding ds-tintuc">
-                            <div class=" tintuc tt-footer thumbnail lvhd">
-                                <img src="<?php echo get_template_directory_uri() . '/images/Asset_10.png' ?>">
-                                <p class="tieude">
-                                    <a href="tin_chi_tiet.html"> Kỉ niệm 28 năm thành lập công ty Tecapro - Bộ quốc phòng 14/11/1988-14/11/2016</a>
-                                </p>
-                                <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Thứ Năm,ngày 24/11/2016</p>
-                                <p class="p-tomtat">
-                                    Ngày 8.11.2016, Công ty TECAPRO đã phối hợp cùng UBND xã An Nhơn Tây tổ chức trao tặng nhà tình nghĩa cho gia đình ...
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                <?php endif; ?>
+            <?php if ($i==count($posts)): ?>
                 </div>
             </div>
+            <?php endif; ?>
+            <?php
+            $i++;
+            endforeach;
+            ?>
+            <!-- VIDEOS -->
             <div class="col-sm-3 col-xs-12 none-padding">
                 <div class=" tintuc tt-footer thumbnail tt-b">
                     <img src="<?php echo get_template_directory_uri() . '/images/Asset-18.jpg' ?>">

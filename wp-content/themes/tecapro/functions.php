@@ -287,3 +287,56 @@ if (!function_exists('tecapro_active_menu')) {
         echo $menu_html;
     }
 }
+
+function get_date_publish($time)
+{
+    $date = new DateTime();
+    $date->setTimestamp($time);
+    return vi_days(date_format($date, 'l, d/m/Y'));
+}
+
+function vi_days($time)
+{
+    $time = strtolower($time);
+
+    $days = [
+        'monday' => 'Thứ Hai',
+        'tuesday' => 'Thứ Ba',
+        'wednesday' => 'Thứ Tư',
+        'thursday' => 'Thứ Năm',
+        'friday' => 'Thứ Sáu',
+        'saturday' => 'Thứ Bảy',
+        'sunday' => 'Chủ nhật',
+    ];
+
+    foreach ($days as $en => $vi) {
+        $time = str_replace($en, $vi, $time);
+    }
+
+    return $time;
+}
+
+function get_thumbnail_url($type = 'banner')
+{
+    $url = get_the_post_thumbnail_url();
+    if (empty($url)) {
+        switch ($type) {
+            case 'banner':
+                $default_images = ['banner.png'];
+                break;
+            case 'right-column':
+            case 'normal':
+                $default_images = ['Asset_10.png', 'Asset_11.png'];
+                break;
+            case 'six-small':
+                $default_images = ['Asset_13.png'];
+                break;
+            default:
+                $default_images = [];
+        }
+        $i = rand(0, count($default_images) - 1);
+        $url = get_template_directory_uri() . '/images/' . $default_images[$i];
+    }
+
+    return $url;
+}
