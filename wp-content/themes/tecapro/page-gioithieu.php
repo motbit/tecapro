@@ -328,39 +328,7 @@ get_header(); ?>
     <p class="p-b">
         Với những thành tích đạt được trong thời gian qua, Công ty TECAPRO đã nhận được nhiều danh hiệu, phần thưởng cao quý của Nhà nước và Bộ Quốc phòng như: Huân chương Lao động Hạng Ba (2004), Huân chương Chiến công Hạng Ba (2004), Huân chương Bảo vệ Tổ quốc Hạng Hai (2009) cùng nhiều hình thức, danh hiệu thi đua của Bộ Quốc phòng, Tổng cục Chính trị, Viện Khoa học – Công nghệ quân sự. Đặc biệt, tháng 07 năm 2013, Công ty TECAPRO đã vinh dự được Chủ tịch nước ký quyết định tặng thưởng “Huân chương Bảo vệ Tổ quốc Hạng Nhất”. Đó là những minh chứng khẳng định vị trí, vai trò của Công ty TECAPRO - một trong những doanh nghiệp hàng đầu của Bộ Quốc phòng trong lĩnh vực khoa học công nghệ.
     </p>
-    <!--=======đối tács============-->
-    <div class="col-sm-12 col-xs-12 none-padding run">
-        <script language="JavaScript1.2">
-            var leftrightslide	=	new Array()
-            var finalslide		=	''
-            var slidesspace		=	parseInt ('5')
-            var sliderwidth		=	"1170px"
-            var sliderheight	=	"70px"
-            var slidebgcolor	=	""
-            var stopslide		=	"1"
-            var imagegap		=	"&nbsp;"
-            var slidespeed		=	1
-            leftrightslide[0]='<a href="dell.com"><img src="images/emerson.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
-            ;
-            leftrightslide[1]='<a href="http://www.microsoft.com/"><img src="images/microsoft.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
-            ;
-            leftrightslide[2]='<a href="#"><img src="images/ibm.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
-            ;
-            leftrightslide[3]='<a href="#"><img src="images/cisco.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
-            ;
-            leftrightslide[4]='<a href="#"><img src="images/nec.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
-            ;
-            leftrightslide[5]='<a href="#"><img src="images/nokia.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
-            ;
-            leftrightslide[6]='<a href="http://www.emerson.com/en-us"><img src="images/dell.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
-
-
-        </script>
-        <script src="js/slider_footer.js"></script>
-    </div>
-    <!--=================-->
 </div>
 <!--end container-->
 <?php
-get_sidebar();
 get_footer();

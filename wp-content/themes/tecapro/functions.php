@@ -205,6 +205,7 @@ if (!function_exists('tecapro_head_scripts')) {
         echo '<script src="' . get_template_directory_uri() . '/js/modernizr.custom.js"></script>';
         echo '<script src="' . get_template_directory_uri() . '/js/menu.js"></script>';
         echo '<script src="' . get_template_directory_uri() . '/js/menu_left.js"></script>';
+        echo '<script src="' . get_template_directory_uri() . '/js/init.js"></script>';
         echo '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>';
     }
 }
@@ -218,3 +219,71 @@ if (!function_exists('tecapro_body_class')) {
     }
 }
 add_filter('body_class', 'tecapro_body_class');
+
+//register menu
+if (!function_exists('tecapro_register_menu')) {
+    function tecapro_register_menu()
+    {
+        register_nav_menu('teca-menu', 'Tecapro Menu');
+    }
+}
+add_action('init', 'tecapro_register_menu');
+
+//show menu
+if (!function_exists('tecapro_active_menu')) {
+    function tecapro_active_menu()
+    {
+        $menu_name = 'teca-menu'; // specify custom menu slug
+        if (($locations = get_nav_menu_locations()) && isset($locations[$menu_name])) {
+            $menu = wp_get_nav_menu_object($locations[$menu_name]);
+            $menu_items = wp_get_nav_menu_items($menu->term_id);
+            $active_menu = [];
+
+            foreach ((array)$menu_items as $key => $menu_item) {
+                $id_parent = $menu_item->menu_item_parent;
+
+                if ($id_parent == 0) {//top menu
+                    $id = $menu_item->ID;
+
+                    if (!array_key_exists($id, $active_menu)) {
+                        $active_menu[$id] = [
+                            'self' => $menu_item,
+                            'children' => []
+                        ];
+                    } else {
+                        $active_menu[$id]['self'] = $menu_item;
+                    }
+                } else {
+                    if (!array_key_exists($id_parent, $active_menu)) {
+                        $active_menu[$id_parent] = [
+                            'self' => null,
+                            'children' => array($menu_item)
+                        ];
+                    } else {
+                        $active_menu[$id_parent]['children'][] = $menu_item;
+                    }
+                }
+            }
+
+            $menu_html = '';
+            foreach ($active_menu as $item) {
+                $parent = $item['self'];
+                $menu_html .= '<li class="category">';
+                $menu_html .= '<a href="' . $parent->url . '">' . $parent->title . '</a>';
+
+                if (count($item['children']) > 0) {
+                    $menu_html .= '<ul class="sub-menu">';
+                    foreach ($item['children'] as $child) {
+                        $menu_html .= '<li><a href="' . $child->url . '">' . $child->title . '</a></li>';
+                    }
+                    $menu_html .= '</ul>';
+                }
+
+                $menu_html .= '<li/>';
+            }
+        } else {
+            // $menu_list = '<!-- no list defined -->';
+        }
+        echo $menu_html;
+    }
+}
