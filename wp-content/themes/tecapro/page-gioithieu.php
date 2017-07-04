@@ -362,5 +362,4 @@ get_header(); ?>
 </div>
 <!--end container-->
 <?php
-get_sidebar();
 get_footer();
