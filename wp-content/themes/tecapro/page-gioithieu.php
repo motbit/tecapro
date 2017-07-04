@@ -9,13 +9,13 @@ get_header(); ?>
     <div class=" container">
         <div  class="col-sm-6 col-xs-6 none-padding">
             <a class="left carousel-control" href="#myCarousel1" role="button" data-slide="prev">
-                <span aria-hidden="true"> <img src="images/truoc.png"></span>
+                <span aria-hidden="true"> <img src="<?php echo home_url("/") ?>/wp-content/themes/tecapro/images/truoc.png"></span>
                 <span class="sr-only">Previous</span>
             </a>
         </div>
         <div  class="col-sm-6 col-xs-6 none-padding">
             <a class="right carousel-control" href="#myCarousel1" role="button" data-slide="next">
-                <span aria-hidden="true"> <img src="images/next.png"></span>
+                <span aria-hidden="true"> <img src="<?php echo home_url("/") ?>/wp-content/themes/tecapro/images/next.png"></span>
                 <span class="sr-only">Next</span>
             </a>
         </div>
@@ -130,15 +130,15 @@ get_header(); ?>
         </p>
         <ul class="ul-min">
             <li>
-                <img src="images/CNTT2.png">
+                <img src="<?php echo home_url("/") ?>/wp-content/themes/tecapro/images/CNTT2.png">
                 <p>Công nghệ thông tin</p>
             </li>
             <li>
-                <img src="images/dien_tu2.png">
+                <img src="<?php echo home_url("/") ?>/wp-content/themes/tecapro/images/dien_tu2.png">
                 <p>Điện tử viễn thông</p>
             </li>
             <li>
-                <img src="images/cong_nghe_MT2.png">
+                <img src="<?php echo home_url("/") ?>/wp-content/themes/tecapro/images/cong_nghe_MT2.png">
                 <p>Công nghệ môi trường</p>
             </li>
         </ul>
@@ -149,7 +149,7 @@ get_header(); ?>
     <!--end text-->
     <div class="frame-a">
         <div class="thumbnail">
-            <img src="images/banner_gt_1.png">
+            <img src="<?php echo home_url("/") ?>/wp-content/themes/tecapro/images/banner_gt_1.png">
             <div class="caption1">
                 <p>Chủ tịch nước Nguyễn Minh Triết trao tặng danh hiệu Doanh nhân tiêu biểu cho Đại tá Lê Việt - Tổng Giám đốc Công ty TECAPRO.
                 </p>
@@ -226,7 +226,7 @@ get_header(); ?>
     <div class="frame-b row frm-center none-margin tongquan">
         <div  class="col-sm-4 col-xs-12 none-padding">
             <div  class="col-sm-5 col-xs-5 none-padding">
-                <img src="images/tam_nhin.png">
+                <img src="<?php echo home_url("/") ?>/wp-content/themes/tecapro/images/tam_nhin.png">
             </div>
             <div  class="col-sm-7  col-xs-7 none-margin-right none-padding">
                 <p>Trở thành doanh nghiệp công nghệ hàng đầu trong nước và khu vực. Ưu tiên công nghệ cao, vượt qua mọi khoảng cách, đủ sức cạnh tranh vươn ra toàn cầu.</p>
@@ -234,7 +234,7 @@ get_header(); ?>
         </div>
         <div  class="col-sm-4 col-xs-12 none-padding">
             <div  class="col-sm-5 col-xs-5 none-padding">
-                <img src="images/su_menh.png">
+                <img src="<?php echo home_url("/") ?>/wp-content/themes/tecapro/images/su_menh.png">
             </div>
             <div  class="col-sm-7 col-xs-7 none-margin-right none-padding">
                 <p>Ứng dụng những thành tựu Khoa học - Công nghệ vào sản xuất phục vụ Quốc phòng và Kinh tế quốc dân. Trung thành với định hướng đã chọn. Phát triển ổn định trên tinh thần năng động, nhạy bén và tích cực.</p>
@@ -242,7 +242,7 @@ get_header(); ?>
         </div>
         <div  class="col-sm-4 col-xs-12 none-padding">
             <div  class="col-sm-5 col-xs-5 none-padding">
-                <img src="images/gia_tri_cot_loi.png">
+                <img src="<?php echo home_url("/") ?>/wp-content/themes/tecapro/images/gia_tri_cot_loi.png">
             </div>
             <div  class="col-sm-7 col-xs-7  none-padding">
                 <p>Chú trọng và đề cao yếu tố con người trên nền tảng sâu sắc về nhận thức, tư duy và hành động trẻ trung, vươn lên đầy trí tuệ...</p>
@@ -251,7 +251,7 @@ get_header(); ?>
     </div>
     <div class="frame-a">
         <div class="thumbnail">
-            <img src="images/gia_tri_cot_loi1.png" class="img-a">
+            <img src="<?php echo home_url("/") ?>/wp-content/themes/tecapro/images/gia_tri_cot_loi1.png" class="img-a">
         </div>
     </div>
     <!--end frame-a-->
@@ -261,7 +261,7 @@ get_header(); ?>
             <p style="margin-top: 2.5em;"> TECAPRO tập trung vào các lĩnh vực công nghệ mũi nhọn </p>
         </div>
         <div class="col-sm-3 col-xs-12 none-padding">
-            <img src="images/mt.png" class="img-cl-muiten">
+            <img src="<?php echo home_url("/") ?>/wp-content/themes/tecapro/images/mt.png" class="img-cl-muiten">
             <ul class="ul-chienluoc-a">
                 <li>
                     <button>1</button>
@@ -278,7 +278,7 @@ get_header(); ?>
             </ul>
         </div>
         <div class="col-sm-6 col-xs-12 none-padding">
-            <img src="images/mt.png" class="img-cl-muiten">
+            <img src="<?php echo home_url("/") ?>/wp-content/themes/tecapro/images/mt.png" class="img-cl-muiten">
             <ul style="padding-left: 50px;text-align: justify;">
                 <li>
                     <p>
@@ -295,7 +295,7 @@ get_header(); ?>
     </div>
     <div class="frame-a col-sm-12 col-xs-12 none-padding">
         <div class="thumbnail">
-            <img src="images/chien_luoc.png">
+            <img src="<?php echo home_url("/") ?>/wp-content/themes/tecapro/images/chien_luoc.png">
             <div class="caption1">
                 <p>Trung tướng Võ Văn Tuấn – Phó Tổng tham mưu trưởng Quân đội Nhân dân Việt Nam đang gắn Huân chương Bảo vệ Tổ quốc hạng Nhất lên quân kỳ quyết thắng tại Công ty TECAPRO
                 </p>
@@ -317,7 +317,7 @@ get_header(); ?>
     </div>
     <div class="frame-c">
         <div class="thumbnail">
-            <img src="images/iso.png" class="iso">
+            <img src="<?php echo home_url("/") ?>/wp-content/themes/tecapro/images/iso.png" class="iso">
             <div class="caption1">
                 <p>Giấy chứng nhận ISO 9001:2008.
                 </p>
@@ -328,37 +328,6 @@ get_header(); ?>
     <p class="p-b">
         Với những thành tích đạt được trong thời gian qua, Công ty TECAPRO đã nhận được nhiều danh hiệu, phần thưởng cao quý của Nhà nước và Bộ Quốc phòng như: Huân chương Lao động Hạng Ba (2004), Huân chương Chiến công Hạng Ba (2004), Huân chương Bảo vệ Tổ quốc Hạng Hai (2009) cùng nhiều hình thức, danh hiệu thi đua của Bộ Quốc phòng, Tổng cục Chính trị, Viện Khoa học – Công nghệ quân sự. Đặc biệt, tháng 07 năm 2013, Công ty TECAPRO đã vinh dự được Chủ tịch nước ký quyết định tặng thưởng “Huân chương Bảo vệ Tổ quốc Hạng Nhất”. Đó là những minh chứng khẳng định vị trí, vai trò của Công ty TECAPRO - một trong những doanh nghiệp hàng đầu của Bộ Quốc phòng trong lĩnh vực khoa học công nghệ.
     </p>
-    <!--=======đối tács============-->
-    <div class="col-sm-12 col-xs-12 none-padding run">
-        <script language="JavaScript1.2">
-            var leftrightslide	=	new Array()
-            var finalslide		=	''
-            var slidesspace		=	parseInt ('5')
-            var sliderwidth		=	"1170px"
-            var sliderheight	=	"70px"
-            var slidebgcolor	=	""
-            var stopslide		=	"1"
-            var imagegap		=	"&nbsp;"
-            var slidespeed		=	1
-            leftrightslide[0]='<a href="dell.com"><img src="images/emerson.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
-            ;
-            leftrightslide[1]='<a href="http://www.microsoft.com/"><img src="images/microsoft.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
-            ;
-            leftrightslide[2]='<a href="#"><img src="images/ibm.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
-            ;
-            leftrightslide[3]='<a href="#"><img src="images/cisco.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
-            ;
-            leftrightslide[4]='<a href="#"><img src="images/nec.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
-            ;
-            leftrightslide[5]='<a href="#"><img src="images/nokia.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
-            ;
-            leftrightslide[6]='<a href="http://www.emerson.com/en-us"><img src="images/dell.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
-
-
-        </script>
-        <script src="js/slider_footer.js"></script>
-    </div>
-    <!--=================-->
 </div>
 <!--end container-->
 <?php
