@@ -194,6 +194,8 @@ require get_template_directory() . '/inc/jetpack.php';
 if (!function_exists('tecapro_head_scripts')) {
     function tecapro_head_scripts()
     {
+        echo '<link rel="shortcut icon" href="' . get_template_directory_uri() . '/images/logo.png"/>';
+
         echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>';
         echo '<script src="' . get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js"></script>';
         echo '<link href="' . get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css" rel="stylesheet" />';
