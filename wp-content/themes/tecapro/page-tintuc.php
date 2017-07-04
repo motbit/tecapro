@@ -4,6 +4,33 @@
 
 
 get_header(); ?>
+    <style>
+        img, .item-img, .item img.active {
+            -webkit-transition: all 200ms ease-in;
+            -webkit-transform: scale(1);
+            -ms-transition: all 200ms ease-in;
+            -ms-transform: scale(1);
+            -moz-transition: all 200ms ease-in;
+            -moz-transform: scale(1);
+            transition: all 200ms ease-in;
+            transform: scale(1);
+        }
+
+        img:hover, .item-img:hover, .item.active:hover {
+            -webkit-transition: all 200ms ease-in;
+            -webkit-transform: scale(1);
+            -ms-transition: all 200ms ease-in;
+            -ms-transform: scale(1);
+            -moz-transition: all 200ms ease-in;
+            -moz-transform: scale(1);
+            transition: all 200ms ease-in;
+            transform: scale(1.05);
+        }
+
+        span {
+            margin-right: 3px;
+        }
+    </style>
 
     <div class="container none-padding padding-mobile">
         <div class="col-sm-12 col-xs-12 none-padding tintuc tintuc-slider">
@@ -49,6 +76,7 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
+
             <div class="contert-right col-md-4 col-xs-12 none-padding  none-mobile">
                 <div class="item item-img">
                     <img src="<?php echo get_template_directory_uri() . '/images/Asset_11.png' ?>">
