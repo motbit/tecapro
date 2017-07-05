@@ -194,6 +194,8 @@ require get_template_directory() . '/inc/jetpack.php';
 if (!function_exists('tecapro_head_scripts')) {
     function tecapro_head_scripts()
     {
+        echo '<link rel="shortcut icon" href="' . get_template_directory_uri() . '/images/logo.png"/>';
+
         echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>';
         echo '<script src="' . get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js"></script>';
         echo '<link href="' . get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css" rel="stylesheet" />';
@@ -287,3 +289,87 @@ if (!function_exists('tecapro_active_menu')) {
         echo $menu_html;
     }
 }
+
+function get_date_publish($time)
+{
+    $date = new DateTime();
+    $date->setTimestamp($time);
+    return vi_days(date_format($date, 'l, d/m/Y'));
+}
+
+function vi_days($time)
+{
+    $time = strtolower($time);
+
+    $days = [
+        'monday' => 'Thứ Hai',
+        'tuesday' => 'Thứ Ba',
+        'wednesday' => 'Thứ Tư',
+        'thursday' => 'Thứ Năm',
+        'friday' => 'Thứ Sáu',
+        'saturday' => 'Thứ Bảy',
+        'sunday' => 'Chủ nhật',
+    ];
+
+    foreach ($days as $en => $vi) {
+        $time = str_replace($en, $vi, $time);
+    }
+
+    return $time;
+}
+
+function get_thumbnail_url($type = 'banner')
+{
+    $url = get_the_post_thumbnail_url();
+    if (empty($url)) {
+        switch ($type) {
+            case 'banner':
+                $default_images = ['banner.png'];
+                break;
+            case 'right-column':
+            case 'normal':
+                $default_images = ['Asset_10.png', 'Asset_11.png'];
+                break;
+            case 'six-small':
+                $default_images = ['Asset_13.png'];
+                break;
+            default:
+                $default_images = [];
+        }
+        $i = rand(0, count($default_images) - 1);
+        $url = get_template_directory_uri() . '/images/' . $default_images[$i];
+    }
+
+    return $url;
+}
+
+if (!function_exists('tecapro_set_post_views')) {
+    function tecapro_set_post_views($postID)
+    {
+        $count_key = 'tecapro_post_views_count';
+        $count = get_post_meta($postID, $count_key, true);
+        if ($count == '') {
+            $count = 0;
+            delete_post_meta($postID, $count_key);
+            add_post_meta($postID, $count_key, '0');
+        } else {
+            $count++;
+            update_post_meta($postID, $count_key, $count);
+        }
+    }
+}
+//To keep the count accurate, lets get rid of prefetching
+remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10);
+
+function tecapro_track_post_views($post_id)
+{
+    if (!is_single()) return;
+    if (empty($post_id)) {
+        global $post;
+        $post_id = $post->ID;
+    }
+    tecapro_set_post_views($post_id);
+}
+
+add_action('wp_head', 'tecapro_track_post_views');
+
