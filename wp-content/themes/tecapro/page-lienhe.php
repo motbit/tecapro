@@ -116,7 +116,7 @@ $category = '';
             <div class="col-sm-5 col-xs-12 none-padding lienhe-right">
                 <div class="tbl-gt row none-margin ">
                     <ul style="text-align: center;padding: 0;">
-                        <imgsrc="<?php echo get_template_directory_uri() . '/images/logo.png'?>" class="img-logo img-bottom">
+                        <img src="<?php echo get_template_directory_uri() . '/images/logo.png'?>" class="img-logo img-bottom">
                     </ul>
                     <ul style="padding: 10px 0;text-align: center;margin: 0;">
                         <p class="addFont" style="margin-left: 0;">CÔNG TY TNHH MỘT THÀNH VIÊN - ỨNG DỤNG KỸ THUẬT VÀ SẢN XUẤT</p>
