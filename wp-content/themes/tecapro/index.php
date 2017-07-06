@@ -110,7 +110,7 @@ get_header(); ?>
             <nav id="menu" class="nav">
                 <ul class="ul-bottom">
                     <li>
-                        <a href="tin_tuc_su_kien.html">
+                        <a href="/tin-tuc-su-kien/">
                                 <span class="icon">
                                 <img src="<?php echo get_template_directory_uri() . '/images/tin_tuc_su_kien.svg' ?>" class="img-show tintucsk">
                                 <img src="<?php echo get_template_directory_uri() . '/images/Tin_tuc_su_kien1.svg' ?>" class="img-hidden tintucsk">
@@ -119,7 +119,7 @@ get_header(); ?>
                         </a>
                     </li>
                     <li>
-                        <a href="san_pham_chung.html">
+                        <a href="/san-pham/">
                                 <span class="icon">
                                 <img src="<?php echo get_template_directory_uri() . '/images/san_pham.svg' ?>" class="img-show">
                                 <img src="<?php echo get_template_directory_uri() . '/images/san_pham1.svg' ?>" class="img-hidden">
@@ -128,7 +128,7 @@ get_header(); ?>
                         </a>
                     </li>
                     <li>
-                        <a href="linh_vuc_hoat_dong_dien_tu_vien_thong.html">
+                        <a href="/dien-tu-vien-thong/">
                                 <span class="icon">
                                 <img src="<?php echo get_template_directory_uri() . '/images/dien_tu.svg' ?>" class="img-show">
                                 <img src="<?php echo get_template_directory_uri() . '/images/dien_tu1.svg' ?>" class="img-hidden">
@@ -137,7 +137,7 @@ get_header(); ?>
                         </a>
                     </li>
                     <li>
-                        <a href="linh_vuc_hoat_dong_cong_nghe_MT.html">
+                        <a href="/cong-nghe-moi-truong/">
                                 <span class="icon">
                                 <img src="<?php echo get_template_directory_uri() . '/images/cong_nghe_MT.svg' ?>" class="img-show">
                                 <img src="<?php echo get_template_directory_uri() . '/images/cong_nghe_MT1.svg' ?>" class="img-hidden">
@@ -146,7 +146,7 @@ get_header(); ?>
                         </a>
                     </li>
                     <li>
-                        <a href="linh_vuc_hoat_dong.html">
+                        <a href="/cong-nghe-thong-tin/">
                                 <span class="icon">
                                 <img src="<?php echo get_template_directory_uri() . '/images/CNTT.svg' ?>" class="img-show">
                                 <img src="<?php echo get_template_directory_uri() . '/images/CNTT1.svg' ?>" class="img-hidden">
@@ -155,7 +155,7 @@ get_header(); ?>
                         </a>
                     </li>
                     <li>
-                        <a href="linh_vuc_hoat_dong_xay_dung_CT.html">
+                        <a href="/xay-dung-cong-trinh/">
                                 <span class="icon">
                                 <img src="<?php echo get_template_directory_uri() . '/images/xay_dung_cong_trinh.svg' ?>" class="img-show">
                                 <img src="<?php echo get_template_directory_uri() . '/images/xay_dung_cong_trinh1.svg' ?>" class="img-hidden">
@@ -164,7 +164,7 @@ get_header(); ?>
                         </a>
                     </li>
                     <li>
-                        <a href="linh_vuc_hoat_dong_dich_vu.html">
+                        <a href="/dich-vu/">
                                 <span class="icon">
                                 <img src="<?php echo get_template_directory_uri() . '/images/dich_vu.svg' ?>" class="img-show">
                                 <img src="<?php echo get_template_directory_uri() . '/images/dich_vu1.svg' ?>" class="img-hidden">
@@ -173,7 +173,7 @@ get_header(); ?>
                         </a>
                     </li>
                     <li>
-                        <a href="linh_vuc_hoat_dong_dich_vu.html">
+                        <a href="/dich-vu/">
                                 <span class="icon">
                                 <img src="<?php echo get_template_directory_uri() . '/images/icon_video.svg' ?>" class="img-show">
                                 <img src="<?php echo get_template_directory_uri() . '/images/video_mobile.svg' ?>" class="img-hidden">
