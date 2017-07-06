@@ -1,6 +1,6 @@
 <?php
 
-/* Template Name: Teca: Trang Giới Thiệu */
+/* Template Name: Teca: Đơn vị thành viên */
 
 
 get_header(); ?>
@@ -78,118 +78,30 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-        <div class="col-sm-12 col-xs-12 none-padding tbl-gt">
-            <!---->
-            <div class="col-sm-12 col-xs-12 none-padding truso-a">
-                <ul class="col-sm-3 col-xs-3 none-padding ">
-                    <li>
-                        Tên công ty
-                    </li>
-                    <li>
-                        Tên giao dịch quốc tế
-                    </li>
-                    <li>
-                        Tên viết tắt
-                    </li>
-                    <li>
-                        Trụ sở chính
-                    </li>
-                    <li>
-                        Điện thoại
-                    </li>
-                    <li>
-                        Fax
-                    </li>
-                    <li>
-                        Giám đốc
-                    </li>
-                </ul>
-                <ul class="col-sm-9 col-xs-9 none-padding col-b ">
-                    <li>
-                        <b>CÔNG TY CỔ PHẦN CÔNG NGHỆ THÔNG TIN VÀ TRUYỀN THÔNG - TECAPRO</b>
-                    </li>
-                    <li>
-                        <b> TECAPRO - COMMUNICATION AND INFORMATION TECHNOLOGY JOINT STOCK COMPANY</b>
-                    </li>
-                    <li>
-                        <b>TECAPRO - IT</b>
-                    </li>
-                    <li>
-                        24 Nguyễn Trường Tộ, phường Trúc Bạch, quận Ba Đình, Tp. Hà Nội
-                    </li>
-                    <li>
-                        04.37163 227
-                    </li>
-                    <li>
-                        04.37163 226
-                    </li>
-                    <li>
-                        Nguyễn Tiến Thắng
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!---=================---->
-        <div class="col-sm-12 col-xs-12 none-padding hoatdong">
-            <p class="p-add add1">LĨNH VỰC HOẠT ĐỘNG</p>
-            <ul class="col-sm-8 col-xs-12 none-padding hoatdong margin-right">
-                <li>
-                    Bán buôn, bán lẻ máy tính, thiết bị ngoại vi, thiết bị nghe nhìn và phần mềm
-                </li>
-                <li>
-                    Sản xuất thiết bị truyền thông, máy vi tính, thiết bị ngoại vi máy vi tính và linh kiện điện tử
-                </li>
-                <li>
-                    Sữa chữa thiết bị điện tử và quang học
-                </li>
-                <li>
-                    Lắp đặt máy móc và thiết bị công nghiệp
-                </li>
-                <li>
-                    Bán buôn thiết bị và linh kiện điện tử, viễn thông
-                </li>
-                <li>
-                    Kiểm tra và phân tích kỹ thuật
-                </li>
-                <li>
-                    Cho thuê xe có động cơ
-                </li>
-                <li>
-                    Cho thuê máy móc, thiết bị văn phòng
-                </li>
-                <li>
-                    Lắp đặt hệ thống cấp - thoát nước, lò sưởi và điều hòa không khí
-                </li>
-            </ul>
-            <!---->
-            <ul class="col-sm-4 col-xs-12 none-padding hoatdong">
-                <li>
-                    Bán phụ tùng và các bộ phận phụ trợ ô tô và xe có động cơ khác
-                </li>
-                <li>
-                    Đại lý, môi giới
-                </li>
-                <li>
-                    Vận tải hàng hóa bằng đường bộ
-                </li>
-                <li>
-                    Xuất bản phần mềm
-                </li>
-                <li>
-                    Lập trình máy vi tính
-                </li>
-                <li>
-                    Tư vấn máy vi tính và quản trị hệ thống máy vi tính
-                </li>
-                <li>
-                    Xử lý dữ liệu
-                </li>
-                <li>
-                    Ủy thác xuất nhập khẩu, dịch vụ chuyển giao công nghệ: môi giới, tư vấn, đánh giá, xúc tiến chuyển giao công nghệ trong lĩnh vực công nghệ thông tin và truyền thông
-                </li>
-            </ul>
 
-        </div>
+        <?php
+        while ( have_posts() ) : the_post(); ?>
+            <div class="entry-content">
+                <?php
+                the_content();
+
+                wp_link_pages( array(
+                    'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'tecapro' ),
+                    'after'  => '</div>',
+                ) );
+                ?>
+            </div><!-- .entry-content -->
+        <?php
+
+        // If comments are open or we have at least one comment, load up the comment template.
+        if ( comments_open() || get_comments_number() ) :
+            comments_template();
+        endif;
+
+        endwhile; // End of the loop.
+        ?>
+
+
     </div>
 
 <?php
