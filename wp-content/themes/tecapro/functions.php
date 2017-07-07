@@ -339,6 +339,12 @@ function get_thumbnail_url($type = 'banner')
             case 'tin-hinh-anh':
                 $default_images = ['2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg'];
                 break;
+            case 'li-tin-video':
+                $default_images = ['Asset 1.png'];
+                break;
+            case 'li-tin-hinh-anh':
+                $default_images = ['Asset 2.png'];
+                break;
             default:
                 $default_images = [];
         }
