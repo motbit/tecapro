@@ -27,19 +27,19 @@ get_header(); ?>
                 </p>
                 <ul class="bxslider ul-sp2">
                     <li>
-                        <a href="san_pham.html"><img src="/wp-content/themes/tecapro/images/1.png"></a>
+                        <a href="/san-pham/motion-base/"><img src="/wp-content/themes/tecapro/images/1.png"></a>
                     </li>
                     <li>
-                        <a href="T-Mail.html"><img src="/wp-content/themes/tecapro/images/2.png"></a>
+                        <a href="/san-pham/t-mail/"><img src="/wp-content/themes/tecapro/images/2.png"></a>
                     </li>
                     <li>
-                        <a href="He_thong_cong_thong_tin.html"><img src="/wp-content/themes/tecapro/images/3.png"></a>
+                        <a href="/san-pham/giai-phap-toan-dien-ve-he-thong-cong-thong-tin-dien-tu/"><img src="/wp-content/themes/tecapro/images/3.png"></a>
                     </li>
                     <li>
-                        <a href="giap_phap_QL_benh_vien_dien_tu.html"><img src="/wp-content/themes/tecapro/images/4.png"></a>
+                        <a href="/san-pham/giai-phap-quan-ly-benh-vien-dien-tu/"><img src="/wp-content/themes/tecapro/images/4.png"></a>
                     </li>
                     <li>
-                        <a href="thiet_bi_y_te.html"> <img src="/wp-content/themes/tecapro/images/5.png"></a>
+                        <a href="/san-pham/thiet-bi-y-te/"> <img src="/wp-content/themes/tecapro/images/5.png"></a>
                     </li>
                 </ul>
             </div>
