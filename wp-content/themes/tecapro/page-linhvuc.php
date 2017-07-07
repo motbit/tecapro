@@ -12,7 +12,7 @@ $category = '';
                 <div class="item active">
                     <img src="<?php echo get_template_directory_uri() . '/images/BG.png' ?>">
                     <div class="btn-a">
-                        <a href="san_pham.html">
+                        <a href="/san-pham/motion-base/">
                             <button>Xem chi tiết</button>
                         </a>
                     </div>
@@ -20,7 +20,7 @@ $category = '';
                 <div class="item">
                     <img src="<?php echo get_template_directory_uri() . '/images/bg03.png' ?>">
                     <div class="btn-a">
-                        <a href="He_thong_cong_thong_tin.html">
+                        <a href="/san-pham/giai-phap-toan-dien-ve-he-thong-cong-thong-tin-dien-tu/">
                             <button>Xem chi tiết</button>
                         </a>
                     </div>
@@ -28,7 +28,7 @@ $category = '';
                 <div class="item">
                     <img src="<?php echo get_template_directory_uri() . '/images/bg02.png' ?>">
                     <div class="btn-a">
-                        <a href="T-Mail.html">
+                        <a href="/san-pham/t-mail/">
                             <button>Xem chi tiết</button>
                         </a>
                     </div>
@@ -36,7 +36,7 @@ $category = '';
                 <div class="item">
                     <img src="<?php echo get_template_directory_uri() . '/images/bg04.png' ?>">
                     <div class="btn-a">
-                        <a href="giap_phap_QL_benh_vien_dien_tu.html">
+                        <a href="/san-pham/giai-phap-quan-ly-benh-vien-dien-tu/">
                             <button>Xem chi tiết</button>
                         </a>
                     </div>
@@ -44,7 +44,7 @@ $category = '';
                 <div class="item">
                     <img src="<?php echo get_template_directory_uri() . '/images/bg05.png' ?>">
                     <div class="btn-a">
-                        <a href="thiet_bi_y_te.html">
+                        <a href="/san-pham/thiet-bi-y-te/">
                             <button>Xem chi tiết</button>
                         </a>
                     </div>
