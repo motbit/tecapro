@@ -69,7 +69,7 @@ get_header(); ?>
                         <a href="/tin-tuc-su-kien/">
                                 <span class="icon">
                                 <img src="/wp-content/themes/tecapro/images/tin_tuc_su_kien.svg" class="img-show tintucsk">
-                                <img src="/wp-content/themes/tecapro/images/Tin_tuc_su_kien1.svg" class="img-hidden tintucsk">
+                                <img src="/wp-content/themes/tecapro/images/tin_tuc_su_kien1.svg" class="img-hidden tintucsk">
                                 </span>
                             <div class="div-add">Tin tức & sự kiện</div>
                         </a>
