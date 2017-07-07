@@ -89,17 +89,17 @@ get_header(); ?>
     <div>
         <ul class="ul-gt">
             <li>
-                <a href="tong_quan.html">
+                <a href="/gioi-thieu/">
                     <p>Tổng quan</p>
                 </a>
             </li>
             <li>
-                <a href="so_do_to_chuc.html">
+                <a href="/gioi-thieu/so-do-to-chuc/">
                     <p>Sơ đồ tổ chức</p>
                 </a>
             </li>
             <li>
-                <a href="truyen_thong_tecapro.html">
+                <a href="/gioi-thieu/truyen-thong-tecapro/">
                     <p>Truyền thống Tecapro</p>
                 </a>
             </li>
