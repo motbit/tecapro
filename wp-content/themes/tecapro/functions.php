@@ -333,6 +333,9 @@ function get_thumbnail_url($type = 'banner')
             case 'six-small':
                 $default_images = ['Asset_13.png'];
                 break;
+            case 'tin-video':
+                $default_images = ['Asset-18.jpg', 'Asset-19.jpg', 'Asset-20.jpg', 'Asset-21.jpg'];
+                break;
             default:
                 $default_images = [];
         }
