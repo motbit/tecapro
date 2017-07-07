@@ -7,7 +7,7 @@ get_header(); ?>
 
     <!--============================-->
     <div class="col-sm-12 col-xs-12 none-padding banner banner-img">
-        <img src="/wp-content/themes/tecapro/images/BG1-1.png">
+        <img src="<?php echo the_post_thumbnail_url( 'full' ); ?>">
     </div>
     <!--end banner-->
     <div class="container none-padding padding-mobile">
