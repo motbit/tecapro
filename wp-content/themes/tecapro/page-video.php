@@ -59,8 +59,8 @@ get_header(); ?>
             <?php endwhile; ?>
         </div>
 
-        <div class="nav-previous alignleft"><?php next_posts_link('Xem tiếp', $video_posts->max_num_pages); ?></div>
-        <div class="nav-next alignright"><?php previous_posts_link('Quay lại'); ?></div>
+        <div class="nav-previous alignright"><?php next_posts_link('Xem tiếp', $video_posts->max_num_pages); ?></div>
+        <div class="nav-next alignleft"><?php previous_posts_link('Quay lại'); ?></div>
         <?php endif; ?>
         <div class="container">
             <!-- Trigger the modal with a button -->
