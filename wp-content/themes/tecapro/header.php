@@ -131,7 +131,7 @@
                         </section>
                         <!-- End Content -->
                     </div>
-                    <a href="#">
+                    <a href="<?php echo home_url("/"); ?>">
                         <img src="images/banner_mobile.svg" class="col-sm-11 col-xs-10 none-padding banner-mobile">
                         <img src="images/banner_ipad.svg" class="col-sm-11 col-xs-10 none-padding banner-ipad">
                     </a>
