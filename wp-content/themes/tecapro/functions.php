@@ -208,7 +208,7 @@ if (!function_exists('tecapro_head_scripts')) {
         echo '<script src="' . get_template_directory_uri() . '/js/menu.js"></script>';
         echo '<script src="' . get_template_directory_uri() . '/js/menu_left.js"></script>';
         echo '<script src="' . get_template_directory_uri() . '/js/init.js"></script>';
-        echo '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>';
+//        echo '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>';
     }
 }
 add_action('wp_head', 'tecapro_head_scripts');
@@ -385,3 +385,32 @@ function tecapro_track_post_views($post_id)
 
 add_action('wp_head', 'tecapro_track_post_views');
 
+function get_youtube_id($youtube_link)
+{
+    if (empty($youtube_link)) {
+        return '';
+    }
+
+    if (strpos($youtube_link, "www.youtube.com/embed") !== false) {
+        $arr = explode('/', $youtube_link);
+        return $arr[count($arr) - 1];
+    }
+
+    if (strpos($youtube_link, "www.youtube.com/watch?v") !== false) {
+        parse_str(parse_url($youtube_link, PHP_URL_QUERY), $arr);
+        return $arr['v'];
+    }
+}
+
+function get_youtube_thumbnail($youtube_link)
+{
+    $url = get_the_post_thumbnail_url();
+    if (!empty($url)) {
+        return $url;
+    }
+
+    if ($youtube_link != '') {
+        $youtube_id = get_youtube_id($youtube_link);
+        return 'https://img.youtube.com/vi/' . $youtube_id . '/hqdefault.jpg';
+    }
+}
