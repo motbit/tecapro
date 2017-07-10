@@ -208,38 +208,29 @@ get_header(); ?>
             $i++;
             endforeach;
             ?>
-            <!-- VIDEOS -->
+
             <div class="col-sm-3 col-xs-12 none-padding">
+            <!-- VIDEOS -->
+            <?php
+            wp_reset_query();
+
+            $video_args = [
+                'numberposts' => 5,
+                'category_name' => 'tin-video'
+            ];
+
+            $video_posts = new WP_Query($video_args);
+
+            while ($video_posts->have_posts()) :
+                $video_posts->the_post();
+                    ?>
                 <div class=" tintuc tt-footer thumbnail tt-b">
-                    <img src="<?php echo get_template_directory_uri() . '/images/Asset-18.jpg' ?>">
+                    <img src="<?php echo get_thumbnail_url('tin-video'); ?>">
                     <p>
-                        <a href="tin_chi_tiet.html">Thương hiệu của người lính trên mặt trận khoa học và công nghệ</a>
+                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                     </p>
                 </div>
-                <div class=" tintuc tt-footer thumbnail tt-b">
-                    <img src="<?php echo get_template_directory_uri() . '/images/Asset-19.jpg' ?>">
-                    <p>
-                        <a href="tin_chi_tiet.html">Thương hiệu của người lính trên mặt trận khoa học và công nghệ</a>
-                    </p>
-                </div>
-                <div class=" tintuc tt-footer thumbnail tt-b">
-                    <img src="<?php echo get_template_directory_uri() . '/images/Asset-20.jpg' ?>">
-                    <p>
-                        <a href="tin_chi_tiet.html">Thương hiệu của người lính trên mặt trận khoa học và công nghệ</a>
-                    </p>
-                </div>
-                <div class=" tintuc tt-footer thumbnail tt-b">
-                    <img src="<?php echo get_template_directory_uri() . '/images/Asset-21.jpg' ?>">
-                    <p>
-                        <a href="tin_chi_tiet.html">Thương hiệu của người lính trên mặt trận khoa học và công nghệ</a>
-                    </p>
-                </div>
-                <div class=" tintuc tt-footer thumbnail tt-b">
-                    <img src="<?php echo get_template_directory_uri() . '/images/Asset-21.jpg' ?>">
-                    <p>
-                        <a href="tin_chi_tiet.html">Thương hiệu của người lính trên mặt trận khoa học và công nghệ</a>
-                    </p>
-                </div>
+            <?php endwhile; ?>
             </div>
         </div>
         <!--==============-->
