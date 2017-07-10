@@ -26,19 +26,26 @@ get_header(); ?>
                 </li>
             </ul>
         </div>
-        <div class="content-tintuc col-sm-12 col-xs-12 none-padding tintuc">
-            <!--========================-->
-            <?php
-            $video_posts = new WP_Query(array(
-                'posts_per_page' => 6,
-                'category_name' => 'tin-video'
-            ));
+        <!--========================-->
+        <?php
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-            if ($video_posts->have_posts()):
+        $video_posts = new WP_Query(array(
+            'posts_per_page' => 6,
+            'category_name' => 'tin-video',
+            'paged' => $paged
+        ));
+
+        $i = 1;
+
+        if ($video_posts->have_posts()):
             while ($video_posts->have_posts()):
                 $video_posts->the_post();
                 $link_embed = get_post_meta(get_the_ID(), 'tecapro_link_video', true);
-                ?>
+                if ($i % 3 == 1):
+                    ?>
+                    <div class="content-tintuc col-sm-12 col-xs-12 none-padding tintuc">
+                <?php endif; ?>
 
                 <div class="col-sm-4 col-xs-12 none-padding ds-thuvien">
                     <div class=" tintuc tt-footer thumbnail lvhd thuvien-video">
@@ -56,11 +63,16 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
-            <?php endwhile; ?>
-        </div>
 
-        <div class="nav-previous alignright"><?php next_posts_link('Xem tiếp', $video_posts->max_num_pages); ?></div>
-        <div class="nav-next alignleft"><?php previous_posts_link('Quay lại'); ?></div>
+                <?php if ($i % 3 == 0 || $i == $video_posts->post_count): ?>
+                </div>
+            <?php endif; ?>
+                <?php $i++; endwhile; ?>
+
+            <?php if ($video_posts->max_num_pages > 1) : ?>
+            <div class="nav-previous alignright" style="float: right!important;"><?php next_posts_link('Xem tiếp', $video_posts->max_num_pages); ?></div>
+            <div class="nav-next alignleft" style="float: left!important;"><?php previous_posts_link('Quay lại'); ?></div>
+        <?php endif; ?>
         <?php endif; ?>
         <div class="container">
             <!-- Trigger the modal with a button -->

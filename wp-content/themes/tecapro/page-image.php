@@ -10,9 +10,12 @@ get_header(); ?>
         <!--======================-->
 
         <?php
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
         $image_posts = new WP_Query(array(
             'posts_per_page' => 9,
-            'category_name' => 'tin-hinh-anh'
+            'category_name' => 'tin-hinh-anh',
+            'paged' => $paged
         ));
 
         $i = 1;
@@ -42,12 +45,17 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
-            <?php if ($i % 3 == 0): ?>
+            <?php if ($i % 3 == 0 || $i == $image_posts->post_count): ?>
             </div>
         <?php endif; ?>
             <?php
             $i++;
         endwhile; ?>
+
+        <?php if ($image_posts->max_num_pages > 1) : ?>
+            <div class="nav-previous alignright" style="float: right!important;"><?php next_posts_link('Xem tiếp', $image_posts->max_num_pages); ?></div>
+            <div class="nav-next alignleft" style="float: left!important;"><?php previous_posts_link('Quay lại'); ?></div>
+        <?php endif; ?>
         <!--========================-->
     </div>
     <!--end container-->
