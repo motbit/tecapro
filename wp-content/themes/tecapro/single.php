@@ -59,30 +59,25 @@ $post_id = 0; ?>
                         VIDEO LIÊN QUAN
                     </p>
                 </div>
-                <div class=" tintuc tt-footer thumbnail tt-d">
-                    <img src="<?php echo get_template_directory_uri() . '/images/Asset-18.jpg' ?>">
-                    <p>
-                        <a href="tin_chi_tiet.html">Thương hiệu của người lính trên mặt trận khoa học và công nghệ</a>
-                    </p>
-                </div>
-                <div class=" tintuc tt-footer thumbnail tt-d">
-                    <img src="<?php echo get_template_directory_uri() . '/images/Asset-19.jpg' ?>">
-                    <p>
-                        <a href="tin_chi_tiet.html">Thương hiệu của người lính trên mặt trận khoa học và công nghệ</a>
-                    </p>
-                </div>
-                <div class=" tintuc tt-footer thumbnail tt-d">
-                    <img src="<?php echo get_template_directory_uri() . '/images/Asset-20.jpg' ?>">
-                    <p>
-                        <a href="tin_chi_tiet.html">Thương hiệu của người lính trên mặt trận khoa học và công nghệ</a>
-                    </p>
-                </div>
-                <div class=" tintuc tt-footer thumbnail tt-d" style="border-bottom: 0px solid rgba(0,0,0,0.1);">
-                    <img src="<?php echo get_template_directory_uri() . '/images/Asset-21.jpg' ?>">
-                    <p>
-                        <a href="tin_chi_tiet.html">Thương hiệu của người lính trên mặt trận khoa học và công nghệ</a>
-                    </p>
-                </div>
+                <?php
+                wp_reset_query();
+
+                $video_posts = new WP_Query(array(
+                    'posts_per_page' => 5,
+                    'post__not_in' => array($post_id),
+                    'category_name' => 'tin-video'
+                ));
+
+                while ($video_posts->have_posts()):
+                    $video_posts->the_post();
+                    ?>
+                    <div class=" tintuc tt-footer thumbnail tt-b">
+                        <img src="<?php echo get_thumbnail_url('tin-video'); ?>">
+                        <p>
+                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                        </p>
+                    </div>
+                <?php endwhile; ?>
             </div>
         </div>
         <!---->

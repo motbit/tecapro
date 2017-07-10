@@ -193,39 +193,28 @@ get_header(); ?>
                         <p class="name">Tin Teca</p>
                         <img src="<?php echo get_template_directory_uri() . '/images/next.png' ?>" class="img-tieude">
                     </li>
-                    <li class="col-xs-12 none-padding li-tin">
-                        <div class="col-xs-12 none-padding list-new">
-                            <div class="col-sm-12 col-xs-2 none-padding">
-                                <a href="tin_chi_tiet.html"><img src="<?php echo get_template_directory_uri() . '/images/Asset-23.jpg' ?>"></a>
+                    <?php
+                    $news_query = new WP_Query(array(
+                        'posts_per_page' => 3,
+                        'category_name' => 'tin-tecapro'
+                    ));
+                    while ($news_query->have_posts()):
+                        $news_query->the_post();
+                        ?>
+                        <li class="col-xs-12 none-padding li-tin">
+                            <div class="col-xs-12 none-padding list-new">
+                                <div class="col-sm-12 col-xs-2 none-padding">
+                                    <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri() . '/images/Asset-23.jpg' ?>"></a>
+                                </div>
+                                <div class="col-sm-12 col-xs-10 none-padding">
+                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                    <p class="mui-ten"></p>
+                                </div>
                             </div>
-                            <div class="col-sm-12 col-xs-10 none-padding ">
-                                <a href="tin_chi_tiet.html">Công ty TECAPRO tặng máy in chuyên dụng cho bệnh viện Quân y 175</a>
-                                <p class="mui-ten"></p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-xs-12 none-padding li-tin">
-                        <div class="col-xs-12 none-padding list-new">
-                            <div class="col-sm-12 col-xs-2 none-padding">
-                                <a href="tin_chi_tiet.html"><img src="<?php echo get_template_directory_uri() . '/images/Asset-23.jpg' ?>"></a>
-                            </div>
-                            <div class="col-sm-12 col-xs-10 none-padding">
-                                <a href="tin_chi_tiet.html">Công ty TECAPRO tặng máy in chuyên dụng cho bệnh viện Quân y 175</a>
-                                <p class="mui-ten"></p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-xs-12 none-padding li-tin">
-                        <div class="col-xs-12 none-padding list-new">
-                            <div class="col-sm-12 col-xs-2 none-padding">
-                                <a href="tin_chi_tiet.html"><img src="<?php echo get_template_directory_uri() . '/images/Asset-23.jpg' ?>"></a>
-                            </div>
-                            <div class="col-sm-12 col-xs-10 none-padding">
-                                <a href="tin_chi_tiet.html">Công ty TECAPRO tặng máy in chuyên dụng cho bệnh viện Quân y 175</a>
-                                <p class="mui-ten"></p>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
+                    <?php endwhile;
+                    wp_reset_query();
+                    ?>
                 </ul>
             </div>
             <div class="col-sm-1 col-xs-12 none-padding"></div>
@@ -235,12 +224,20 @@ get_header(); ?>
                         <p class="name video">Video & Ảnh</p>
                         <img src="<?php echo get_template_directory_uri() . '/images/next.png' ?>" class="img-tieude">
                     </li>
-                    <li class="li-img">
-                        <img src="<?php echo get_template_directory_uri() . '/images/Asset 2.png' ?>">
-                    </li>
-                    <li class="li-img">
-                        <img src="<?php echo get_template_directory_uri() . '/images/Asset 1.png' ?>">
-                    </li>
+
+                    <?php $video_query = new WP_Query(array(
+                        'posts_per_page' => 2,
+                        'category_name' => 'tin-video, tin-hinh-anh'
+                    ));
+                    while ($video_query->have_posts()):
+                        $video_query->the_post();
+                        $cat = get_the_category();
+                        $cat_slug = $cat[0]->slug;
+                        ?>
+                        <li class="li-img">
+                            <a href="<?php the_permalink(); ?>"><img src="<?php echo get_thumbnail_url('li-' .$cat_slug); ?>"></a>
+                        </li>
+                    <?php endwhile; ?>
                 </ul>
             </div>
         </div>
