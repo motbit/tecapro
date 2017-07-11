@@ -72,12 +72,12 @@
                             </a>
                         </li>
                         <li>
-                            <a href="tong_quan.html">
+                            <a href="/gioi-thieu/">
                                 <p>Về chúng tôi</p>
                             </a>
                         </li>
                         <li>
-                            <a href="lien_he.html">
+                            <a href="/lien-he/">
                                 <p>Liên hệ</p>
                             </a>
                         </li>

@@ -2,7 +2,7 @@
 
 /* Template Name: Teca: Đơn vị thành viên */
 
-
+remove_filter ('the_content', 'wpautop');
 get_header(); ?>
 
 

@@ -2,7 +2,7 @@
 
 /* Template Name: Teca: Trang Liên hệ */
 
-
+remove_filter ('the_content', 'wpautop');
 get_header();
 $category = '';
 ?>
