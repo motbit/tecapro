@@ -140,10 +140,13 @@ $category = '';
         </div>
         <div class="col-sm-12 col-xs-12 none-padding content-lvhd">
             <?php
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
             $news_query = new WP_Query(array(
                 'post_type' => 'post',
                 'posts_per_page' => 9,
-                'category_name' => $category
+                'category_name' => $category,
+                'paged' => $paged
             ));
 
             $i = 1;
@@ -166,12 +169,17 @@ $category = '';
                         </p>
                     </div>
                 </div>
-                <?php if ($i % 3 == 0): ?>
+                <?php if ($i % 3 == 0 || $i == $news_query->post_count): ?>
                 </div>
             <?php endif; ?>
                 <?php
                 $i++;
             endwhile; ?>
+
+            <?php if ($news_query->max_num_pages > 1) : ?>
+                <div class="nav-previous alignright" style="float: right!important;"><?php next_posts_link('Xem tiếp', $news_query->max_num_pages); ?></div>
+                <div class="nav-next alignleft" style="float: left!important;"><?php previous_posts_link('Quay lại'); ?></div>
+            <?php endif; ?>
         </div>
     </div>
 

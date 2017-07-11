@@ -17,7 +17,7 @@ $post_id = 0; ?>
                 <?php while (have_posts()) : the_post();
                     $post_id = get_the_ID(); ?>
                     <p class="tieude">
-                        <a href="tin_chi_tiet.html"><?php the_title(); ?></a>
+                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                     </p>
                     <?php the_content(); ?>
                 <?php endwhile;
