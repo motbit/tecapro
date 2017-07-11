@@ -2,7 +2,7 @@
 
 /* Template Name: Teca: Trang Tin tức và Sự kiện */
 
-
+remove_filter ('the_content', 'wpautop');
 get_header(); ?>
     <style>
         img, .item-img, .item img.active {

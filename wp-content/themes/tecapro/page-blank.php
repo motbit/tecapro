@@ -6,6 +6,7 @@
 get_header(); ?>
     <div class="container none-padding padding-mobile">
 <?php
+remove_filter ('the_content', 'wpautop');
 while ( have_posts() ) : the_post(); ?>
     <div class="entry-content">
     <?php

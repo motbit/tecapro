@@ -2,7 +2,7 @@
 
 /* Template Name: Teca: Trang Giới Thiệu */
 
-
+remove_filter ('the_content', 'wpautop');
 get_header(); ?>
 
     <div class="container-fuild none-padding banner none-mobile">
