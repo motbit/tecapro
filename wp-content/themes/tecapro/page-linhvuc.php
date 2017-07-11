@@ -1,7 +1,7 @@
 <?php
 
 /* Template Name: Teca: Trang Lĩnh vực hoạt động */
-
+remove_filter ('the_content', 'wpautop');
 
 get_header();
 $category = '';

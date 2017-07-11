@@ -147,7 +147,7 @@
 
                         $logo_src = !empty($image[0]) ? $image[0] : get_template_directory_uri() . '/images/logo.png';
                         ?>
-                        <img src="<?php echo $logo_src ?>" alt="tecapro" class="img-logo"/>
+                        <a href="<?php echo home_url("/"); ?>"><img src="<?php echo $logo_src ?>" alt="tecapro" class="img-logo"/></a>
                     </div>
                     <div class="col-sm-10 col-xs-12 none-padding ">
                         <div class="pushmenu-push">

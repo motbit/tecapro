@@ -3,7 +3,9 @@
 /* Template Name: Teca: Sản Phẩm */
 
 
-get_header(); ?>
+get_header();
+remove_filter ('the_content', 'wpautop');
+?>
 
     <!--============================-->
     <div class="col-sm-12 col-xs-12 none-padding banner banner-img">

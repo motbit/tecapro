@@ -1,7 +1,7 @@
 <?php
 
 /* Template Name: Teca: Thư viện Hình ảnh */
-
+remove_filter ('the_content', 'wpautop');
 
 get_header(); ?>
 
