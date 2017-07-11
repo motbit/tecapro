@@ -70,9 +70,12 @@ $post_id = 0; ?>
 
                 while ($video_posts->have_posts()):
                     $video_posts->the_post();
+                    $youtube_link = get_post_meta(get_the_ID(), 'tecapro_link_video', true);
                     ?>
                     <div class=" tintuc tt-footer thumbnail tt-b">
-                        <img src="<?php echo get_thumbnail_url('tin-video'); ?>">
+                        <a href="<?php the_permalink(); ?>">
+                            <img src="<?php echo get_youtube_thumbnail($youtube_link) ?>" style="width: 100%; height: 163px"/>
+                        </a>
                         <p>
                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </p>

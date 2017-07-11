@@ -34,16 +34,19 @@ get_header(); ?>
 
     <div class="container none-padding padding-mobile">
         <?php
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
         $args = [
-            'numberposts' => 21,
-            'category_name' => 'tin-tecapro'
+            'posts_per_page' => 21,
+            'category_name' => 'tin-tecapro',
+            'paged' => $paged
         ];
 
-        $posts = get_posts($args);
+        $posts = new WP_Query($args);
         $i = 1;
 
         foreach ($posts as $post):
-            setup_postdata($post);
+        $posts->the_post();
         if ($i == 1):
         ?>
         <div class="col-sm-12 col-xs-12 none-padding tintuc tintuc-slider">
@@ -60,7 +63,7 @@ get_header(); ?>
                     <div class="carousel-inner" role="listbox" id="tt">
                         <?php endif ?>
                         <?php if ($i >= 1 && $i <= 4) { ?>
-                            <div class="item <?php if ($i==1) echo 'active';?>">
+                            <div class="item <?php if ($i == 1) echo 'active'; ?>">
                                 <img src="<?php echo get_thumbnail_url(); ?>">
                                 <div class="carousel-caption cmd">
                                     <p class="add-fnt"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
@@ -78,7 +81,7 @@ get_header(); ?>
             <div class="contert-right col-md-4 col-xs-12 none-padding  none-mobile">
                 <?php } ?>
                 <?php if ($i >= 5 && $i <= 6): ?>
-                    <div class="item item-img <?php if ($i==6) echo 'item-bottom'; ?>">
+                    <div class="item item-img <?php if ($i == 6) echo 'item-bottom'; ?>">
                         <img src="<?php echo get_thumbnail_url('right-column'); ?>">
                         <div class="caption-tt">
                             <p class="add-fnt"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
@@ -90,118 +93,132 @@ get_header(); ?>
             </div>
         </div>
         <!--ènd container-->
-        <?php } ?>
+    <?php } ?>
 
-            <?php if ($i==7): ?>
+        <?php if ($i == 7): ?>
         <!--================-->
         <div class="content-tintuc ul-tintuc col-sm-12 col-xs-12 none-padding">
             <!--=======================-->
-                <?php endif;?>
-            <?php if ($i==7 || $i==10): ?>
+            <?php endif;
+            ?>
+            <?php if ($i == 7 || $i == 10): ?>
             <div class="content-tintuc ct-hidden col-sm-12 col-xs-12 none-padding none-mobile">
-                <?php endif;?>
-                <?php if ($i >=7 && $i<=12): ?>
-                <div class="col-sm-4 col-xs-12 none-padding">
-                    <div class=" tintuc thumbnail thumbnail-top">
-                        <div class="col-sm-2 col-xs-2 none-padding">
-                            <img src="<?php echo get_thumbnail_url('six-small'); ?>">
-                        </div>
-                        <div class="col-sm-10 col-xs-10 tintuc-left">
-                            <p>
-                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                            </p>
-                            <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span><?php echo get_date_publish(get_post_time()); ?></p>
+                <?php endif;
+                ?>
+                <?php if ($i >= 7 && $i <= 12): ?>
+                    <div class="col-sm-4 col-xs-12 none-padding">
+                        <div class=" tintuc thumbnail thumbnail-top">
+                            <div class="col-sm-2 col-xs-2 none-padding">
+                                <img src="<?php echo get_thumbnail_url('six-small'); ?>">
+                            </div>
+                            <div class="col-sm-10 col-xs-10 tintuc-left">
+                                <p>
+                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                </p>
+                                <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span><?php echo get_date_publish(get_post_time()); ?></p>
+                            </div>
                         </div>
                     </div>
-                </div>
                 <?php endif; ?>
 
-            <?php if ($i==9 || $i==12): ?>
+                <?php if ($i == 9 || $i == 12): ?>
             </div>
+        <?php endif; ?>
+
+            <?php if ($i == 9): ?>
+                <!--====================-->
+                <div class="content-tintuc ct-hidden col-sm-12 col-xs-12 none-padding none-mobile">
+                    <div class="col-sm-4 col-xs-4 none-padding linett">
+                        <ul class="tt-line"></ul>
+                    </div>
+                    <div class="col-sm-4 col-xs-4 none-padding linett">
+                        <ul class="tt-line"></ul>
+                    </div>
+                    <div class="col-sm-4 col-xs-4 none-padding ">
+                        <ul class="tt-line"></ul>
+                    </div>
+                </div>
+                <!--================-->
             <?php endif; ?>
 
-            <?php if ($i==9): ?>
-            <!--====================-->
-            <div class="content-tintuc ct-hidden col-sm-12 col-xs-12 none-padding none-mobile">
-                <div class="col-sm-4 col-xs-4 none-padding linett">
-                    <ul class="tt-line"></ul>
-                </div>
-                <div class="col-sm-4 col-xs-4 none-padding linett">
-                    <ul class="tt-line"></ul>
-                </div>
-                <div class="col-sm-4 col-xs-4 none-padding ">
-                    <ul class="tt-line"></ul>
-                </div>
-            </div>
-            <!--================-->
-            <?php endif; ?>
-
-            <?php if ($i==13): ?>
+            <?php if ($i == 13): ?>
             <!--====================-->
             <div class="content-tintuc col-sm-12 col-xs-12 none-padding tintuc linh-vuc-hd">
                 <?php endif; ?>
-                <?php if ($i>=13 && $i<=15): ?>
-                <div class="col-sm-4 col-xs-6 none-padding ds-tintuc">
-                    <div class=" tintuc tt-footer thumbnail lvhd">
-                        <img src="<?php echo get_thumbnail_url('normal'); ?>">
-                        <p class="tieude">
-                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                        </p>
-                        <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span><?php echo get_date_publish(get_post_time()); ?></p>
-                        <p class="p-tomtat">
-                            <?php echo wp_trim_words(substr(get_the_content(), 0, 120)) . '...'; ?>
-                        </p>
+                <?php if ($i >= 13 && $i <= 15): ?>
+                    <div class="col-sm-4 col-xs-6 none-padding ds-tintuc">
+                        <div class=" tintuc tt-footer thumbnail lvhd">
+                            <img src="<?php echo get_thumbnail_url('normal'); ?>">
+                            <p class="tieude">
+                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                            </p>
+                            <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span><?php echo get_date_publish(get_post_time()); ?></p>
+                            <p class="p-tomtat">
+                                <?php echo wp_trim_words(substr(get_the_content(), 0, 120)) . '...'; ?>
+                            </p>
+                        </div>
                     </div>
-                </div>
                 <?php endif; ?>
-            <?php if ($i==15): ?>
+                <?php if ($i == 15): ?>
             </div>
         </div>
-        <?php endif; ?>
+    <?php endif; ?>
 
-            <?php if ($i==16): ?>
+        <?php if ($i == 16): ?>
         <!--===================-->
         <div class="col-sm-12 col-xs-12 none-padding">
             <div class="col-sm-9 col-xs-12 none-padding">
                 <div class="col-sm-12 col-xs-12 none-padding content-lvhd content-tintucsukien">
                     <?php endif; ?>
                     <!--=====================-->
-            <?php if ($i==16 || $i==18 || $i==20): ?>
+                    <?php if ($i == 16 || $i == 18 || $i == 20): ?>
                     <div class="content-tintuc col-sm-12 col-xs-12 none-padding  linh-vuc-hd">
                         <?php endif; ?>
-                        <?php if ($i>=16 && $i<=21): ?>
-                        <div class="col-sm-6 col-xs-6 none-padding ds-tintuc">
-                            <div class=" tintuc tt-footer thumbnail lvhd">
-                                <img src="<?php echo get_thumbnail_url('normal'); ?>">
-                                <p class="tieude">
-                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                </p>
-                                <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span><?php echo get_date_publish(get_post_time()); ?></p>
-                                <p class="p-tomtat">
-                                    <?php echo wp_trim_words(substr(get_the_content(), 0, 120)) . '...'; ?>
-                                </p>
-                            </div>
-                        </div>
-                            <?php if ($i==17 || $i==19 || $i==21): ?>
+                        <?php if ($i >= 16 && $i <= 21): ?>
                             <div class="col-sm-6 col-xs-6 none-padding ds-tintuc">
                                 <div class=" tintuc tt-footer thumbnail lvhd">
-                                    <img src="<?php echo get_template_directory_uri() . '/images/Asset_10.png' ?>">
+                                    <img src="<?php echo get_thumbnail_url('normal'); ?>">
                                     <p class="tieude">
-                                        <a href="tin_chi_tiet.html">Đoàn sĩ quan trẻ Quân đội Hoàng gia Cam-pu-chia giao lưu tại Công ty TECAPRO</a>
+                                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                     </p>
-                                    <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Thứ Năm,ngày 24/11/2016</p>
+                                    <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span><?php echo get_date_publish(get_post_time()); ?></p>
                                     <p class="p-tomtat">
-                                        Ngày 8.11.2016, Công ty TECAPRO đã phối hợp cùng UBND xã An Nhơn Tây tổ chức trao tặng nhà tình nghĩa cho gia đình ...
+                                        <?php echo wp_trim_words(substr(get_the_content(), 0, 120)) . '...'; ?>
                                     </p>
                                 </div>
                             </div>
+                            <?php if ($i == 17 || $i == 19 || $i == 21): ?>
+                                <div class="col-sm-6 col-xs-6 none-padding ds-tintuc">
+                                    <div class=" tintuc tt-footer thumbnail lvhd">
+                                        <img src="<?php echo get_template_directory_uri() . '/images/Asset_10.png' ?>">
+                                        <p class="tieude">
+                                            <a href="tin_chi_tiet.html">Đoàn sĩ quan trẻ Quân đội Hoàng gia Cam-pu-chia giao lưu tại Công ty TECAPRO</a>
+                                        </p>
+                                        <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Thứ Năm,ngày 24/11/2016</p>
+                                        <p class="p-tomtat">
+                                            Ngày 8.11.2016, Công ty TECAPRO đã phối hợp cùng UBND xã An Nhơn Tây tổ chức trao tặng nhà tình nghĩa cho gia đình ...
+                                        </p>
+                                    </div>
+                                </div>
                             <?php endif; ?>
                         <?php endif; ?>
-            <?php if ($i==17 || $i==19 || $i==21): ?>
+                        <?php if ($i == 17 || $i == 19 || $i == 21): ?>
                     </div>
                 <?php endif; ?>
-            <?php if ($i==count($posts)): ?>
+                    <?php if ($i == $posts->post_count): ?>
                 </div>
+
+                <?php if ($posts->max_num_pages > 1) { ?>
+                    <div class="col-sm-12 col-xs-12 none-padding content-lvhd content-tintucsukien">
+                        <div class="nav-previous alignright" style="float: right!important; margin-right: 15px;">
+                            <?php next_posts_link('Xem tiếp', $posts->max_num_pages); ?>
+                        </div>
+                        <div class="nav-next alignleft" style="float: left!important;">
+                            <?php previous_posts_link('Quay lại'); ?>
+                        </div>
+                    </div>
+                <?php } ?>
+
             </div>
             <?php endif; ?>
             <?php
@@ -210,27 +227,30 @@ get_header(); ?>
             ?>
 
             <div class="col-sm-3 col-xs-12 none-padding">
-            <!-- VIDEOS -->
-            <?php
-            wp_reset_query();
+                <!-- VIDEOS -->
+                <?php
+                wp_reset_query();
 
-            $video_args = [
-                'numberposts' => 5,
-                'category_name' => 'tin-video'
-            ];
+                $video_args = [
+                    'posts_per_page' => 5,
+                    'category_name' => 'tin-video'
+                ];
 
-            $video_posts = new WP_Query($video_args);
+                $video_posts = new WP_Query($video_args);
 
-            while ($video_posts->have_posts()) :
-                $video_posts->the_post();
+                while ($video_posts->have_posts()) :
+                    $video_posts->the_post();
+                    $youtube_link = get_post_meta(get_the_ID(), 'tecapro_link_video', true);
                     ?>
-                <div class=" tintuc tt-footer thumbnail tt-b">
-                    <img src="<?php echo get_thumbnail_url('tin-video'); ?>">
-                    <p>
-                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                    </p>
-                </div>
-            <?php endwhile; ?>
+                    <div class=" tintuc tt-footer thumbnail tt-b">
+                        <a href="<?php the_permalink(); ?>">
+                            <img src="<?php echo get_youtube_thumbnail($youtube_link) ?>" style="width: 100%; height: 163px"/>
+                        </a>
+                        <p>
+                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                        </p>
+                    </div>
+                <?php endwhile; ?>
             </div>
         </div>
         <!--==============-->
