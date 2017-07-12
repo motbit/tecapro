@@ -16,93 +16,13 @@ get_header(); ?>
 
     <!-- ===== BANNER ===== -->
     <div class="container-fuild none-padding banner">
-        <div id="myCarousel1" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel1" data-slide-to="1"></li>
-                <li data-target="#myCarousel1" data-slide-to="2"></li>
-                <li data-target="#myCarousel1" data-slide-to="3"></li>
-                <li data-target="#myCarousel1" data-slide-to="4"></li>
-                <li data-target="#myCarousel1" data-slide-to="5"></li>
-
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img src="<?php echo get_template_directory_uri() . '/images/BG.png' ?>">
-                    <img src="<?php echo get_template_directory_uri() . '/images/Tecapro_banner-06.png' ?>">
-                    <div class="btn-a">
-                        <a href="/san-pham/motion-base/">
-                            <button>Xem chi tiết</button>
-                        </a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="<?php echo get_template_directory_uri() . '/images/bg03.png' ?>">
-                    <img src="<?php echo get_template_directory_uri() . '/images/Tecapro_banner-01.png' ?>">
-                    <div class="btn-a">
-                        <a href="/san-pham/giai-phap-toan-dien-ve-he-thong-cong-thong-tin-dien-tu/">
-                            <button>Xem chi tiết</button>
-                        </a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="<?php echo get_template_directory_uri() . '/images/bg02.png' ?>">
-                    <img src="<?php echo get_template_directory_uri() . '/images/Tecapro_banner-02.png' ?>">
-                    <div class="btn-a">
-                        <a href="/san-pham/t-mail/">
-                            <button>Xem chi tiết</button>
-                        </a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="<?php echo get_template_directory_uri() . '/images/bg04.png' ?>">
-                    <img src="<?php echo get_template_directory_uri() . '/images/Tecapro_banner-03.png' ?>">
-                    <div class="btn-a">
-                        <a href="/san-pham/giai-phap-quan-ly-benh-vien-dien-tu/">
-                            <button>Xem chi tiết</button>
-                        </a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="<?php echo get_template_directory_uri() . '/images/bg05.png' ?>">
-                    <img src="<?php echo get_template_directory_uri() . '/images/Tecapro_banner-04.png' ?>">
-                    <div class="btn-a">
-                        <a href="/san-pham/thiet-bi-y-te/">
-                            <button>Xem chi tiết</button>
-                        </a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="<?php echo get_template_directory_uri() . '/images/bg06.png' ?>">
-                    <img src="<?php echo get_template_directory_uri() . '/images/Tecapro_banner-05.png' ?>">
-                    <div class="btn-a">
-                        <a href="Tecopter.html">
-                            <button>Xem chi tiết</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- Left and right controls -->
+        <div class=" col-sm-12 col-xs-12 none-padding">
+            <!--            <div class="col-sm-9 col-xs-12 none-padding tin-chitiet">-->
+            <?php echo do_shortcode("[metaslider id=911]"); ?>
+            <!--            </div>-->
         </div>
     </div>
     <!-- ===== END BANNER ===== -->
-
-    <div class="container-fuild none-padding">
-        <div class=" container">
-            <div class="col-sm-6 col-xs-6 none-padding">
-                <a class="left carousel-control" href="#myCarousel1" role="button" data-slide="prev">
-                    <span aria-hidden="true"> <img src="<?php echo get_template_directory_uri() . '/images/truoc.png' ?>"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-            </div>
-            <div class="col-sm-6 col-xs-6 none-padding">
-                <a class="right carousel-control" href="#myCarousel1" role="button" data-slide="next">
-                    <span aria-hidden="true"> <img src="<?php echo get_template_directory_uri() . '/images/next.png' ?>"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-    </div>
 
     <!-- ===== SERVICES ===== -->
     <div class="container none-padding">
@@ -235,7 +155,7 @@ get_header(); ?>
                         $cat_slug = $cat[0]->slug;
                         ?>
                         <li class="li-img">
-                            <a href="<?php the_permalink(); ?>"><img src="<?php echo get_thumbnail_url('li-' .$cat_slug); ?>"></a>
+                            <a href="<?php the_permalink(); ?>"><img src="<?php echo get_thumbnail_url('li-' . $cat_slug); ?>"></a>
                         </li>
                     <?php endwhile; ?>
                 </ul>
