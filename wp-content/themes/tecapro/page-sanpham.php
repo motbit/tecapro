@@ -142,36 +142,6 @@ remove_filter ('the_content', 'wpautop');
                 </ul>
             </nav>
         </div>
-        <!--=======đối tács============-->
-        <div class="col-sm-12 col-xs-12 none-padding run">
-            <script language="JavaScript1.2">
-                var leftrightslide	=	new Array()
-                var finalslide		=	''
-                var slidesspace		=	parseInt ('5')
-                var sliderwidth		=	"1170px"
-                var sliderheight	=	"70px"
-                var slidebgcolor	=	""
-                var stopslide		=	"1"
-                var imagegap		=	"&nbsp;"
-                var slidespeed		=	1
-                leftrightslide[0]='<a href="dell.com"><img src="/wp-content/themes/tecapro/images/emerson.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
-                ;
-                leftrightslide[1]='<a href="http://www.microsoft.com/"><img src="/wp-content/themes/tecapro/images/microsoft.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
-                ;
-                leftrightslide[2]='<a href="#"><img src="/wp-content/themes/tecapro/images/ibm.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
-                ;
-                leftrightslide[3]='<a href="#"><img src="/wp-content/themes/tecapro/images/cisco.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
-                ;
-                leftrightslide[4]='<a href="#"><img src="/wp-content/themes/tecapro/images/nec.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
-                ;
-                leftrightslide[5]='<a href="#"><img src="/wp-content/themes/tecapro/images/nokia.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
-                ;
-                leftrightslide[6]='<a href="http://www.emerson.com/en-us"><img src="/wp-content/themes/tecapro/images/dell.png"  height="33px" hspace="10"  border="0" class="img-img"></a>'
-
-
-            </script>
-            <script src="/wp-content/themes/tecapro/JS/slider_footer.js"></script>
-        </div>
     </div>
     <!--end container-->
 <?php

@@ -1866,7 +1866,8 @@ padding:0}
          .direction-r .flag:before {
          position: absolute;
          top: 50%;
-            right: -525px;
+            /*right: -525px;*/
+            right: -85px;
          content: ' ';
          display: block;
          width: 25px;
