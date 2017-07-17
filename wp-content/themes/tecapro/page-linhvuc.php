@@ -1,14 +1,14 @@
 <?php
 
 /* Template Name: Teca: Trang Lĩnh vực hoạt động */
-remove_filter ('the_content', 'wpautop');
+remove_filter('the_content', 'wpautop');
 
 get_header();
 $category = '';
 ?>
     <!-- ===== BANNER ===== -->
     <div class="container-fuild none-padding banner">
-        <div class=" col-sm-12 col-xs-12 none-padding"  style="margin-bottom: 30px">
+        <div class=" col-sm-12 col-xs-12 none-padding" style="margin-bottom: 30px">
             <!--            <div class="col-sm-9 col-xs-12 none-padding tin-chitiet">-->
             <?php echo do_shortcode("[metaslider id=911]"); ?>
             <!--            </div>-->
@@ -103,7 +103,10 @@ $category = '';
                         </p>
                         <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span><?php echo get_date_publish(get_post_time()); ?></p>
                         <p class="p-tomtat">
-                            <?php echo wp_trim_words(substr(get_the_content(), 0, 120)) . '...'; ?>
+                            <?php
+                            $url = get_the_permalink();
+                            echo wp_trim_words(get_the_content(), 20, '...<a href="'. $url .'">Đọc thêm</a>');
+                            ?>
                         </p>
                     </div>
                 </div>
