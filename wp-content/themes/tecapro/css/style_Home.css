@@ -655,6 +655,11 @@ ul.sp li{
     padding: 5px 0;
 
 }
+
+.tbl-sp tr td:first-child {
+	width: 150px;
+}
+
 .mid{
 	margin-top:30px
 }

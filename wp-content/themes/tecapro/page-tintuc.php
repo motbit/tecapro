@@ -154,7 +154,7 @@ get_header(); ?>
                             </p>
                             <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span><?php echo get_date_publish(get_post_time()); ?></p>
                             <p class="p-tomtat">
-                                <?php echo wp_trim_words(substr(get_the_content(), 0, 120)) . '...'; ?>
+                                <?php echo wp_trim_words(get_the_content(), 20, '...'); ?>
                             </p>
                         </div>
                     </div>
@@ -183,7 +183,7 @@ get_header(); ?>
                                     </p>
                                     <p class="p-time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span><?php echo get_date_publish(get_post_time()); ?></p>
                                     <p class="p-tomtat">
-                                        <?php echo wp_trim_words(substr(get_the_content(), 0, 120)) . '...'; ?>
+                                        <?php echo wp_trim_words(get_the_content(), 20, '...'); ?>
                                     </p>
                                 </div>
                             </div>
